@@ -1,11 +1,9 @@
 
-<%= simple_form_for(@inscription) do |f| %>
+<%= simple_form_for @inscription do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.association :user %>
-    <%= f.association :evenement %>
     <%= f.input :q1 %>
     <%= f.input :r1 %>
     <%= f.input :q2 %>

@@ -34,8 +34,8 @@
   <tbody>
     <% @inscriptions.each do |inscription| %>
       <tr>
-        <td><%= inscription.user %></td>
-        <td><%= inscription.evenement %></td>
+        <td><%= inscription.user.nom %></td>
+        <td><%= inscription.evenement.nom %></td>
         <td><%= inscription.q1 %></td>
         <td><%= inscription.r1 %></td>
         <td><%= inscription.q2 %></td>

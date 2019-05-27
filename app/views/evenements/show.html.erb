@@ -15,5 +15,10 @@
   <%= @evenement.adresse %>
 </p>
 
+<p>
+  <strong>Actif:</strong>
+  <%= 'true' if @evenement.actif %>
+</p>
+
 <%= link_to 'Edit', edit_evenement_path(@evenement) %> |
 <%= link_to 'Back', evenements_path %>

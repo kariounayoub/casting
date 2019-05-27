@@ -10,6 +10,7 @@ class InscriptionsController < ApplicationController
 
   def new
     @inscription = Inscription.new
+    @questions = Question.where(evenement: @evenement)
   end
 
   def edit
@@ -17,6 +18,8 @@ class InscriptionsController < ApplicationController
 
   def create
     @inscription = Inscription.new(inscription_params)
+    @inscription.evenement = Evenement.where(actif: true)
+    @inscription.user = current_user
     if @inscription.save
       redirect_to @inscription, notice: 'Inscription was successfully created.'
     else

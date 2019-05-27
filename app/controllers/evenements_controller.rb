@@ -17,6 +17,11 @@ class EvenementsController < ApplicationController
 
   def create
     @evenement = Evenement.new(evenement_params)
+    if @evenement.actif
+      Evenement.all.each do |evenement|
+        evenement.actif = false unless evenement == @evenement
+      end
+    end
     if @evenement.save
       redirect_to @evenement, notice: 'Evenement was successfully created.'
     else
@@ -25,6 +30,11 @@ class EvenementsController < ApplicationController
   end
 
   def update
+    if @evenement.actif
+      Evenement.all.each do |evenement|
+        evenement.actif = false unless evenement == @evenement
+      end
+    end
     if @evenement.update(evenement_params)
       redirect_to @evenement, notice: 'Evenement was successfully updated.'
     else
