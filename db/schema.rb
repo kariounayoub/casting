@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_27_095509) do
+ActiveRecord::Schema.define(version: 2019_05_27_101332) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,35 @@ ActiveRecord::Schema.define(version: 2019_05_27_095509) do
     t.string "adresse"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "inscriptions", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "evenement_id"
+    t.text "q1"
+    t.text "r1"
+    t.text "q2"
+    t.text "r2"
+    t.text "q3"
+    t.text "r3"
+    t.text "q4"
+    t.text "r4"
+    t.text "q5"
+    t.text "r5"
+    t.text "q6"
+    t.text "r6"
+    t.text "q7"
+    t.text "r7"
+    t.text "q8"
+    t.text "r8"
+    t.text "q9"
+    t.text "r9"
+    t.text "q10"
+    t.text "r10"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["evenement_id"], name: "index_inscriptions_on_evenement_id"
+    t.index ["user_id"], name: "index_inscriptions_on_user_id"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -43,5 +72,7 @@ ActiveRecord::Schema.define(version: 2019_05_27_095509) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "inscriptions", "evenements"
+  add_foreign_key "inscriptions", "users"
   add_foreign_key "questions", "evenements"
 end

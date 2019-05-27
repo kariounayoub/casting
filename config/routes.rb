@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :questions
+  resources :inscriptions
+  resources :questions, except: [:show]
   resources :evenements
   devise_for :users
   root to: 'pages#home'

@@ -20,7 +20,7 @@ class EvenementsController < ApplicationController
     if @evenement.save
       redirect_to @evenement, notice: 'Evenement was successfully created.'
     else
-      render :new }
+      render :new
     end
   end
 
