@@ -10,7 +10,8 @@ class InscriptionsController < ApplicationController
 
   def new
     @inscription = Inscription.new
-    # @questions = Question.where(evenement: @evenement)
+    evenement = Evenement.where(actif: true)
+    @questions = Question.where(evenement: evenement)
   end
 
   def edit

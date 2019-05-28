@@ -1,3 +1,6 @@
+<% questions.each do |question| %>
+  <p> <%= question.contenu %> </p>
+<% end %>
 
 <%= simple_form_for @inscription do |f| %>
   <%= f.error_notification %>
