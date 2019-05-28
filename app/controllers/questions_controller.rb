@@ -15,7 +15,7 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new(question_params)
     if @question.save
-      redirect_to @question, notice: 'Question was successfully created.'
+      redirect_to questions_path, notice: 'Question was successfully created.'
     else
       render :new
     end
@@ -23,7 +23,7 @@ class QuestionsController < ApplicationController
 
   def update
     if @question.update(question_params)
-      redirect_to @question, notice: 'Question was successfully updated.'
+      redirect_to questions_path, notice: 'Question was successfully updated.'
     else
       render :edit
     end
@@ -40,6 +40,6 @@ class QuestionsController < ApplicationController
     end
 
     def question_params
-      params.require(:question).permit(:evenement_id, :contenu)
+      params.require(:question).permit(:evenement_id, :categorie, :contenu)
     end
 end

@@ -20,9 +20,7 @@
         <td><%= evenement.date %></td>
         <td><%= evenement.adresse %></td>
         <td><%= evenement.actif %></td>
-        <td><%= link_to 'Show', evenement %></td>
         <td><%= link_to 'Edit', edit_evenement_path(evenement) %></td>
-        <td><%= link_to 'Destroy', evenement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

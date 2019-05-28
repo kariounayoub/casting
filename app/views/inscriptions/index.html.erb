@@ -7,26 +7,6 @@
     <tr>
       <th>User</th>
       <th>Evenement</th>
-      <th>Q1</th>
-      <th>R1</th>
-      <th>Q2</th>
-      <th>R2</th>
-      <th>Q3</th>
-      <th>R3</th>
-      <th>Q4</th>
-      <th>R4</th>
-      <th>Q5</th>
-      <th>R5</th>
-      <th>Q6</th>
-      <th>R6</th>
-      <th>Q7</th>
-      <th>R7</th>
-      <th>Q8</th>
-      <th>R8</th>
-      <th>Q9</th>
-      <th>R9</th>
-      <th>Q10</th>
-      <th>R10</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -34,28 +14,8 @@
   <tbody>
     <% @inscriptions.each do |inscription| %>
       <tr>
-        <td><%= inscription.user.nom %></td>
+        <td><%= inscription.user.email %></td>
         <td><%= inscription.evenement.nom %></td>
-        <td><%= inscription.q1 %></td>
-        <td><%= inscription.r1 %></td>
-        <td><%= inscription.q2 %></td>
-        <td><%= inscription.r2 %></td>
-        <td><%= inscription.q3 %></td>
-        <td><%= inscription.r3 %></td>
-        <td><%= inscription.q4 %></td>
-        <td><%= inscription.r4 %></td>
-        <td><%= inscription.q5 %></td>
-        <td><%= inscription.r5 %></td>
-        <td><%= inscription.q6 %></td>
-        <td><%= inscription.r6 %></td>
-        <td><%= inscription.q7 %></td>
-        <td><%= inscription.r7 %></td>
-        <td><%= inscription.q8 %></td>
-        <td><%= inscription.r8 %></td>
-        <td><%= inscription.q9 %></td>
-        <td><%= inscription.r9 %></td>
-        <td><%= inscription.q10 %></td>
-        <td><%= inscription.r10 %></td>
         <td><%= link_to 'Show', inscription %></td>
         <td><%= link_to 'Edit', edit_inscription_path(inscription) %></td>
         <td><%= link_to 'Destroy', inscription, method: :delete, data: { confirm: 'Are you sure?' } %></td>
