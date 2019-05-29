@@ -12,6 +12,9 @@ class InscriptionsController < ApplicationController
     @inscription = Inscription.new
     evenement = Evenement.where(actif: true)
     @questions = Question.where(evenement: evenement)
+    @questions.each do |question|
+      @inscription.reponses.build(question_id: question.id)
+    end
   end
 
   def edit
@@ -19,7 +22,7 @@ class InscriptionsController < ApplicationController
 
   def create
     @inscription = Inscription.new(inscription_params)
-    @inscription.evenement = Evenement.where(actif: true)
+    @inscription.evenement = Evenement.where(actif: true).first
     @inscription.user = current_user
     if @inscription.save
       redirect_to @inscription, notice: 'Inscription was successfully created.'
@@ -47,6 +50,6 @@ class InscriptionsController < ApplicationController
     end
 
     def inscription_params
-      params.require(:inscription).permit(:user_id, :evenement_id )
+      params.require(:inscription).permit(:user_id, :evenement_id, reponses_attributes: [:contenu, :question_id])
     end
 end

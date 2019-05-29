@@ -1,16 +1,13 @@
-<% questions.each do |question| %>
-  <p> <%= question.contenu %> </p>
-<% end %>
+<%= form_for(@inscription) do |form| %>
+  <%= form.fields_for :reponses do |reponse_form| %>
+    <div>
+      <p><%= reponse_form.object.question.contenu %></p>
+      <%= reponse_form.text_area :contenu %>
+      <%= reponse_form.hidden_field :question_id, value: reponse_form.object.question_id %>
+    </div>
+  <% end %>
 
-<%= simple_form_for @inscription do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-inputs">
-
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div>
+    <%= form.submit %>
   </div>
 <% end %>

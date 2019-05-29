@@ -7,7 +7,14 @@
 
 <p>
   <strong>Evenement:</strong>
-  <%= @inscription.evenement.name %>
+  <%= @inscription.evenement.nom %>
+</p>
+
+<p>
+  <strong>Reponse:</strong>
+  <% @inscription.reponses.each do |reponse| %>
+    <%= reponse.contenu %>
+  <% end %>
 </p>
 
 
