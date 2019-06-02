@@ -1,6 +1,11 @@
+<% new_category = nil %>
 <%= form_for(@inscription) do |form| %>
   <%= form.fields_for :reponses do |reponse_form| %>
     <div>
+      <% if new_category != reponse_form.object.question.categorie %>
+        <h4><%= reponse_form.object.question.categorie %></h4>
+        <% new_category = reponse_form.object.question.categorie %>
+      <% end %>
       <p><%= reponse_form.object.question.contenu %></p>
       <%= reponse_form.text_area :contenu %>
       <%= reponse_form.hidden_field :question_id, value: reponse_form.object.question_id %>

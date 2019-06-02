@@ -1,21 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<h3>
   <strong>User:</strong>
   <%= @inscription.user.email %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Evenement:</strong>
   <%= @inscription.evenement.nom %>
-</p>
+</h3>
 
-<p>
-  <strong>Reponse:</strong>
-  <% @inscription.reponses.each do |reponse| %>
-    <%= reponse.contenu %>
+<% new_category = nil %>
+<h3><strong>Reponses:</strong></h3>
+
+<% @inscription.reponses.each do |reponse| %>
+  <% if new_category != reponse.question.categorie %>
+    <h3><strong><%= reponse.question.categorie %><strong></h3>
+    <% new_category = reponse.question.categorie %>
   <% end %>
-</p>
+  <h4><%= reponse.question.contenu %></h4>
+  <h4><%= reponse.contenu %></h4>
+  <br/><br/>
+<% end %>
 
 
 <%= link_to 'Edit', inscriptions_path(@inscription) %> |
