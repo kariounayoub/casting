@@ -2,7 +2,7 @@ class InscriptionsController < ApplicationController
   before_action :set_inscription, only: [:show, :edit, :update, :destroy]
 
   def index
-    @inscriptions = Inscription.all
+    @questions = policy_scope(Inscription).order(created_at: :asc)
   end
 
   def show
@@ -10,6 +10,7 @@ class InscriptionsController < ApplicationController
 
   def new
     @inscription = Inscription.new
+    authorize @inscription
     evenement = Evenement.where(actif: true)
     @questions = Question.where(evenement: evenement)
     @questions.each do |question|
@@ -24,6 +25,8 @@ class InscriptionsController < ApplicationController
     @inscription = Inscription.new(inscription_params)
     @inscription.evenement = Evenement.where(actif: true).first
     @inscription.user = current_user
+    @inscription.save
+    authorize @inscription
     if @inscription.save
       redirect_to @inscription, notice: 'Inscription was successfully created.'
     else
@@ -47,6 +50,7 @@ class InscriptionsController < ApplicationController
   private
     def set_inscription
       @inscription = Inscription.find(params[:id])
+      authorize @inscription
     end
 
     def inscription_params

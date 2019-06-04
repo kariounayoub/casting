@@ -1,31 +1,31 @@
 class EvenementPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all
+      user.admin ? scope.all : []
     end
   end
 
   def new?
-    true
+    user.admin
   end
 
   def edit?
-    true
+    new?
   end
 
   def create?
-    return true
+    new?
   end
 
   def update?
-    return true
+    new?
   end
 
   def activate?
-    return true
+    new?
   end
 
   def destroy?
-    return true
+    new?
   end
 end

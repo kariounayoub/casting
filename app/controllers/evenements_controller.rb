@@ -2,7 +2,7 @@ class EvenementsController < ApplicationController
   before_action :set_evenement, only: [:edit, :update, :activate, :destroy]
 
   def index
-    @evenements = policy_scope(Evenement).order(created_at: :desc)
+    @evenements = policy_scope(Evenement).order(date: :desc)
   end
 
   def new

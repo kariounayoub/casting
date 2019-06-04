@@ -2,11 +2,12 @@ class QuestionsController < ApplicationController
   before_action :set_question, only: [:edit, :update, :destroy]
 
   def index
-    @questions = Question.all
+    @questions = policy_scope(Question).order(created_at: :asc)
   end
 
   def new
     @question = Question.new
+    authorize @question
   end
 
   def edit
@@ -14,6 +15,7 @@ class QuestionsController < ApplicationController
 
   def create
     @question = Question.new(question_params)
+    authorize @question
     if @question.save
       redirect_to questions_path, notice: 'Question was successfully created.'
     else
@@ -37,6 +39,7 @@ class QuestionsController < ApplicationController
   private
     def set_question
       @question = Question.find(params[:id])
+      authorize @question
     end
 
     def question_params

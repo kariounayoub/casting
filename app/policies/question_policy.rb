@@ -1,7 +1,27 @@
 class QuestionPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all
+      user.admin ? scope.all : []
     end
+  end
+
+  def new?
+    user.admin
+  end
+
+  def edit?
+    new?
+  end
+
+  def create?
+    new?
+  end
+
+  def update?
+    new?
+  end
+
+  def destroy?
+    new?
   end
 end

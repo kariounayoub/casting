@@ -1,29 +1,40 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Inscriptions</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Evenement</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="container">
+  <% unless @inscriptions.nil? %>
     <% @inscriptions.each do |inscription| %>
-      <tr>
-        <td><%= inscription.user.email %></td>
-        <td><%= inscription.evenement.nom %></td>
-        <td><%= link_to 'Show', inscription %></td>
-        <td><%= link_to 'Edit', edit_inscription_path(inscription) %></td>
-        <td><%= link_to 'Destroy', inscription, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+        <div class="card-product-infos">
+          <% rep = inscription.reponses.select { |r| r.blank? }.count %>
+          <% tot = inscription.reponses.count %>
+          <h2><%= inscription.evenement.nom %> - (<%= rep %> / <%= tot %>)</h2>
+          <% if policy(inscription).edit? %>
+            <p>
+              <%= link_to edit_inscription_path(inscription) do %>
+                <i class="far fa-edit"></i>
+              <% end %>
+            </p>
+          <% end %>
+          <% if policy(inscription).destroy? %>
+            <p>
+              <%= link_to inscription, method: :delete, data: { confirm: 'Etes-vous sure de vouloir supprimer?' } do %>
+                <i class="far fa-trash-alt"></i>
+              <% end %>
+            </p>
+          <% end %>
+          <% if policy(inscription).show? %>
+            <p>
+              <%= link_to inscription do %>
+                <i class="far fa-eye"></i>
+              <% end %>
+            </p>
+          <% end %>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Inscription', new_inscription_path %>
+  <% end %>
+  <% if policy(Inscription).create? %>
+    <%= link_to new_inscription_path do %>
+      <i class="fas fa-plus"></i>
+    <% end %>
+  <% end %>
+</div>
