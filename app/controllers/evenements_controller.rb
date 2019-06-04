@@ -1,5 +1,5 @@
 class EvenementsController < ApplicationController
-  before_action :set_evenement, only: [:edit, :update, :destroy]
+  before_action :set_evenement, only: [:edit, :update]
 
   def index
     @evenements = Evenement.all
@@ -7,6 +7,7 @@ class EvenementsController < ApplicationController
 
   def new
     @evenement = Evenement.new
+    authorize @evenement
   end
 
   def edit
@@ -14,6 +15,7 @@ class EvenementsController < ApplicationController
 
   def create
     @evenement = Evenement.new(evenement_params)
+    authorize @evenement
     if @evenement.actif
       Evenement.all.each do |evenement|
         unless evenement == @evenement
@@ -50,6 +52,7 @@ class EvenementsController < ApplicationController
 
   def set_evenement
     @evenement = Evenement.find(params[:id])
+    authorize @evenement
   end
 
   def evenement_params

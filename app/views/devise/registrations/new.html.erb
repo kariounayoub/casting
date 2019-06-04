@@ -1,40 +1,40 @@
-<h2>Sign up</h2>
+<div id="login-form">
+  <div class="container card half-screen">
+    <h2>Inscription</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :prenom %>
-    <%= f.input :nom %>
-    <%= f.input :adresse %>
-    <%= f.input :ville %>
-    <%= f.input :date_de_naissance %>
-    <%= f.input :sexe %>
-    <%= f.input :taille %>
-    <%= f.input :taille_vetement %>
-    <%= f.input :pointure %>
-    <%= f.input :nationalite_residence %>
-    <%= f.input :allergie_intolerance %>
-    <%= f.input :allergie_intolerance_contenu %>
-    <%= f.input :medicament %>
-    <%= f.input :medicament_contenu %>
-    <%= f.input :autre %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" }, class: 'login-input'%>
+        <%= f.input :password,
+                    required: true,
+                    label: 'Mot de passe',
+                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                    input_html: { autocomplete: "new-password" }, class: 'login-input' %>
+        <%= f.input :password_confirmation,
+                    label: 'Confirmation du mot de passe',
+                    required: true,
+                    input_html: { autocomplete: "new-password" }, class: 'login-input' %>
+            <%= f.input :prenom %>
+            <%= f.input :nom %>
+            <%= f.input :adresse %>
+            <%= f.input :ville %>
+            <%= f.input :date_de_naissance, as: :date, start_year: Date.today.year - 13,
+                              end_year: Date.today.year - 7,
+                              order: [:day, :month, :year] %>
+            <%= f.input :sexe , collection: ["Garçon", "Fille"] %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "S'inscrire", class: 'login-submit v-btn rounded' %>
+      </div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
   </div>
+</div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
