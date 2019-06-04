@@ -11,7 +11,7 @@
     <% end %>
 
     <%= f.input :password,
-                hint: "Laisser vide si vous ne voulez pas le modifier",
+                hint: "Laisser vide si vous ne voulez pas modifier",
                 required: false,
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :password_confirmation,
@@ -32,9 +32,9 @@
     <%= f.input :pointure %>
     <%= f.input :nationalite_residence %>
     <%= f.input :allergie_intolerance %>
-    <%= f.input :allergie_intolerance_contenu %>
+    <%= f.input :allergie_intolerance_contenu, wrapper_html: { class: "hidden" }  %>
     <%= f.input :medicament %>
-    <%= f.input :medicament_contenu %>
+    <%= f.input :medicament_contenu, wrapper_html: { class: "hidden" }  %>
     <%= f.input :autre %>
   </div>
 
