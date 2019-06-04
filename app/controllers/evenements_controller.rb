@@ -1,8 +1,8 @@
 class EvenementsController < ApplicationController
-  before_action :set_evenement, only: [:edit, :update]
+  before_action :set_evenement, only: [:edit, :update, :activate, :destroy]
 
   def index
-    @evenements = Evenement.all
+    @evenements = policy_scope(Evenement).order(created_at: :desc)
   end
 
   def new
@@ -25,7 +25,7 @@ class EvenementsController < ApplicationController
       end
     end
     if @evenement.save
-      redirect_to evenements_path, notice: 'Evenement was successfully created.'
+      redirect_to evenements_path, notice: 'Evenement créé avec succès.'
     else
       render :new
     end
@@ -42,10 +42,27 @@ class EvenementsController < ApplicationController
       end
     end
     if @evenement.update(evenement_params)
-      redirect_to evenements_path, notice: 'Evenement was successfully updated.'
+      redirect_to evenements_path, notice: 'Evenement mis à jour avec succès.'
     else
       render :edit
     end
+  end
+
+  def activate
+    @evenement.actif = true
+    @evenement.save
+    Evenement.all.each do |evenement|
+      unless evenement == @evenement
+        evenement.actif = false
+        evenement.save
+      end
+    end
+    redirect_to evenements_path, notice: 'Evenement activé.'
+  end
+
+  def destroy
+    @evenement.destroy
+    redirect_to evenements_url, notice: 'Evenement supprimé avec succès.'
   end
 
   private

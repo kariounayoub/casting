@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:prenom, :nom, :adresse, :ville, :date_de_naissance, :sexe, :taille, :taille_vetement, :pointure, :nationalite_residence, :allergie_intolerance, :allergie_intolerance_contenu, :medicament, :medicament_contenu, :autre])
   end
 
+  include Pundit
   # Pundit: white-list approach.
   after_action :verify_authorized, except: :index, unless: :skip_pundit?
   after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?

@@ -6,11 +6,11 @@ class EvenementPolicy < ApplicationPolicy
   end
 
   def new?
-    return true
+    true
   end
 
   def edit?
-    return true
+    true
   end
 
   def create?
@@ -18,6 +18,14 @@ class EvenementPolicy < ApplicationPolicy
   end
 
   def update?
+    return true
+  end
+
+  def activate?
+    return true
+  end
+
+  def destroy?
     return true
   end
 end
