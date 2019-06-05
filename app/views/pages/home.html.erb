@@ -1,12 +1,69 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-  <div class="container">
-    <h1><strong>MasterChef Junior</strong> est de retour pour une nouvelle saison !</h1>
-    <div class="d-inline">
-      <p>Vous avez entre 8 à 12 ans et êtes passionnés de cuisine ? </p>
-      <p>Participer et tentez de devenir le MasterChef Junior Maroc 2019 👇</p>
-    </div>
-    <div class="d-inline">
-      <%= link_to "Inscription", new_inscription_path, class: "btn btn-success d-inline" %>
+<div id="home-wrapper">
+  <div id="home-top">
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('trophe.jpg') %>);">
+      <div class="text-container">
+        <h1>MasterChef Junior est de retour pour une nouvelle saison !</h1>
+        <p>Vous avez entre 8 à 12 ans et êtes passionnés de cuisine ?<br>Participer et tentez de devenir le MasterChef Junior Maroc 2019 👇</p>
+        <%= link_to "Inscription", new_inscription_path, class: "home-btn" %>
+      </div>
     </div>
   </div>
+
+    <section>
+    <h3 class='title'>Comment ça marche?</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <div class="home-card">
+            <i class="fas fa-download"></i>
+            <h4>Inscrivez-vous</h4>
+            <p>Remplissez le <strong>formulaire d'inscrition</strong> afin que nous puissions en savoir d'avantage sur vos compétences et votre personalité</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="home-card">
+            <i class="fas fa-envelope"></i>
+            <h4>Participez au casting</h4>
+            <p>Surveillez votre boite mail ou une <strong>convocation</strong> vous sera envoyé. Elle vous donnera plus d'informations concernant le <strong>casting</strong></p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="home-card">
+            <i class="fas fa-trophy"></i>
+            <h4>Participez MasterChef Junior 2019</h4>
+            <p>Le jury selectionnera les candidats qui participeront à la deuxième édition de MasterChef Junior. Bonne chance à tous!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class='last-section'>
+    <div class="container-fluid">
+      <div id="carousel-example" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner row w-100 mx-auto" role="listbox">
+          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+            <img src="<%= image_path('trophe.jpg') %>" class="img-fluid mx-auto d-block" alt="img1">
+          </div>
+          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+            <img src="<%= image_path('trophe.jpg') %>" class="img-fluid mx-auto d-block" alt="img2">
+          </div>
+          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+            <img src="<%= image_path('trophe.jpg') %>" class="img-fluid mx-auto d-block" alt="img3">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+          <i class="fas fa-chevron-left carousel-icon"></i>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+          <i class="fas fa-chevron-right carousel-icon"></i>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <br><br><br>
 </div>
+
