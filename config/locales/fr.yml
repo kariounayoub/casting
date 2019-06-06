@@ -30,8 +30,95 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 fr:
-  fr: "Français"
-  ar: "Arabe"
-  titre: "MasterChef Junior est de retour pour une nouvelle saison !"
-  sous_titre_1: "Vous avez entre 8 à 12 ans et êtes passionnés de cuisine ?"
-  sous_titre_2: "Participer et tentez de devenir le MasterChef Junior Maroc 2019 👇"
+  fr: "france.png"
+  ar: "morocco.png"
+  navbar:
+    evenements: "Evenements"
+    questions: "Questions"
+    dashboard: "Dashboard"
+    a_propos: "A propos"
+    contact: "Contact"
+    inscription: "Inscription"
+    edit: "Editer profil"
+    logout: "Deconexion"
+    login: "Se connecter"
+  home:
+    titre: "MasterChef Junior est de retour pour une nouvelle saison !"
+    sous_titre_1: "Vous avez entre 8 à 12 ans et êtes passionnés de cuisine ?"
+    sous_titre_2: "Participer et tentez de devenir le MasterChef Junior Maroc 2019 👇"
+    inscription: "Inscription"
+    comment: "Comment ça marche ?"
+    step_1:
+      title: "Inscrivez-vous"
+      text_1: "Remplissez le "
+      text_2: "formulaire d''inscrition"
+      text_3: "afin que nous puissions en savoir d''avantage sur vos compétences et votre personalité"
+    step_2:
+      title: "Participez au casting"
+      text_1: "Surveillez votre boite mail où une "
+      text_2: "convocation"
+      text_3: "vous sera envoyée. Elle vous donnera plus d'informations concernant le "
+      text_4: "casting"
+    step_3:
+      title: "Participez MasterChef Junior 2019"
+      text_1: "Le jury selectionnera les candidats qui participeront à la deuxième édition de MasterChef Junior."
+      text_2: "Bonne chance à tous!"
+  questions:
+    personnel:
+      taille: 'Taille'
+      vetement: 'Taille de vêtement'
+      pointure: 'Pointure'
+      nationalite_residence: 'Es-tu marocain ou résident au Maroc ?'
+      allergie_intolerance: 'As-tu des allergies ou intolérances ?'
+      allergie_intolerance_contenu: 'Lesquelles ?'
+      medicament: 'Prends-tu des médicaments ?'
+      medicament_contenu: 'Lesquels ?'
+      autre: 'Y a-t-il autre chose que nous devrions avoir à l''esprit ?'
+    tuteur:
+      nom: 'Nom'
+      prenom: 'Prénom'
+      lien: 'Quel est ton lien avec ton tuteur ?'
+      adresse: 'Adresse'
+      ville: 'Ville'
+      tel: 'Numéro de téléphone'
+      email: 'Adresse email'
+    ecole:
+      nom: 'Nom'
+      adresse: 'Adresse'
+      ville: 'Ville'
+      contact: 'Contact au sein de l''établissement'
+      tel: 'Numéro de téléphone'
+    motivation:
+      participation: 'Pourquoi veux-tu participer à MasterChef Junior ?'
+    cuisine:
+      temps: 'Depuis combien de temps cuisines-tu ?'
+      souvenir: 'Quel est ton premier souvenir de cuisine ?'
+      plats: 'Quels sont les 3 plats que tu aimes cuisiner et pourquoi ?'
+      difficile: 'Quelle est la chose la plus difficile que tu as essayé de cuisiner ?'
+      chef: 'Qui est votre chef préféré ?'
+    competence:
+      freq: 'À quelle fréquence cuisines-tu ?'
+      plat: 'Quel est le plat que préfère cuisiner ?'
+      style: 'Quel style de cuisine maitrises-tu le plus ?'
+      mieux: 'Quel plat cuisines-tu le mieux ?'
+      moins: 'Quel plat cuisines-tu le moins bien ?'
+      competence: 'Quelle est ta plus grande compétence culinaire ? (Maitrise des cuissons, rapidité, etc.)'
+      desastre: 'Parle nous d''un désastre que tu as vécu en cuisine'
+      competitif: 'A quel point es-tu compétitif ?'
+      habitude: 'Est-ce que tu as l''habitude de cuisiner seul ou avec de l''aide ?'
+    perso:
+      fraterie: 'Parle nous de tes freres et soeurs si tu en as'
+      classe: 'En quelle classe es-tu à l’école ?'
+      loisirs: 'Quels sont les loisirs et sports que tu aimes ?'
+      grand: 'Qu’aimerais-tu faire quand tu seras grand ?'
+      qualites: 'Si on demande à ton/ta meilleur(e) ami(e) de nous citer tes 3 qualités, que dirait-t-il(elle) ?'
+      defauts: 'Si on demande à ton/ta meilleur(e) ami(e) de nous citer tes 3 défauts, que dirait-t-il(elle) ?'
+      tele: 'As-tu déjà joué, ou apparu à la télévision ou au cinéma auparavant ? Si oui, veuillez décrire'
+
+
+
+
+
+
+
+

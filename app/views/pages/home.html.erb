@@ -2,36 +2,36 @@
   <div id="home-top">
     <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('trophe.jpg') %>);">
       <div class="text-container">
-        <h1><%= t('titre') %></h1>
-        <p><%= t('sous_titre_1') %><br><%= t('sous_titre_2') %> </p>
-        <%= link_to "Inscription", new_inscription_path, class: "home-btn" %>
+        <h1><%= t('home.titre') %></h1>
+        <p><%= t('home.sous_titre_1') %><br><%= t('home.sous_titre_2') %> </p>
+        <%= link_to t('home.inscription'), new_inscription_path, class: "home-btn" %>
       </div>
     </div>
   </div>
 
     <section>
-    <h3 class='title'>Comment ça marche?</h3>
+    <h3 class='title'><%= t('home.comment') %></h3>
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-4">
           <div class="home-card">
             <i class="fas fa-download"></i>
-            <h4>Inscrivez-vous</h4><br>
-            <p>Remplissez le <strong>formulaire d'inscrition</strong> afin que nous puissions en savoir d'avantage sur vos compétences et votre personalité</p>
+            <h4><%= t('home.step_1.title') %></h4>
+            <p><%= t('home.step_1.text_1') %><strong><%= t('home.step_1.text_2') %></strong> <%= t('home.step_1.text_3') %></p>
           </div>
         </div>
         <div class="col-xs-12 col-sm-4">
           <div class="home-card">
             <i class="fas fa-envelope"></i>
-            <h4>Participez au casting</h4><br>
-            <p>Surveillez votre boite mail ou une <strong>convocation</strong> vous sera envoyé. Elle vous donnera plus d'informations concernant le <strong>casting</strong></p>
+            <h4><%= t('home.step_2.title') %></h4>
+            <p><%= t('home.step_2.text_1') %><strong><%= t('home.step_2.text_2') %></strong> <%= t('home.step_2.text_3') %><strong><%= t('home.step_2.text_4') %></strong></p>
           </div>
         </div>
         <div class="col-xs-12 col-sm-4">
           <div class="home-card">
             <i class="fas fa-trophy"></i>
-            <h4>Participez MasterChef Junior 2019</h4>
-            <p>Le jury selectionnera les candidats qui participeront à la deuxième édition de MasterChef Junior. Bonne chance à tous!</p>
+            <h4><%= t('home.step_3.title') %></h4>
+            <p><%= t('home.step_3.text_1') %><br><strong><%= t('home.step_3.text_2') %></strong></p>
           </div>
         </div>
       </div>
