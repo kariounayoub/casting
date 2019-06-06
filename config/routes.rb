@@ -1,14 +1,20 @@
 Rails.application.routes.draw do
-  resources :questions, except: [:show]
-  resources :evenements, except: [:show] do
-    member do
-      get 'activate'
+  scope "(:locale)", locale: /fr|ar/ do
+    resources :questions, except: [:show, :destroy]
+    resources :evenements, except: [:show, :destroy] do
+      member do
+        get 'activate'
+      end
     end
+    resources :inscriptions, except: [:destroy]
+    get 'dashboard', to: 'pages#dashboard'
+    get 'contact', to: 'pages#contact'
+    get 'a_propos', to: 'pages#a_propos'
+    get '/change/:lang', to: 'pages#lang', as: 'lang'
+    root to: 'pages#home'
   end
-  resources :inscriptions
   devise_for :users
-  get 'dashboard', to: 'pages#dashboard'
-  get 'contact', to: 'pages#contact'
-  get 'a_propos', to: 'pages#a_propos'
-  root to: 'pages#home'
+  resources :questions, only: [:destroy]
+  resources :evenements, only: [:destroy]
+  resources :inscriptions, only: [:destroy]
 end

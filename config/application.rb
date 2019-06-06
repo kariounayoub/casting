@@ -34,5 +34,7 @@ module Casting
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.i18n.default_locale = :fr
+    I18n.available_locales = [:fr, :ar]
   end
 end

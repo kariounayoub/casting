@@ -29,5 +29,9 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
+fr:
+  fr: "Français"
+  ar: "Arabe"
+  titre: "MasterChef Junior est de retour pour une nouvelle saison !"
+  sous_titre_1: "Vous avez entre 8 à 12 ans et êtes passionnés de cuisine ?"
+  sous_titre_2: "Participer et tentez de devenir le MasterChef Junior Maroc 2019 👇"
