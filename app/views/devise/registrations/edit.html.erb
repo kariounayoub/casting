@@ -25,8 +25,12 @@
     <%= f.input :nom %>
     <%= f.input :adresse %>
     <%= f.input :ville %>
-    <%= f.input :naissance %>
-    <%= f.input :sexe %>
+    <%= f.input :naissance, as: :date, start_year: Date.today.year - 13,
+                      end_year: Date.today.year - 7,
+                      order: [:day, :month, :year] %>
+    <%= f.input :sexe , collection: ["Garçon", "Fille"] %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
   </div>
 
   <div class="form-actions">
