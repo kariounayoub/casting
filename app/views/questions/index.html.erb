@@ -12,7 +12,7 @@
             <%= link_to edit_question_path(I18n.locale, question) do %>
               <i class="far fa-edit"></i>
             <% end %>
-            <a href='/question' data-method="delete" data-confirm='Etes-vous sure de vouloir supprimer?'><i class="far fa-trash-alt"></i></a>
+            <a href="/questions/<%= question.id %>" data-method="delete" data-confirm='Etes-vous sure de vouloir supprimer?'><i class="far fa-trash-alt"></i></a>
           </p>
         <% end %>
       </div>

@@ -1,4 +1,4 @@
-const allergie_intolerance =document.getElementById('user_allergie_intolerance');
+const allergie_intolerance = document.getElementById('user_allergie_intolerance');
 
 if (allergie_intolerance != undefined) {
   allergie_intolerance.addEventListener('change', (e) => {

@@ -32,6 +32,9 @@
 fr:
   fr: "france.png"
   ar: "morocco.png"
+  retour: "Retour"
+  voir: "Voir"
+  cree: "Créée le "
   navbar:
     evenements: "Evenements"
     questions: "Questions"
@@ -63,7 +66,15 @@ fr:
       title: "Participez MasterChef Junior 2019"
       text_1: "Le jury selectionnera les candidats qui participeront à la deuxième édition de MasterChef Junior."
       text_2: "Bonne chance à tous!"
-  questions:
+  inscription:
+    cat:
+      tuteur: "A propos de ton tuteur"
+      ecole: "A propos de ton école"
+      motivation: "A quel point es-tu motivé pour rejoindre l'aventure MasterChef Junior ?"
+      cuisine: "Quelle est ta relation avec la cuisine ?"
+      competence: "Dis nous plus à propos de tes talents de cuisinier"
+      perso: "Nous avons envie d'en savoir davantage sur toi !"
+  question:
     personnel:
       taille: 'Taille'
       vetement: 'Taille de vêtement'
@@ -75,21 +86,22 @@ fr:
       medicament_contenu: 'Lesquels ?'
       autre: 'Y a-t-il autre chose que nous devrions avoir à l''esprit ?'
     tuteur:
-      nom: 'Nom'
-      prenom: 'Prénom'
+      nom: 'Nom :'
+      prenom: 'Prénom :'
       lien: 'Quel est ton lien avec ton tuteur ?'
-      adresse: 'Adresse'
-      ville: 'Ville'
-      tel: 'Numéro de téléphone'
-      email: 'Adresse email'
+      adresse: 'Adresse :'
+      ville: 'Ville :'
+      tel: 'Numéro de téléphone :'
+      email: 'Adresse email :'
     ecole:
-      nom: 'Nom'
-      adresse: 'Adresse'
-      ville: 'Ville'
-      contact: 'Contact au sein de l''établissement'
-      tel: 'Numéro de téléphone'
+      nom: 'Nom :'
+      adresse: 'Adresse :'
+      ville: 'Ville :'
+      contact: 'Contact au sein de l''établissement :'
+      tel: 'Numéro de téléphone :'
     motivation:
       participation: 'Pourquoi veux-tu participer à MasterChef Junior ?'
+      competitif: 'A quel point es-tu compétitif ?'
     cuisine:
       temps: 'Depuis combien de temps cuisines-tu ?'
       souvenir: 'Quel est ton premier souvenir de cuisine ?'
@@ -97,28 +109,247 @@ fr:
       difficile: 'Quelle est la chose la plus difficile que tu as essayé de cuisiner ?'
       chef: 'Qui est votre chef préféré ?'
     competence:
-      freq: 'À quelle fréquence cuisines-tu ?'
-      plat: 'Quel est le plat que préfère cuisiner ?'
+      frequence: 'À quelle fréquence cuisines-tu ?'
+      plat: 'Quel est le plat que tu préfères cuisiner ?'
       style: 'Quel style de cuisine maitrises-tu le plus ?'
       mieux: 'Quel plat cuisines-tu le mieux ?'
       moins: 'Quel plat cuisines-tu le moins bien ?'
       competence: 'Quelle est ta plus grande compétence culinaire ? (Maitrise des cuissons, rapidité, etc.)'
-      desastre: 'Parle nous d''un désastre que tu as vécu en cuisine'
-      competitif: 'A quel point es-tu compétitif ?'
+      desastre: 'Parle nous d''un désastre que tu as vécu en cuisine :'
       habitude: 'Est-ce que tu as l''habitude de cuisiner seul ou avec de l''aide ?'
     perso:
-      fraterie: 'Parle nous de tes freres et soeurs si tu en as'
+      fraterie: 'Parle nous de tes freres et soeurs si tu en as :'
       classe: 'En quelle classe es-tu à l’école ?'
       loisirs: 'Quels sont les loisirs et sports que tu aimes ?'
       grand: 'Qu’aimerais-tu faire quand tu seras grand ?'
       qualites: 'Si on demande à ton/ta meilleur(e) ami(e) de nous citer tes 3 qualités, que dirait-t-il(elle) ?'
       defauts: 'Si on demande à ton/ta meilleur(e) ami(e) de nous citer tes 3 défauts, que dirait-t-il(elle) ?'
       tele: 'As-tu déjà joué, ou apparu à la télévision ou au cinéma auparavant ? Si oui, veuillez décrire'
+  simple_form:
+    labels:
+      user:
+        username: 'User name'
+        password: 'Password'
+        edit:
+          username: 'Change user name'
+          password: 'Change password'
 
 
-
-
-
-
-
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'La validation a échoué : %{errors}'
+        restrict_dependent_destroy:
+          has_one: Vous ne pouvez pas supprimer l'enregistrement car un(e) %{record}
+            dépendant(e) existe
+          has_many: Vous ne pouvez pas supprimer l'enregistrement parce que les %{record}
+            dépendants existent
+  date:
+    abbr_day_names:
+    - dim
+    - lun
+    - mar
+    - mer
+    - jeu
+    - ven
+    - sam
+    abbr_month_names:
+    -
+    - jan.
+    - fév.
+    - mar.
+    - avr.
+    - mai
+    - juin
+    - juil.
+    - août
+    - sept.
+    - oct.
+    - nov.
+    - déc.
+    day_names:
+    - dimanche
+    - lundi
+    - mardi
+    - mercredi
+    - jeudi
+    - vendredi
+    - samedi
+    formats:
+      default: "%d/%m/%Y"
+      long: "%e %B %Y"
+      short: "%e %b"
+    month_names:
+    -
+    - janvier
+    - février
+    - mars
+    - avril
+    - mai
+    - juin
+    - juillet
+    - août
+    - septembre
+    - octobre
+    - novembre
+    - décembre
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: environ une heure
+        other: environ %{count} heures
+      about_x_months:
+        one: environ un mois
+        other: environ %{count} mois
+      about_x_years:
+        one: environ un an
+        other: environ %{count} ans
+      almost_x_years:
+        one: presqu'un an
+        other: presque %{count} ans
+      half_a_minute: une demi-minute
+      less_than_x_seconds:
+        zero: moins d'une seconde
+        one: moins d'une seconde
+        other: moins de %{count} secondes
+      less_than_x_minutes:
+        zero: moins d'une minute
+        one: moins d'une minute
+        other: moins de %{count} minutes
+      over_x_years:
+        one: plus d'un an
+        other: plus de %{count} ans
+      x_seconds:
+        one: 1 seconde
+        other: "%{count} secondes"
+      x_minutes:
+        one: 1 minute
+        other: "%{count} minutes"
+      x_days:
+        one: 1 jour
+        other: "%{count} jours"
+      x_months:
+        one: 1 mois
+        other: "%{count} mois"
+      x_years:
+        one: 1 an
+        other: "%{count} ans"
+    prompts:
+      second: Seconde
+      minute: Minute
+      hour: Heure
+      day: Jour
+      month: Mois
+      year: Année
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: doit être accepté(e)
+      blank: doit être rempli(e)
+      confirmation: ne concorde pas avec %{attribute}
+      empty: doit être rempli(e)
+      equal_to: doit être égal à %{count}
+      even: doit être pair
+      exclusion: n'est pas disponible
+      greater_than: doit être supérieur à %{count}
+      greater_than_or_equal_to: doit être supérieur ou égal à %{count}
+      inclusion: n'est pas inclus(e) dans la liste
+      invalid: n'est pas valide
+      less_than: doit être inférieur à %{count}
+      less_than_or_equal_to: doit être inférieur ou égal à %{count}
+      model_invalid: 'Validation échouée : %{errors}'
+      not_a_number: n'est pas un nombre
+      not_an_integer: doit être un nombre entier
+      odd: doit être impair
+      other_than: doit être différent de %{count}
+      present: doit être vide
+      required: doit exister
+      taken: n'est pas disponible
+      too_long:
+        one: est trop long (pas plus d'un caractère)
+        other: est trop long (pas plus de %{count} caractères)
+      too_short:
+        one: est trop court (au moins un caractère)
+        other: est trop court (au moins %{count} caractères)
+      wrong_length:
+        one: ne fait pas la bonne longueur (doit comporter un seul caractère)
+        other: ne fait pas la bonne longueur (doit comporter %{count} caractères)
+    template:
+      body: 'Veuillez vérifier les champs suivants : '
+      header:
+        one: 'Impossible d''enregistrer ce(tte) %{model} : 1 erreur'
+        other: 'Impossible d''enregistrer ce(tte) %{model} : %{count} erreurs'
+  helpers:
+    select:
+      prompt: Veuillez sélectionner
+    submit:
+      create: Créer un(e) %{model}
+      submit: Enregistrer ce(tte) %{model}
+      update: Modifier ce(tte) %{model}
+  number:
+    currency:
+      format:
+        delimiter: " "
+        format: "%n %u"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "€"
+    format:
+      delimiter: " "
+      precision: 3
+      separator: ","
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: milliard
+          million: million
+          quadrillion: million de milliards
+          thousand: millier
+          trillion: billion
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: octet
+            other: octets
+          eb: Eo
+          gb: Go
+          kb: ko
+          mb: Mo
+          pb: Po
+          tb: To
+    percentage:
+      format:
+        delimiter: ''
+        format: "%n%"
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: " et "
+      two_words_connector: " et "
+      words_connector: ", "
+  time:
+    am: am
+    formats:
+      default: "%d %B %Y %Hh %Mmin %Ss"
+      long: "%A %d %B %Y %Hh%M"
+      short: "%d %b %Hh%M"
+    pm: pm
 

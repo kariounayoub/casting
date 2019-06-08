@@ -1,4 +1,4 @@
-<%= simple_form_for(@question) do |f| %>
+<%= simple_form_for(@question, url: (@question.new_record? ? questions_path : question_path(locale: I18n.locale, id: question))) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 

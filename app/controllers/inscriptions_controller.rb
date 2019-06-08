@@ -2,7 +2,7 @@ class InscriptionsController < ApplicationController
   before_action :set_inscription, only: [:show, :edit, :update, :destroy]
 
   def index
-    @questions = policy_scope(Inscription).order(created_at: :asc)
+    @inscriptions = policy_scope(Inscription).order(created_at: :asc)
   end
 
   def show
@@ -28,7 +28,7 @@ class InscriptionsController < ApplicationController
     @inscription.save
     authorize @inscription
     if @inscription.save
-      redirect_to @inscription, notice: 'Inscription was successfully created.'
+      redirect_to root_path(I18n.locale), notice: 'Inscription was successfully created.'
     else
       render :new
     end
@@ -36,7 +36,7 @@ class InscriptionsController < ApplicationController
 
   def update
     if @inscription.update(inscription_params)
-      redirect_to @inscription, notice: 'Inscription was successfully updated.'
+      redirect_to inscription_path(I18n.locale, @inscription), notice: 'Inscription was successfully updated.'
     else
       render :edit
     end

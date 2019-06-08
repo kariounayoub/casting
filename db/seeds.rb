@@ -7,14 +7,25 @@ puts 'delete complted'
 puts ''
 
 puts 'creating admin'
-User.create(email: 'a.karioun@medprod.ma', password: '123456', admin: true)
+User.create(email: 'a.karioun@medprod.ma', password: 'azerty', admin: true)
 
 puts 'creating user'
-User.create(email: 'user@gmail.com', password: '123456', admin: false)
+User.create(email: 'user@gmail.com', password: 'azerty', admin: false)
+User.create(email: 'user2@gmail.com', password: 'azerty', admin: false)
 
 puts 'creating questions'
 
 mcjr2 = Evenement.create(nom: 'MCJR2', date: '15/06/2019', adresse: 'Hotel Grand Mogador, Casablanca', actif: true)
+
+Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'taille')
+Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'vetement')
+Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'pointure')
+Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'nationalite_residence')
+Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'allergie_intolerance')
+Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'allergie_intolerance_contenu')
+Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'medicament')
+Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'medicament_contenu')
+Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'autre')
 
 Question.create(evenement: mcjr2, categorie: 'tuteur', contenu: 'nom')
 Question.create(evenement: mcjr2, categorie: 'tuteur', contenu: 'prenom')
@@ -31,6 +42,7 @@ Question.create(evenement: mcjr2, categorie: 'ecole', contenu: 'contact')
 Question.create(evenement: mcjr2, categorie: 'ecole', contenu: 'tel')
 
 Question.create(evenement: mcjr2, categorie: 'motivation', contenu: 'participation')
+Question.create(evenement: mcjr2, categorie: 'motivation', contenu: 'competitif')
 
 Question.create(evenement: mcjr2, categorie: 'cuisine', contenu: 'temps')
 Question.create(evenement: mcjr2, categorie: 'cuisine', contenu: 'souvenir')
@@ -45,7 +57,6 @@ Question.create(evenement: mcjr2, categorie: 'competence', contenu: 'mieux')
 Question.create(evenement: mcjr2, categorie: 'competence', contenu: 'moins')
 Question.create(evenement: mcjr2, categorie: 'competence', contenu: 'competence')
 Question.create(evenement: mcjr2, categorie: 'competence', contenu: 'desastre')
-Question.create(evenement: mcjr2, categorie: 'competence', contenu: 'competitif')
 Question.create(evenement: mcjr2, categorie: 'competence', contenu: 'habitude')
 
 Question.create(evenement: mcjr2, categorie: 'perso', contenu: 'fraterie')

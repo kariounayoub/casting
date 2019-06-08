@@ -64,17 +64,8 @@ ActiveRecord::Schema.define(version: 2019_06_04_055413) do
     t.string "nom"
     t.string "adresse"
     t.string "ville"
-    t.date "date_de_naissance"
+    t.date "naissance"
     t.string "sexe"
-    t.integer "taille"
-    t.string "taille_vetement"
-    t.integer "pointure"
-    t.boolean "nationalite_residence"
-    t.boolean "allergie_intolerance"
-    t.text "allergie_intolerance_contenu"
-    t.boolean "medicament"
-    t.text "medicament_contenu"
-    t.text "autre"
     t.boolean "admin"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

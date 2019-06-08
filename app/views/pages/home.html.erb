@@ -4,7 +4,7 @@
       <div class="text-container">
         <h1><%= t('home.titre') %></h1>
         <p><%= t('home.sous_titre_1') %><br><%= t('home.sous_titre_2') %> </p>
-        <%= link_to t('home.inscription'), new_inscription_path, class: "home-btn" %>
+        <%= link_to t('home.inscription'), new_inscription_path(I18n.locale), class: "home-btn" %>
       </div>
     </div>
   </div>
