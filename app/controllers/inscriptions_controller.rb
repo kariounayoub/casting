@@ -54,6 +54,6 @@ class InscriptionsController < ApplicationController
     end
 
     def inscription_params
-      params.require(:inscription).permit(:user_id, :evenement_id, reponses_attributes: [:contenu, :question_id])
+      params.require(:inscription).permit(:user_id, :evenement_id, :photo_1, :photo_2, :photo_3, reponses_attributes: [:contenu, :question_id])
     end
 end

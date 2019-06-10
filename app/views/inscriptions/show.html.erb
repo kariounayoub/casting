@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<%= cl_image_tag @inscription.photo_1, height: 300, width: 400, crop: :fill %>
 <h3>
   <strong>User:</strong>
   <%= @inscription.user.email %>
