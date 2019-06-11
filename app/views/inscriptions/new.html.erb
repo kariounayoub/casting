@@ -1,7 +1,10 @@
 <div class="container">
   <h1>Nouvelle inscription</h1>
-
-  <%= render 'form', inscription: @inscription, questions: @questions %>
-
-  <%= link_to t('retour'), inscriptions_path %>
 </div>
+
+<% content_for :after_js do %>
+    <%= javascript_pack_tag 'vue_inscription' %>
+<% end %>
+
+<div id='app' data-evenement='<%= @evenement %>'></div>
+

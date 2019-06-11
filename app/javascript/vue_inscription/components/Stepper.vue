@@ -20,7 +20,9 @@
           <!-- STEP 1 -->
             <v-stepper-content step="1">
               <v-form ref="form1" v-model="valid" lazy-validation>
-                <br><br><br> Step 1 <br><br><br>
+                <div v-for="question in evenement.questions">
+                  <FormFields v-bind:question='question' v-if='question.categorie === "personnel" ' v-bind:reponses='reponses'/>
+                </div>
                 <v-btn id="suivant1" color="success" class="right rounded" :disabled="!valid" @click="validate(1,2)">Suivant</v-btn>
               </v-form>
             </v-stepper-content>
@@ -28,7 +30,9 @@
           <!-- STEP 2 -->
             <v-stepper-content step="2">
               <v-form ref="form2" v-model="valid" lazy-validation>
-                <br><br><br> Step 2 <br><br><br>
+                <div v-for="question in evenement.questions">
+                  <FormFields v-bind:question='question' v-if='question.categorie === "tuteur" ' />
+                </div>
                 <v-btn color="success" class="left rounded" :disabled="!valid"  @click="back()">Précédent</v-btn>
                 <v-btn id="suivant2" color="success" class="right rounded" :disabled="!valid" @click="validate(2,3)">Suivant</v-btn>
               </v-form>
@@ -37,7 +41,9 @@
           <!-- STEP 3 -->
             <v-stepper-content step="3">
               <v-form ref="form3" v-model="valid" lazy-validation>
-                <br><br><br> Step 3 <br><br><br>
+                <div v-for="question in evenement.questions">
+                  <FormFields v-bind:question='question' v-if='question.categorie === "ecole" ' />
+                </div>
                 <v-btn color="success" class="left rounded" :disabled="!valid"  @click="back()">Précédent</v-btn>
                 <v-btn id="suivant2" color="success" class="right rounded" :disabled="!valid" @click="validate(3,4)">Suivant</v-btn>
               </v-form>
@@ -46,7 +52,9 @@
           <!-- STEP 4 -->
             <v-stepper-content step="4">
               <v-form ref="form4" v-model="valid" lazy-validation>
-                <br><br><br> Step 4 <br><br><br>
+                <div v-for="question in evenement.questions">
+                  <FormFields v-bind:question='question' v-if='question.categorie === "cuisine" || question.categorie === "motivation"' />
+                </div>
                 <v-btn color="success" class="left rounded" :disabled="!valid"  @click="back()">Précédent</v-btn>
                 <v-btn id="suivant2" color="success" class="right rounded" :disabled="!valid" @click="validate(4,5)">Suivant</v-btn>
               </v-form>
@@ -54,8 +62,10 @@
 
           <!-- STEP 5 -->
             <v-stepper-content step="5">
-              <v-form ref="form3" v-model="valid" lazy-validation>
-                <br><br><br>Step 3 <br><br><br>
+              <v-form ref="form5" v-model="valid" lazy-validation>
+                <div v-for="question in evenement.questions">
+                  <FormFields v-bind:question='question' v-if='question.categorie === "competence" || question.categorie === "perso"' />
+                </div>
                 <v-btn color="success" class="left rounded"  :disabled="!valid" @click="back()">Précédent</v-btn>
                 <v-btn id="suivant3" color="success" class="right rounded" :disabled="!valid" @click="validate(5,5)">Inscription</v-btn>
               </v-form>
@@ -68,17 +78,28 @@
 </template>
 
 <script>
+const root = document.getElementById('app')
+
+import FormFields from './FormFields'
 
   export default {
     name: 'Stepper',
     components: {
-
+      FormFields,
     },
     data () {
       return {
         e1: 0,
         valid: true,
+        evenement: JSON.parse(root.dataset.evenement).data.attributes,
       }
+    },
+    computed: {
+      // reponses() {
+      //   const arr = []
+      //   this.evenement.questions.forEach(q => arr.push({q.id: null}))
+      //   return arr
+      // }
     },
     methods: {
       validate (step,page) {
@@ -97,7 +118,12 @@
         if (form.validate()) {
           this.e1 = page
           if (step === 5) { // This is where all the form data is cleaned and sent to post requests
-            console.log('validate')
+            const formFields = {
+              questions: [
+              this.$refs.form1.questions
+              ]
+            }
+            console.log(formFields)
           }
         }
       },
