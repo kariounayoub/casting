@@ -25,7 +25,7 @@ class InscriptionsController < ApplicationController
     authorize inscription
     if inscription.save
       inscription_params[:reponses_attributes].each do |r|
-        Reponse.create!(question_id: r[:question_id], contenu: r[:contenu], inscription_id: inscription.id)
+        Reponse.create(question_id: r[:question_id], contenu: r[:contenu], inscription_id: inscription.id)
       end
       render json: {success: true}
 

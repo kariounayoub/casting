@@ -198,7 +198,7 @@ const config = {
                 photo_2: document.querySelector('#drop2').dropzone.getAcceptedFiles()[0] === undefined ? null : document.querySelector('#drop2').dropzone.getAcceptedFiles()[0].dataURL,
                 photo_3: document.querySelector('#drop3').dropzone.getAcceptedFiles()[0] === undefined ? null : document.querySelector('#drop3').dropzone.getAcceptedFiles()[0].dataURL,
 
-                id: null,
+                id: this.inscription === false ? null : this.inscription,
                 reponses_attributes: this.reponses
               },
             }
@@ -207,6 +207,7 @@ const config = {
               .then((res) => {
                 if(res.data.success) {
                   this.flash = {message: "L'inscription a été validé", variant: 'success', show: 'true'}
+                  window.location = `${ROOT_URL}/inscriptions`
                 } else {
                   this.flash = {message: "Erreur l'inscription n'a pas été validé", variant: 'error', show: 'true'}
                 }
@@ -219,6 +220,7 @@ const config = {
               .then((res) => {
                 if(res.data.success) {
                   this.flash = {message: "L'inscription a été modifié", variant: 'success', show: 'true'}
+                   window.location = `${ROOT_URL}/inscriptions`
                 } else {
                   this.flash = {message: "Erreur l'inscription n'a pas été modifié", variant: 'error', show: 'true'}
                 }
