@@ -1,28 +1,47 @@
 <p id="notice"><%= notice %></p>
-<%= cl_image_tag @inscription.photo_1, height: 300, width: 400, crop: :fill %>
-<h3>
-  <strong>User:</strong>
-  <%= @inscription.user.email %>
-</h3>
+<div class="container">
+    <h2 class='page-title text-center'>Inscription # <%= @inscription.id %></h2>
+    <br>
+    <h3>Utilisateur : <span><%= @inscription.user.email %></span></h3>
+    <h3>Evenement : <span><%= @inscription.evenement.nom %></span></h3>
+    <br>
+    <hr>
+    <br>
+    <h3>Photos</h3>
+  <div class="row">
+    <div class="col-12 col-sm-4">
+      <%= cl_image_tag @inscription.photo_1, height: 300, class: 'w-100', crop: :fit %>
+    </div>
+    <div class="col-12 col-sm-4">
+      <%= cl_image_tag @inscription.photo_2, height: 300, class: 'w-100', crop: :fit %>
+    </div>
+    <div class="col-12 col-sm-4">
+      <%= cl_image_tag @inscription.photo_3, height: 300, class: 'w-100', crop: :fit %>
+    </div>
+  </div>
 
-<h3>
-  <strong>Evenement:</strong>
-  <%= @inscription.evenement.nom %>
-</h3>
+    <br>
+    <hr>
+    <br>
+    <h3><strong>Reponses:</strong></h3>
+    <br>
 
-<% new_category = nil %>
-<h3><strong>Reponses:</strong></h3>
+    <% new_category = nil %>
+    <% @inscription.reponses.joins(:question).order(question_id: :asc).each do |reponse| %>
+      <% if new_category != reponse.question.categorie %>
+        <hr>
+        <h3><strong><%= t("inscription.cat.#{reponse.question.categorie}") %><strong></h3>
+        <hr>
+        <% new_category = reponse.question.categorie %>
+      <% end %>
+      <h4><%= t("question.#{reponse.question.categorie}.#{reponse.question.contenu}") %></h4>
+      <h5><%= reponse.contenu %></h5>
+      <br/><br/>
+    <% end %>
+  <%= link_to 'Modifier', edit_inscription_path(I18n.locale, @inscription) %> |
+  <%= link_to 'Retour', inscriptions_path %>
+</div>
 
-<% @inscription.reponses.each do |reponse| %>
-  <% if new_category != reponse.question.categorie %>
-    <h3><strong><%= reponse.question.categorie %><strong></h3>
-    <% new_category = reponse.question.categorie %>
-  <% end %>
-  <h4><%= reponse.question.contenu %></h4>
-  <h4><%= reponse.contenu %></h4>
-  <br/><br/>
-<% end %>
 
 
-<%= link_to 'Edit', inscriptions_path(@inscription) %> |
-<%= link_to 'Back', inscriptions_path %>
+

@@ -1,11 +1,11 @@
 <div class="container">
-  <h1>Mise à jour d'inscription</h1>
+  <h1 class='page-title text-center'>Mise à jour d'inscription</h1>
 
     <% content_for :after_js do %>
       <%= javascript_pack_tag 'vue_inscription' %>
   <% end %>
 
-  <div id='app' data-evenement='<%= @evenement %>' data-inscription='<%= @inscription.id %>'></div>
+  <div id='app' data-evenement='<%= @evenement %>' data-inscription='<%= @inscription.id %>' data-photo1="<%= @inscription.photo_1 %>" data-photo2='<%= @inscription.photo_2 %>' data-photo3='<%= @inscription.photo_3 %>'></div>
 
   <%= link_to t('voir'), inscription_path(I18n.locale,@inscription) %> |
   <%= link_to t('retour'), inscriptions_path %>

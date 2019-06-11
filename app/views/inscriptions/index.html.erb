@@ -1,8 +1,20 @@
-<div class="container">
+<div class="container min-height-full">
+  <h2 class='page-title text-center'>Toutes mes inscriptions</h2>
+  <br><br>
+  <% if policy(Inscription).create? %>
+  <div class="d-flex justicy-content-center">
+    <%= link_to new_inscription_path(I18n.locale), class: "btn btn-lg inscription-btn btn-success" do%>
+      <span class='btn-plus'>+</span> <%=  t('home.inscription') %>
+      <% end %>
+  </div>
+  <% end %>
+  <br><br>
   <% unless @inscriptions.all.nil? %>
+  <div class="row">
     <% @inscriptions.each do |inscription| %>
+    <div class="col-12 col-sm-6">
       <div class="card-product">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+        <img src="https://picsum.photos/id/429/400/600">
         <div class="card-product-infos">
           <% rep = inscription.reponses.reject { |r| r.contenu.blank? }.count %>
           <% tot = inscription.reponses.count.to_f %>
@@ -19,7 +31,7 @@
           <% end %>
           <% if policy(inscription).destroy? %>
             <p>
-            <a href="/inscriptions/<%= inscription.id %>" data-method="delete" data-confirm='Etes-vous sure de vouloir supprimer?'><i class="far fa-trash-alt"></i></a>
+            <a href="/inscriptions/<%= inscription.id %>" data-method="delete" data-confirm='Etes-vous sure de vouloir supprimer?'><i class="far fa-trash-alt danger"></i></a>
             </p>
           <% end %>
           <% if policy(inscription).show? %>
@@ -31,9 +43,8 @@
           <% end %>
         </div>
       </div>
+    </div>
     <% end %>
-  <% end %>
-  <% if policy(Inscription).create? %>
-    <%= link_to t('home.inscription'), new_inscription_path(I18n.locale), class: "home-btn" %>
+  </div>
   <% end %>
 </div>
