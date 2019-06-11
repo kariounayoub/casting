@@ -1,3 +1,5 @@
+const $ = require("jquery");
+require("jquery-ui/ui/effect.js");
 const stepper = () => {
   var current_fs, next_fs, previous_fs; //fieldsets
   var left, opacity, scale; //fieldset properties which we will animate

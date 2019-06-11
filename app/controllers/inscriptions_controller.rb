@@ -9,13 +9,8 @@ class InscriptionsController < ApplicationController
   end
 
   def new
-    @inscription = Inscription.new
-    authorize @inscription
-    evenement = Evenement.where(actif: true)
-    @questions = Question.where(evenement: evenement)
-    @questions.each do |question|
-      @inscription.reponses.build(question_id: question.id)
-    end
+    authorize Inscription.new
+    @evenement = EvenementsSerializer.new(Evenement.first).serialized_json
   end
 
   def edit
