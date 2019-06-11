@@ -9,31 +9,39 @@ class InscriptionsController < ApplicationController
   end
 
   def new
-    authorize Inscription.new
-    @evenement = EvenementsSerializer.new(Evenement.first).serialized_json
+    @inscription = Inscription.new
+    authorize @inscription
+    @evenement = EvenementsSerializer.new(Evenement.where(actif: true).first, {params: {inscription: @inscription.id}}).serialized_json
   end
 
   def edit
+    @evenement = EvenementsSerializer.new(Evenement.where(actif: true).first, {params: {inscription: @inscription.id}}).serialized_json
   end
 
   def create
-    @inscription = Inscription.new(inscription_params)
-    @inscription.evenement = Evenement.where(actif: true).first
-    @inscription.user = current_user
-    @inscription.save
-    authorize @inscription
-    if @inscription.save
-      redirect_to root_path(I18n.locale), notice: 'Inscription was successfully created.'
+    inscription = Inscription.new(inscription_params)
+    inscription.evenement = Evenement.where(actif: true).first
+    inscription.user = current_user
+    authorize inscription
+    if inscription.save
+      inscription_params[:reponses_attributes].each do |r|
+        Reponse.create!(question_id: r[:question_id], contenu: r[:contenu], inscription_id: inscription.id)
+      end
+      render json: {success: true}
+
     else
-      render :new
+      render json: {success: false}
     end
   end
 
   def update
     if @inscription.update(inscription_params)
-      redirect_to inscription_path(I18n.locale, @inscription), notice: 'Inscription was successfully updated.'
+      inscription_params[:reponses_attributes].each do |r|
+          Reponse.find_by_id(r[:id]).update(question_id: r[:question_id], contenu: r[:contenu], inscription_id: @inscription.id)
+        end
+      render json: {success: true}
     else
-      render :edit
+      render json: {success: false}
     end
   end
 
@@ -49,6 +57,7 @@ class InscriptionsController < ApplicationController
     end
 
     def inscription_params
-      params.require(:inscription).permit(:user_id, :evenement_id, :photo_1, :photo_2, :photo_3, reponses_attributes: [:contenu, :question_id])
+      params.require(:inscription).permit(:id, :photo_1, :photo_2, :photo_3, reponses_attributes: [:question_id, :contenu, :id, :inscription_id])
     end
+
 end
