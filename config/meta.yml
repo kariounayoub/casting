@@ -1,0 +1,5 @@
+meta_product_name: "MasterChef Junior 2"
+meta_title: "MasterChef Junior 2 - Participer et tentez de devenir le MasterChef Junior Maroc 2019 !"
+meta_description: "Relevant description"
+meta_image: "logo-MCJR.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards

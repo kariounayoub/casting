@@ -1,5 +1,6 @@
 <div id="home-wrapper">
-  <div id="home-top">
+
+  <div id="home-banner">
     <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('trophe.jpg') %>);">
       <div class="text-container">
         <h1><%= t('home.titre') %></h1>
@@ -8,40 +9,151 @@
       </div>
     </div>
   </div>
-  <div class="embedresize">
-    <div>
-      <iframe width="100%" height="800" src="https://www.youtube.com/embed/VSvy_FEUDg4?el=0&modestbranding=1&autohide=1&mute=1&showinfo=1&autoplay=1&start=0&version=3&loop=1&playlist=VSvy_FEUDg4&autoplay=1&controls=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+
+  <div class="home-video">
+    <div class="embedresize">
+      <div>
+        <iframe width="100%" height="800" src="https://www.youtube.com/embed/VSvy_FEUDg4?el=0&modestbranding=1&autohide=1&mute=1&showinfo=1&autoplay=1&start=0&version=3&loop=1&playlist=VSvy_FEUDg4&autoplay=1&controls=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+      </div>
     </div>
   </div>
+
+  <div class="home-comment">
     <section>
-    <h3 class='title'><%= t('home.comment') %></h3>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-4">
-          <div class="home-card">
-            <i class="fas fa-download"></i>
-            <h4><%= t('home.step_1.title') %></h4>
-            <p><%= t('home.step_1.text_1') %><strong><%= t('home.step_1.text_2') %></strong> <%= t('home.step_1.text_3') %></p>
+      <h3 class='title'><%= t('home.comment') %></h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4">
+            <div class="home-card">
+              <i class="fas fa-download"></i>
+              <h4><%= t('home.step_1.title') %></h4>
+              <p><%= t('home.step_1.text_1') %><strong><%= t('home.step_1.text_2') %></strong> <%= t('home.step_1.text_3') %></p>
+            </div>
           </div>
-        </div>
-        <div class="col-xs-12 col-sm-4">
-          <div class="home-card">
-            <i class="fas fa-envelope"></i>
-            <h4><%= t('home.step_2.title') %></h4>
-            <p><%= t('home.step_2.text_1') %><strong><%= t('home.step_2.text_2') %></strong> <%= t('home.step_2.text_3') %><strong><%= t('home.step_2.text_4') %></strong></p>
+          <div class="col-xs-12 col-sm-4">
+            <div class="home-card">
+              <i class="fas fa-envelope"></i>
+              <h4><%= t('home.step_2.title') %></h4>
+              <p><%= t('home.step_2.text_1') %><strong><%= t('home.step_2.text_2') %></strong> <%= t('home.step_2.text_3') %><strong><%= t('home.step_2.text_4') %></strong></p>
+            </div>
           </div>
-        </div>
-        <div class="col-xs-12 col-sm-4">
-          <div class="home-card">
-            <i class="fas fa-trophy"></i>
-            <h4><%= t('home.step_3.title') %></h4>
-            <p><%= t('home.step_3.text_1') %><br><strong><%= t('home.step_3.text_2') %></strong></p>
+          <div class="col-xs-12 col-sm-4">
+            <div class="home-card">
+              <i class="fas fa-trophy"></i>
+              <h4><%= t('home.step_3.title') %></h4>
+              <p><%= t('home.step_3.text_1') %><br><strong><%= t('home.step_3.text_2') %></strong></p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
+  <div class="home-episodes">
+    <section>
+      <div class="container-fluid">
+        <div id="carousel-example" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner row w-100 mx-auto" role="listbox">
+            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+              <iframe src="https://www.youtube.com/embed/VSvy_FEUDg4?el=0&modestbranding=1&autohide=1&showinfo=1&start=0&version=3&loop=1&playlist=VSvy_FEUDg4&autoplay=1&controls=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="img-fluid mx-auto d-block"></iframe>
+            </div>
+            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <iframe src="https://www.youtube.com/embed/VSvy_FEUDg4?el=0&modestbranding=1&autohide=1&showinfo=1&start=0&version=3&loop=1&playlist=VSvy_FEUDg4&autoplay=1&controls=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="img-fluid mx-auto d-block"></iframe>
+            </div>
+            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <iframe src="https://www.youtube.com/embed/VSvy_FEUDg4?el=0&modestbranding=1&autohide=1&showinfo=1&start=0&version=3&loop=1&playlist=VSvy_FEUDg4&autoplay=1&controls=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="img-fluid mx-auto d-block"></iframe>
+            </div>
+            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <iframe src="https://www.youtube.com/embed/VSvy_FEUDg4?el=0&modestbranding=1&autohide=1&showinfo=1&start=0&version=3&loop=1&playlist=VSvy_FEUDg4&autoplay=1&controls=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="img-fluid mx-auto d-block"></iframe>
+            </div>
+            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <iframe src="https://www.youtube.com/embed/VSvy_FEUDg4?el=0&modestbranding=1&autohide=1&showinfo=1&start=0&version=3&loop=1&playlist=VSvy_FEUDg4&autoplay=1&controls=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="img-fluid mx-auto d-block"></iframe>
+            </div>
+            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <iframe src="https://www.youtube.com/embed/VSvy_FEUDg4?el=0&modestbranding=1&autohide=1&showinfo=1&start=0&version=3&loop=1&playlist=VSvy_FEUDg4&autoplay=1&controls=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="img-fluid mx-auto d-block"></iframe>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+            <i class="fas fa-chevron-left carousel-icon"></i>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+            <i class="fas fa-chevron-right carousel-icon"></i>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="home-jury d-flex justify-content-between ">
+    <section>
+      <div class="jury">
+        <img src="<%= image_path('trophe.jpg') %>" class="" alt="Chef Moha">
+        <div class="jury-description text-justify">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis et rem debitis voluptatum sapiente dolores nulla quia libero molestias placeat doloremque fugit quae, dicta nam praesentium architecto quasi nihil magni.</p>
+        </div>
+      </div>
+      <div class="jury">
+        <img src="<%= image_path('trophe.jpg') %>" class="" alt="Chef Meriem">
+        <div class="jury-description text-justify">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis et rem debitis voluptatum sapiente dolores nulla quia libero molestias placeat doloremque fugit quae, dicta nam praesentium architecto quasi nihil magni.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="home-candidats">
+    <section class='last-section'>
+      <h3>Candidats</h3>
+      <div class="container-fluid">
+        <div id="carousel-example" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner row w-100 mx-auto" role="listbox">
+            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+              <iframe src="https://www.youtube.com/embed/VSvy_FEUDg4?el=0&modestbranding=1&autohide=1&showinfo=1&start=0&version=3&loop=1&playlist=VSvy_FEUDg4&autoplay=1&controls=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="img-fluid mx-auto d-block"></iframe>
+            </div>
+            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <iframe src="https://www.youtube.com/embed/VSvy_FEUDg4?el=0&modestbranding=1&autohide=1&showinfo=1&start=0&version=3&loop=1&playlist=VSvy_FEUDg4&autoplay=1&controls=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="img-fluid mx-auto d-block"></iframe>
+            </div>
+            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <iframe src="https://www.youtube.com/embed/VSvy_FEUDg4?el=0&modestbranding=1&autohide=1&showinfo=1&start=0&version=3&loop=1&playlist=VSvy_FEUDg4&autoplay=1&controls=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="img-fluid mx-auto d-block"></iframe>
+            </div>
+            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <iframe src="https://www.youtube.com/embed/VSvy_FEUDg4?el=0&modestbranding=1&autohide=1&showinfo=1&start=0&version=3&loop=1&playlist=VSvy_FEUDg4&autoplay=1&controls=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="img-fluid mx-auto d-block"></iframe>
+            </div>
+            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <iframe src="https://www.youtube.com/embed/VSvy_FEUDg4?el=0&modestbranding=1&autohide=1&showinfo=1&start=0&version=3&loop=1&playlist=VSvy_FEUDg4&autoplay=1&controls=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="img-fluid mx-auto d-block"></iframe>
+            </div>
+            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <iframe src="https://www.youtube.com/embed/VSvy_FEUDg4?el=0&modestbranding=1&autohide=1&showinfo=1&start=0&version=3&loop=1&playlist=VSvy_FEUDg4&autoplay=1&controls=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="img-fluid mx-auto d-block"></iframe>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+            <i class="fas fa-chevron-left carousel-icon"></i>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+            <i class="fas fa-chevron-right carousel-icon"></i>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="home-social">
+    <h3>Candidats</h3>
+    <div class="fb">
+      <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fweb.facebook.com%2Fmasterchefmarocofficiel%2F&width=450&layout=standard&action=like&size=large&show_faces=true&share=true&height=80&appId" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    <div class="ig">
+
+    </div>
+    <div class="yt">
+      <script src="https://apis.google.com/js/platform.js"></script>
+      <div class="g-ytsubscribe" data-channel="masterchefma" data-layout="full" data-count="default"></div>
+    </div>
+  </div>
 
   <section class='last-section'>
     <div class="container-fluid">
@@ -68,14 +180,6 @@
       </div>
     </div>
   </section>
-
-  <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fweb.facebook.com%2Fmasterchefmarocofficiel%2F&width=450&layout=standard&action=like&size=large&show_faces=true&share=true&height=80&appId" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-
-<script src="https://apis.google.com/js/platform.js"></script>
-
-<div class="g-ytsubscribe" data-channel="masterchefma" data-layout="full" data-count="default"></div>
-
-<div class="sharethis-inline-follow-buttons"></div>
 
 </div>
 

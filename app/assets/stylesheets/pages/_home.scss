@@ -1,55 +1,81 @@
 // Specific CSS for your home-page
 #home-wrapper {
-  #home-top {
+  #home-banner {
    height: 80vh;
    padding-buttom: 120px;
    display: flex;
    justify-content: space-around;
-   -webkit-clip-path: ellipse(80% 100% at 50% 0%);
-    clip-path: ellipse(80% 100% at 50% 0%);
-
-    .text-container {
-      width: 60%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: top;
-      text-align: center;
-      position: relative;
-      font-weight: bold;
-      h1 {
+   // -webkit-clip-path: ellipse(80% 100% at 50% 0%);
+   //  clip-path: ellipse(80% 100% at 50% 0%);
+    .banner {
+      background-size: cover;
+      background-position: center;
+      padding: 150px 0;
+      width: 100%;
+      height: 80vh;
+      .text-container {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: top;
+        text-align: center;
+        position: relative;
         font-weight: bold;
-        color: white;
-        font-size: 50px;
-      }
-      .smaller {
-        font-size: 25px;
-      }
-      p {
-        color: white;
-        padding: 20px 0px;
-        font-size: 18px;
-      }
-      .home-btn {
-        border-radius: 15px 2px 15px 2px;
-        background: white;
-        color: $red;
-        padding: 15px 30px;
-        box-shadow: 0px 0px 7px rgba(0,0,0,0.3);
-        &:hover {
-          transform: scale(1.2);
-          text-decoration: none;
+        h1 {
+          font-weight: bold;
+          color: white;
+          font-size: 50px;
+        }
+        p {
+          color: white;
+          padding: 20px 0px;
+          font-size: 18px;
+        }
+        .home-btn {
+          border-radius: 15px 2px 15px 2px;
+          background: white;
+          color: $red;
+          padding: 15px 30px;
+          box-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+          &:hover {
+            transform: scale(1.2);
+            text-decoration: none;
+          }
         }
       }
     }
   }
 
-  .banner {
-    background-size: cover;
-    background-position: center;
-    padding: 150px 0;
-    width: 100%;
-    height: 80vh;
+  .home-video {
+    background: green;
+  }
+
+  .home-comment {
+    background: blue;
+  }
+
+  .home-episodes {
+    background: green;
+  }
+
+  .home-jury {
+    background: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      height: 100px;
+      width: 100px;
+    }
+  }
+
+  .home-candidats {
+    background: green;
+  }
+
+  .home-social {
+    background: blue;
   }
 
   section {
@@ -85,20 +111,20 @@
   p {
     margin-bottom: 30px;
   }
-  .carousel-inner img {
-    height: 150px;
-    width: auto;
-  }
+  // .carousel-inner img {
+  //   height: 150px;
+  //   width: auto;
+  // }
 }
 
-.last-section {
-  margin-bottom: 100px;
-}
+// .last-section {
+//   margin-bottom: 100px;
+// }
 
 
 @media only screen and (max-width: 600px) {
   #home-wrapper {
-    #home-top {
+    #home-banner {
       display: block;
       img {
         display: none;
