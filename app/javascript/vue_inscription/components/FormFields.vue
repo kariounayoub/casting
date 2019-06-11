@@ -1,28 +1,29 @@
 <template>
   <div>
     <p>{{question.text}}</p>
-    <v-textarea v-model="question.reponse" solo box :rules="[]" v-if='question.type === "text"'></v-textarea>
-    <v-text-field v-model="question.reponse" solo box :rules="[isPhone, number]" v-if='question.type === "tel"'></v-text-field>
-    <v-switch  v-model="question.reponse" :label='booleanToString(question.reponse)' color='error' v-if='question.type === "boolean"'></v-switch>
+    <v-textarea v-model="question.contenu" solo box :rules="[]" v-if='question.type === "text"'  @change='reponse'></v-textarea>
+    <v-text-field v-model="question.contenu" solo box :rules="[]" v-if='question.type === "string"'  @change='reponse'></v-text-field>
+    <v-text-field v-model="question.contenu" solo box :rules="[isPhone, number]" v-if='question.type === "tel"' @change='reponse'></v-text-field>
+    <v-text-field v-model="question.contenu" solo box :rules="[isEmail]" v-if='question.type === "email"' @change='reponse'></v-text-field>
+    <v-switch  v-model="question.contenu" :label='booleanToString(question.contenu)' color='error' v-if='question.type === "boolean"' @change='reponse'></v-switch>
   </div>
 </template>
 
 <script>
-    import {required, number, isPhone} from '../validate'
+    import {required, number, isPhone, isEmail} from '../validate'
 
   export default {
     name: 'FormFields',
-    props: ['question', 'responses'],
+    props: ['question', 'reponses'],
     data: () => ({
-      required: required, number: number, isPhone: isPhone,
+      required: required, number: number, isPhone: isPhone, isEmail: isEmail
    }),
-    computed: {
-      response() {
-        const id = this.question.id
-       this.responses.id = this.question.reponse
-      }
-    },
     methods: {
+      reponse() {
+        const id = this.question.id
+        const question = this.reponses.find(r => r.question_id === id)
+        question.contenu = this.question.contenu
+      },
       booleanToString(param) {
         if(param) return 'Oui'
         if(!param) return 'Non'

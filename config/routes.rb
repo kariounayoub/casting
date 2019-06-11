@@ -6,7 +6,7 @@ Rails.application.routes.draw do
         get 'activate'
       end
     end
-    resources :inscriptions, except: [:destroy]
+    resources :inscriptions, except: [:destroy, :create]
     get 'dashboard', to: 'pages#dashboard'
     get 'contact', to: 'pages#contact'
     get 'a_propos', to: 'pages#a_propos'
@@ -16,5 +16,5 @@ Rails.application.routes.draw do
   devise_for :users
   resources :questions, only: [:destroy]
   resources :evenements, only: [:destroy]
-  resources :inscriptions, only: [:destroy]
+  resources :inscriptions, only: [:destroy, :create]
 end
