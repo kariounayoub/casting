@@ -70,8 +70,16 @@ fr:
       title: "Participez MasterChef Junior 2019"
       text_1: "Le jury selectionnera les candidats qui participeront à la deuxième édition de MasterChef Junior."
       text_2: "Bonne chance à tous!"
+  stepper:
+    title1: 'Perso'
+    title2: 'Tuteur'
+    title3: 'Ecole'
+    title4: 'Cuisine & Motivation'
+    title5: 'Plus sur toi'
+    photos: 'Quelque photos de tes plats'
   inscription:
     cat:
+      personnel: 'A propos de toi'
       tuteur: "A propos de ton tuteur"
       ecole: "A propos de ton école"
       motivation: "A quel point es-tu motivé pour rejoindre l'aventure MasterChef Junior ?"

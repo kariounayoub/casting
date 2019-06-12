@@ -13,18 +13,18 @@
       {{flash.message}}
     </div>
     <v-container>
-      <v-stepper v-model="e1" alt-labels>
+      <v-stepper v-model="e1" alt-labels non-linear>
         <!-- HEADER -->
           <v-stepper-header >
-              <v-stepper-step color='error' :complete="e1 > 1" step="1">Personnel</v-stepper-step>
+              <v-stepper-step color='error' class='text-center pointer' :complete="completed.includes(1)" step="1" @click='e1 = 1' >{{translations.stepper_title1}}</v-stepper-step>
               <v-divider></v-divider>
-              <v-stepper-step color='error' :complete="e1 > 2" step="2">Tuteur</v-stepper-step>
+              <v-stepper-step color='error' class='text-center pointer' :complete="completed.includes(2)" step="2" @click='e1 = 2' >{{translations.stepper_title2}}</v-stepper-step>
               <v-divider></v-divider>
-              <v-stepper-step color='error' :complete="e1 > 3" step="3">Ecole</v-stepper-step>
+              <v-stepper-step color='error' class='text-center pointer' :complete="completed.includes(3)" step="3" @click='e1 = 3' >{{translations.stepper_title3}}</v-stepper-step>
               <v-divider></v-divider>
-              <v-stepper-step color='error' :complete="e1 > 4" step="4" class='text-center' >Cuisine & Motivation</v-stepper-step>
+              <v-stepper-step color='error' class='text-center pointer' :complete="completed.includes(4)" step="4"  @click='e1 = 4' >{{translations.stepper_title4}}</v-stepper-step>
               <v-divider></v-divider>
-              <v-stepper-step color='error' :complete="e1 > 5" step="5">Plus sur toi</v-stepper-step>
+              <v-stepper-step color='error' class='text-center pointer' :complete="completed.includes(5)" step="5" @click='e1 = 5' >{{translations.stepper_title5}}</v-stepper-step>
           </v-stepper-header>
 
       <!-- CONTENT -->
@@ -32,6 +32,7 @@
           <!-- STEP 1 -->
             <v-stepper-content step="1">
               <v-form ref="form1" v-model="valid" lazy-validation>
+                <h4 class='question-title'>{{evenement.questions.find(q => q.categorie === 'personnel').categorie_text}}</h4>
                 <div v-for="question in evenement.questions">
                   <FormFields v-bind:question='question' v-if='question.categorie === "personnel" ' v-bind:reponses='reponses'/>
                 </div>
@@ -42,6 +43,7 @@
           <!-- STEP 2 -->
             <v-stepper-content step="2">
               <v-form ref="form2" v-model="valid" lazy-validation>
+                <h4 class='question-title'>{{evenement.questions.find(q => q.categorie === 'tuteur').categorie_text}}</h4>
                 <div v-for="question in evenement.questions">
                   <FormFields v-bind:question='question' v-if='question.categorie === "tuteur" ' v-bind:reponses='reponses'/>
                 </div>
@@ -53,6 +55,7 @@
           <!-- STEP 3 -->
             <v-stepper-content step="3">
               <v-form ref="form3" v-model="valid" lazy-validation>
+                <h4 class='question-title'>{{evenement.questions.find(q => q.categorie === 'ecole').categorie_text}}</h4>
                 <div v-for="question in evenement.questions">
                   <FormFields v-bind:question='question' v-if='question.categorie === "ecole" ' v-bind:reponses='reponses' />
                 </div>
@@ -64,8 +67,17 @@
           <!-- STEP 4 -->
             <v-stepper-content step="4">
               <v-form ref="form4" v-model="valid" lazy-validation>
+                <h4 class='question-title'>{{evenement.questions.find(q => q.categorie === 'motivation').categorie_text}}</h4>
                 <div v-for="question in evenement.questions">
-                  <FormFields v-bind:question='question' v-if='question.categorie === "competence" || question.categorie === "cuisine" || question.categorie === "motivation"' v-bind:reponses='reponses'/>
+                  <FormFields v-bind:question='question' v-if='question.categorie === "motivation"' v-bind:reponses='reponses'/>
+                </div>
+                <h4 class='question-title'>{{evenement.questions.find(q => q.categorie === 'cuisine').categorie_text}}</h4>
+                <div v-for="question in evenement.questions">
+                  <FormFields v-bind:question='question' v-if='question.categorie === "cuisine"' v-bind:reponses='reponses'/>
+                </div>
+                <h4 class='question-title'>{{evenement.questions.find(q => q.categorie === 'competence').categorie_text}}</h4>
+                <div v-for="question in evenement.questions">
+                  <FormFields v-bind:question='question' v-if='question.categorie === "competence"' v-bind:reponses='reponses'/>
                 </div>
                 <v-btn color="success" class="left rounded" :disabled="!valid"  @click="back()">Précédent</v-btn>
                 <v-btn id="suivant2" color="success" class="right rounded" :disabled="!valid" @click="validate(4,5)">Suivant</v-btn>
@@ -75,28 +87,30 @@
           <!-- STEP 5 -->
             <v-stepper-content step="5">
               <v-form ref="form5" v-model="valid" lazy-validation>
+                <h4 class='question-title'>{{evenement.questions.find(q => q.categorie === 'competence').categorie_text}}</h4>
                 <div v-for="question in evenement.questions">
                   <FormFields v-bind:question='question' v-if=' question.categorie === "perso"' v-bind:reponses='reponses'/>
                 </div>
+                <h4 class='question-title'>{{translations.stepper_photos}}</h4>
                 <v-container>
                   <v-layout row wrap>
                     <v-flex xs12 sm4>
+                      <vue-dropzone ref="dropzone1" id="drop1" :options='dropOptions' class="dropzone-message"></vue-dropzone>
                       <div class='thumb-wrapper'>
                         <img :src="photo1" alt="" class='thumb'>
                       </div>
-                      <vue-dropzone ref="dropzone1" id="drop1" :options='dropOptions' class="dropzone-message"></vue-dropzone>
                     </v-flex>
                     <v-flex xs12 sm4>
+                      <vue-dropzone ref="dropzone2" id="drop2" :options='dropOptions' class="dropzone-message"></vue-dropzone>
                       <div class='thumb-wrapper'>
                         <img :src="photo2" alt="" class='thumb'>
                       </div>
-                      <vue-dropzone ref="dropzone2" id="drop2" :options='dropOptions' class="dropzone-message"></vue-dropzone>
                     </v-flex>
                     <v-flex xs12 sm4>
+                     <vue-dropzone ref="dropzone3" id="drop3" :options='dropOptions' class="dropzone-message"></vue-dropzone>
                       <div class='thumb-wrapper'>
                         <img :src="photo3" alt="" class='thumb'>
                       </div>
-                     <vue-dropzone ref="dropzone3" id="drop3" :options='dropOptions' class="dropzone-message"></vue-dropzone>
                     </v-flex>
                   </v-layout>
                 </v-container>
@@ -138,6 +152,7 @@ const config = {
     },
     data () {
       return {
+        completed: [],
         e1: 0,
         valid: true,
         evenement: JSON.parse(root.dataset.evenement).data.attributes,
@@ -145,6 +160,7 @@ const config = {
         photo1: root.dataset.photo1,
         photo2: root.dataset.photo2,
         photo3: root.dataset.photo3,
+        translations: JSON.parse(root.dataset.translations),
         flash: {
           message: null,
           show: false,
@@ -192,14 +208,19 @@ const config = {
         let form = null // This if loop is for partial validation of each form individually
         if (step === 1) {
           form = this.$refs.form1
+          this.completed.push(1)
         } else if (step === 2) {
           form = this.$refs.form2
+          this.completed.push(2)
         } else if (step === 3) {
           form = this.$refs.form3
+          this.completed.push(3)
         } else if (step === 4) {
           form = this.$refs.form4
+          this.completed.push(4)
         } else if (step === 5) {
           form = this.$refs.form5
+          this.completed.push(5)
         }
         if (form.validate()) {
           this.e1 = page
@@ -288,5 +309,14 @@ const config = {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .question-title {
+    font-weight: bold;
+    text-align: center;
+    margin: 20px;
+  }
+  .pointer {
+    cursor: pointer;
   }
 </style>
