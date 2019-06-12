@@ -81,12 +81,21 @@
                 <v-container>
                   <v-layout row wrap>
                     <v-flex xs12 sm4>
+                      <div class='thumb-wrapper'>
+                        <img :src="photo1" alt="" class='thumb'>
+                      </div>
                       <vue-dropzone ref="dropzone1" id="drop1" :options='dropOptions' class="dropzone-message"></vue-dropzone>
                     </v-flex>
                     <v-flex xs12 sm4>
+                      <div class='thumb-wrapper'>
+                        <img :src="photo2" alt="" class='thumb'>
+                      </div>
                       <vue-dropzone ref="dropzone2" id="drop2" :options='dropOptions' class="dropzone-message"></vue-dropzone>
                     </v-flex>
                     <v-flex xs12 sm4>
+                      <div class='thumb-wrapper'>
+                        <img :src="photo3" alt="" class='thumb'>
+                      </div>
                      <vue-dropzone ref="dropzone3" id="drop3" :options='dropOptions' class="dropzone-message"></vue-dropzone>
                     </v-flex>
                   </v-layout>
@@ -133,6 +142,9 @@ const config = {
         valid: true,
         evenement: JSON.parse(root.dataset.evenement).data.attributes,
         inscription: JSON.parse(root.dataset.inscription),
+        photo1: root.dataset.photo1,
+        photo2: root.dataset.photo2,
+        photo3: root.dataset.photo3,
         flash: {
           message: null,
           show: false,
@@ -267,5 +279,14 @@ const config = {
     h4 {
       font-weight: 700,
     }
+  }
+  .thumb {
+    width: 100px;
+    height: 100px;
+  }
+  .thumb-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>

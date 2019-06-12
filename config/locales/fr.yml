@@ -51,6 +51,10 @@ fr:
     sous_titre_2: "Participer et tentez de devenir le MasterChef Junior Maroc 2019 👇"
     inscription: "Inscription"
     comment: "Comment ça marche ?"
+    episodes: "La saison dernière sur MasterChef ..."
+    jury: "Le jury"
+    candidats: 'Les candidats'
+    follow: 'Suivez nous'
     step_1:
       title: "Inscrivez-vous"
       text_1: "Remplissez le "

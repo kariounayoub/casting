@@ -1,7 +1,11 @@
 <div id="login-form">
   <div class="container card half-screen">
-    <h2>Connexion</h2>
-
+    <div class="flex-column">
+      <%= link_to root_path(I18n.locale) do %>
+      <%= image_tag 'logo-MCJR', class: 'small-logo' %>
+      <% end %>
+      <h2>Connexion</h2>
+    </div>
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-inputs">
         <%= f.input :email,

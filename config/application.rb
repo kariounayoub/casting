@@ -31,7 +31,13 @@ module Casting
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
-
+    config.to_prepare do
+        Devise::SessionsController.layout "login_layout"
+        Devise::RegistrationsController.layout "login_layout"
+        Devise::ConfirmationsController.layout "login_layout"
+        Devise::UnlocksController.layout "login_layout"
+        Devise::PasswordsController.layout "login_layout"
+    end
     # Don't generate system test files.
     config.generators.system_tests = nil
     config.i18n.default_locale = :fr
