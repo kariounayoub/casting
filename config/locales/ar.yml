@@ -47,6 +47,15 @@ ar:
     title4: 'Cuisine & Motivation'
     title5: 'Plus sur toi'
     photos: 'Quelque photos de tes plats'
+    add_photo: 'Glissez une photo iciddd'
+    suivant: 'Suivant'
+    precedent: 'Precedent'
+    inscription: 'Inscription'
+    new: "L'inscription a bien été crée"
+    edit: "L'inscription a bien été modifié"
+    newErr: "L'inscription n'a pas été crée"
+    editErr: "Linscription n'a pas été modifié"
+    incomplete: "Un ou plusieurs champs obligatoires n'ont pas été remplies"
   inscription:
     cat:
       personnel: 'A propos de toi'

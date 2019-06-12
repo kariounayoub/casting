@@ -1,22 +1,25 @@
 <template>
   <div>
-    <p>{{question.text}}</p>
-    <v-textarea v-model="question.contenu" solo box  :rules='[setRequired(question.required)]'v-if='question.type === "text"'  @change='reponse'></v-textarea>
-    <v-text-field v-model="question.contenu" solo box :rules='[setRequired(question.required)]' v-if='question.type === "string"'  @change='reponse'></v-text-field>
-    <v-text-field v-model="question.contenu" solo box :rules="[number, minLength(10)]" v-if='question.type === "tel"' @change='reponse'></v-text-field>
-    <v-text-field v-model="question.contenu" solo box :rules="[isEmail]" v-if='question.type === "email"' @change='reponse'></v-text-field>
-    <v-switch  v-model="question.contenu" :label='booleanToString(question.contenu)' color='error' v-if='question.type === "boolean"' @change='reponse'></v-switch>
+    <p v-bind:class="{arabic: locale === 'ar' }">{{question.text}}</p>
+    <v-textarea v-bind:class="{arabic: locale === 'ar' }" v-model="question.contenu" solo box  :rules='[setRequired(question.required)]'v-if='question.type === "text"'  @change='reponse'></v-textarea>
+    <v-text-field v-bind:class="{arabic: locale === 'ar' }" v-model="question.contenu" solo box :rules='[setRequired(question.required)]' v-if='question.type === "string"'  @change='reponse'></v-text-field>
+    <v-text-field v-bind:class="{arabic: locale === 'ar' }" v-model="question.contenu" solo box :rules="[setRequired(question.required), number, minLength(10)]" v-if='question.type === "tel"' @change='reponse'></v-text-field>
+    <v-text-field v-bind:class="{arabic: locale === 'ar' }" v-model="question.contenu" solo box :rules="[setRequired(question.required), isEmail]" v-if='question.type === "email"' @change='reponse'></v-text-field>
+    <v-switch  v-bind:class="{arabic: locale === 'ar' }" v-model="question.contenu" :label='booleanToString(question.contenu)' color='error' v-if='question.type === "boolean"' @change='reponse'></v-switch>
   </div>
 </template>
 
 <script>
     import {required, number, isPhone, isEmail, minLength} from '../validate'
+    const root = document.getElementById('app')
 
   export default {
+
     name: 'FormFields',
     props: ['question', 'reponses'],
     data: () => ({
-      required: required, number: number, isPhone: isPhone, isEmail: isEmail, minLength: minLength
+      required: required, number: number, isPhone: isPhone, isEmail: isEmail, minLength: minLength,
+      locale: JSON.parse(root.dataset.translations).locale
    }),
     methods: {
       reponse() {
@@ -40,5 +43,19 @@
     font-size: 16px;
     color: #777;
   }
+  .arabic{
+    text-align: right;
+  }
+  .arabic.v-input{
+    justify-content: flex-end;
+  }
+</style>
 
+<style>
+  .arabic input {
+    text-align: right;
+  }
+  .arabic textarea {
+    text-align: right;
+  }
 </style>
