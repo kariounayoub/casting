@@ -173,6 +173,13 @@
 // .last-section {
 //   margin-bottom: 100px;
 // }
+    .carousel-multiple .carousel-control-prev {
+      left: -150px;
+    }
+    .carousel-multiple .carousel-control-next {
+      right: -150px;
+    }
+
 @media only screen and (max-width: 991px) {
   #home-wrapper {
     #home-banner {
@@ -249,6 +256,12 @@
       }
     }
   }
+    .carousel-multiple .carousel-control-prev {
+      left: 0px;
+    }
+    .carousel-multiple .carousel-control-next {
+      right: 0px;
+    }
 }
 
 .footer-visible {
@@ -267,6 +280,12 @@
         display: block;
         visibility: visible;
     }
+    .carousel-multiple .carousel-control-prev {
+      left: 0px;
+    }
+    .carousel-multiple .carousel-control-next {
+      right: 0px;
+    }
 }
 @media (min-width: 576px) and (max-width: 768px) {
     /* Show 3rd slide on sm if col-sm-6*/
@@ -278,8 +297,15 @@
         display: block;
         visibility: visible;
     }
+    .carousel-multiple .carousel-control-prev {
+      left: 0px;
+    }
+    .carousel-multiple .carousel-control-next {
+      right: 0px;
+    }
 }
 @media (min-width: 576px) {
+
     .carousel-item {
         margin-right: 0;
     }

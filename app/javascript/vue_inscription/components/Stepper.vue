@@ -36,7 +36,7 @@
                 <div v-for="question in evenement.questions">
                   <FormFields v-bind:question='question' v-if='question.categorie === "personnel" ' v-bind:reponses='reponses'/>
                 </div>
-                <v-btn id="suivant1" color="success" class="right rounded" :disabled="!valid" @click="validate(1,2)">Suivant</v-btn>
+                <v-btn id="suivant1" color="success" class="right rounded" :disabled="!valid" @click="validate(1,2)">{{translations.stepper_next}}</v-btn>
               </v-form>
             </v-stepper-content>
 
@@ -47,8 +47,8 @@
                 <div v-for="question in evenement.questions">
                   <FormFields v-bind:question='question' v-if='question.categorie === "tuteur" ' v-bind:reponses='reponses'/>
                 </div>
-                <v-btn color="success" class="left rounded" :disabled="!valid"  @click="back()">Précédent</v-btn>
-                <v-btn id="suivant2" color="success" class="right rounded" :disabled="!valid" @click="validate(2,3)">Suivant</v-btn>
+                <v-btn color="success" class="left rounded" :disabled="!valid"  @click="back()">{{translations.stepper_previous}}</v-btn>
+                <v-btn id="suivant2" color="success" class="right rounded" :disabled="!valid" @click="validate(2,3)">{{translations.stepper_next}}</v-btn>
               </v-form>
             </v-stepper-content>
 
@@ -59,8 +59,8 @@
                 <div v-for="question in evenement.questions">
                   <FormFields v-bind:question='question' v-if='question.categorie === "ecole" ' v-bind:reponses='reponses' />
                 </div>
-                <v-btn color="success" class="left rounded" :disabled="!valid"  @click="back()">Précédent</v-btn>
-                <v-btn id="suivant2" color="success" class="right rounded" :disabled="!valid" @click="validate(3,4)">Suivant</v-btn>
+                <v-btn color="success" class="left rounded" :disabled="!valid"  @click="back()">{{translations.stepper_previous}}</v-btn>
+                <v-btn id="suivant2" color="success" class="right rounded" :disabled="!valid" @click="validate(3,4)">{{translations.stepper_next}}</v-btn>
               </v-form>
             </v-stepper-content>
 
@@ -79,8 +79,8 @@
                 <div v-for="question in evenement.questions">
                   <FormFields v-bind:question='question' v-if='question.categorie === "competence"' v-bind:reponses='reponses'/>
                 </div>
-                <v-btn color="success" class="left rounded" :disabled="!valid"  @click="back()">Précédent</v-btn>
-                <v-btn id="suivant2" color="success" class="right rounded" :disabled="!valid" @click="validate(4,5)">Suivant</v-btn>
+                <v-btn color="success" class="left rounded" :disabled="!valid"  @click="back()">{{translations.stepper_previous}}</v-btn>
+                <v-btn id="suivant2" color="success" class="right rounded" :disabled="!valid" @click="validate(4,5)">{{translations.stepper_next}}</v-btn>
               </v-form>
             </v-stepper-content>
 
@@ -95,19 +95,19 @@
                 <v-container>
                   <v-layout row wrap>
                     <v-flex xs12 sm4>
-                      <vue-dropzone ref="dropzone1" id="drop1" :options='dropOptions' class="dropzone-message"></vue-dropzone>
+                      <vue-dropzone v-if='activeDropzone' ref="dropzone1" id="drop1" :options='dropOptions' class="dropzone-message"></vue-dropzone>
                       <div class='thumb-wrapper'>
                         <img :src="photo1" alt="" class='thumb'>
                       </div>
                     </v-flex>
                     <v-flex xs12 sm4>
-                      <vue-dropzone ref="dropzone2" id="drop2" :options='dropOptions' class="dropzone-message"></vue-dropzone>
+                      <vue-dropzone v-if='activeDropzone' ref="dropzone2" id="drop2" :options='dropOptions' class="dropzone-message"></vue-dropzone>
                       <div class='thumb-wrapper'>
                         <img :src="photo2" alt="" class='thumb'>
                       </div>
                     </v-flex>
                     <v-flex xs12 sm4>
-                     <vue-dropzone ref="dropzone3" id="drop3" :options='dropOptions' class="dropzone-message"></vue-dropzone>
+                     <vue-dropzone v-if='activeDropzone' ref="dropzone3" id="drop3" :options='dropOptions' class="dropzone-message"></vue-dropzone>
                       <div class='thumb-wrapper'>
                         <img :src="photo3" alt="" class='thumb'>
                       </div>
@@ -115,8 +115,8 @@
                   </v-layout>
                 </v-container>
 
-                <v-btn color="success" class="left rounded"  :disabled="!valid" @click="back()">Précédent</v-btn>
-                <v-btn id="suivant3" color="success" class="right rounded" :disabled="!valid" @click="validate(5,5)">Inscription</v-btn>
+                <v-btn color="success" class="left rounded"  :disabled="!valid" @click="back()">{{translations.stepper_previous}}</v-btn>
+                <v-btn id="suivant3" color="success" class="right rounded" :disabled="!valid" @click="validate(5,5)">{{translations.stepper_inscription}}</v-btn>
               </v-form>
             </v-stepper-content>
 
@@ -161,6 +161,7 @@ const config = {
         photo2: root.dataset.photo2,
         photo3: root.dataset.photo3,
         translations: JSON.parse(root.dataset.translations),
+        activeDropzone: false,
         flash: {
           message: null,
           show: false,
@@ -209,16 +210,16 @@ const config = {
         let form = null
         if (step === 1) {
           form = forms[0]
-          this.completed.push(1)
+          if (form.validate()) this.completed.push(1)
         } else if (step === 2) {
           form = forms[1]
-          this.completed.push(2)
+          if (form.validate()) this.completed.push(2)
         } else if (step === 3) {
           form = forms[2]
-          this.completed.push(3)
+          if (form.validate()) this.completed.push(3)
         } else if (step === 4) {
           form = forms[3]
-          this.completed.push(4)
+          if (form.validate()) this.completed.push(4)
         } else if (step === 5) {
           form = forms[4]
         }
@@ -240,10 +241,10 @@ const config = {
                 axios.post(`/inscriptions`, formFields, config)
                 .then((res) => {
                   if(res.data.success) {
-                    this.flash = {message: "L'inscription a été validé", variant: 'success', show: 'true'}
+                    this.flash = {message: this.translations.insc_new, variant: 'success', show: 'true'}
                     window.location = `${ROOT_URL}/inscriptions`
                   } else {
-                    this.flash = {message: "Erreur l'inscription n'a pas été validé", variant: 'error', show: 'true'}
+                    this.flash = {message: this.translations.insc_new_err, variant: 'error', show: 'true'}
                   }
                 })
                 .catch(err => this.flash = {message: err, variant: 'error', show: 'true'})
@@ -253,16 +254,16 @@ const config = {
                 axios.patch(`/inscriptions/${this.inscription}`, formFields, config)
                 .then((res) => {
                   if(res.data.success) {
-                    this.flash = {message: "L'inscription a été modifié", variant: 'success', show: 'true'}
+                    this.flash = {message: this.translations.insc_edit, variant: 'success', show: 'true'}
                      window.location = `${ROOT_URL}/inscriptions`
                   } else {
-                    this.flash = {message: "Erreur l'inscription n'a pas été modifié", variant: 'error', show: 'true'}
+                    this.flash = {message: this.translations.insc_edit_err, variant: 'error', show: 'true'}
                   }
                 })
                 .catch(err => this.flash = {message: err, variant: 'error', show: 'true'})
               }
             } else (
-              this.flash = {message: 'Certains champs obligatoire ne sont pas remplies', variant: 'error', show: 'true'}
+              this.flash = {message: this.translations.insc_incomplete, variant: 'error', show: 'true'}
             )
           }
         }
@@ -270,7 +271,10 @@ const config = {
       back () {
         this.e1--
       }
-
+    },
+    mounted() {
+      this.dropOptions.dictDefaultMessage = this.translations.stepper_add_photo
+      this.activeDropzone = true
     }
   }
 </script>

@@ -63,12 +63,22 @@ class InscriptionsController < ApplicationController
 
     def vue_translations
       @translations = {
+        locale: I18n.locale,
         stepper_title1: I18n.translate("stepper.title1"),
         stepper_title2: I18n.translate("stepper.title2"),
         stepper_title3: I18n.translate("stepper.title3"),
         stepper_title4: I18n.translate("stepper.title4"),
         stepper_title5: I18n.translate("stepper.title5"),
         stepper_photos: I18n.translate("stepper.photos"),
+        stepper_add_photo: I18n.translate("stepper.add_photo"),
+        stepper_previous: I18n.translate("stepper.precedent"),
+        stepper_next: I18n.translate("stepper.suivant"),
+        stepper_inscription: I18n.translate("stepper.inscription"),
+        insc_new: I18n.translate("stepper.new"),
+        insc_edit: I18n.translate("stepper.edit"),
+        insc_new_err: I18n.translate("stepper.newErr"),
+        insc_edit_err: I18n.translate("stepper.editErr"),
+        insc_incomplete: I18n.translate("stepper.incomplete"),
       }
     end
 
