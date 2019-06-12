@@ -3,7 +3,10 @@
   #home-banner {
    #home-carousel {
     .carousel-inner {
-      height: 80vh;
+      height: 800px;
+      .carousel-item {
+        height: 100%;
+      }
       .text-container {
         display: flex;
         flex-direction: column;
@@ -11,7 +14,7 @@
         justify-content: top;
         text-align: center;
         font-weight: bold;
-        top: 10% !important;
+        top: 20% !important;
         h1 {
           font-weight: bold;
           color: white;
@@ -37,6 +40,7 @@
     }
    }
     .banner-gradient {
+      height: 100%;
       display: inline-block;
       background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.5) 100%); /* W3C */
     }
@@ -50,17 +54,19 @@
   }
 
   .home-video {
-    background: lighten($red, 50%);
-    padding: 50px 0;
+    background: lighten(white, 50%);
+    padding: 0px 0;
   }
 
   .home-comment {
-    background: lighten($green, 40%);
+    background: lighten($red, 50%);
     padding: 50px 0 200px 0;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   }
 
   .home-episodes {
-    background: lighten($red, 50%);
+    background: lighten(white, 50%);
     padding: 50px 0 200px 0;
   }
     .carousel-video {
@@ -69,10 +75,28 @@
     }
 
   .home-jury {
-    background: lighten($green, 40%);
-    padding: 50px 0 200px 0;
-    .card {
-      margin: 20px;
+    background: lighten($red, 50%);
+    padding: 100px 0 200px 0;
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+    .card-horizontal {
+     flex-direction: row;
+     justify-content: space-between;
+     padding: 0;
+     height: 250px;
+     .card-image {
+      width: 45%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 25px 0 0 2px;
+     }
+     .card-body {
+      width: 45%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     }
     }
     img {
       height: 250px;
@@ -80,7 +104,7 @@
   }
 
   .home-candidats {
-    background: lighten($red, 50%);
+    background: lighten(white, 50%);
     padding: 50px 0 200px 0;
   }
   .home-social {
@@ -109,6 +133,7 @@
     .title {
       color: $red;
       font-weight: bold;
+      font-size: 35px;
       padding: 30px 0;
     }
 
@@ -148,10 +173,60 @@
 // .last-section {
 //   margin-bottom: 100px;
 // }
-
+@media only screen and (max-width: 991px) {
+  #home-wrapper {
+    #home-banner {
+    #home-carousel .carousel-inner {
+      height: 500px;
+      .text-container {
+          h1 {
+            font-size: 35px;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+    }
+    }
+    }
+  }
 
 @media only screen and (max-width: 600px) {
   #home-wrapper {
+    #home-banner {
+    #home-carousel .carousel-inner {
+      height: 300px;
+      .carousel-caption {
+        position: absolute;
+        top: 0px !important;
+        left: 0px;
+      }
+      .text-container {
+          h1 {
+            font-size: 25px;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    section {
+      .title {
+        font-size: 28px;
+      }
+    }
+  .home-comment {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+  }
+  .home-jury {
+    -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+    }
+  .home-card {
+    transform: scale(0.8);
+  }
     .social-flex {
       flex-direction: column;
       justify-content: center;
