@@ -35,12 +35,6 @@ fr:
   retour: "Retour"
   voir: "Voir"
   cree: "Créée le "
-  episode_1: "Episode 1"
-  episode_2: "Episode 2"
-  episode_3: "Episode 3"
-  episode_4: "Episode 4"
-  episode_5: "Episode 5"
-  episode_6: "Episode 6"
   navbar:
     evenements: "Evenements"
     questions: "Questions"
@@ -79,9 +73,29 @@ fr:
       title: "Participez MasterChef Junior 2019"
       text_1: "Le jury selectionnera les candidats qui participeront à la deuxième édition de MasterChef Junior."
       text_2: "Bonne chance à tous!"
+
+    episode_1: "Episode 1"
+    episode_2: "Episode 2"
+    episode_3: "Episode 3"
+    episode_4: "Episode 4"
+    episode_5: "Episode 5"
+    episode_6: "Episode 6"
     chef:
       moha: "Moha: Some quick example text to build on the card title and make up the bulk of the card's content."
       mimi: "Meryem: Some quick example text to build on the card title and make up the bulk of the card's content."
+    candidat:
+      douaa: "Meryem Douaa"
+      aya: "Aya"
+      lina: "Lina"
+      rana: "Rana"
+      rania: "Rania"
+      mya: "Mya"
+      samy: "Samy"
+      omar: "Omar"
+      abdou: "Abdou"
+      salma: "Salma"
+      kamil: "Kamil"
+      nada: "Nada"
   stepper:
     title1: 'Perso'
     title2: 'Tuteur'
