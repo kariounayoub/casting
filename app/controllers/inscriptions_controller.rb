@@ -1,5 +1,6 @@
 class InscriptionsController < ApplicationController
   before_action :set_inscription, only: [:show, :edit, :update, :destroy]
+  before_action :vue_translations, only: [:new, :edit]
 
   def index
     @inscriptions = policy_scope(Inscription).order(created_at: :asc)
@@ -58,6 +59,17 @@ class InscriptionsController < ApplicationController
 
     def inscription_params
       params.require(:inscription).permit(:id, :photo_1, :photo_2, :photo_3, reponses_attributes: [:question_id, :contenu, :id, :inscription_id])
+    end
+
+    def vue_translations
+      @translations = {
+        stepper_title1: I18n.translate("stepper.title1"),
+        stepper_title2: I18n.translate("stepper.title2"),
+        stepper_title3: I18n.translate("stepper.title3"),
+        stepper_title4: I18n.translate("stepper.title4"),
+        stepper_title5: I18n.translate("stepper.title5"),
+        stepper_photos: I18n.translate("stepper.photos"),
+      }
     end
 
 end
