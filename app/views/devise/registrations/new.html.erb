@@ -1,34 +1,65 @@
 <div id="login-form">
   <div class="container card half-screen">
-    <h2>Inscription</h2>
+    <div class="flex-column">
+      <%= link_to root_path(I18n.locale) do %>
+      <%= image_tag 'logo-MCJR', class: 'small-logo' %>
+      <% end %>
+      <h2>Inscription</h2>
+    </div>
 
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
 
       <div class="form-inputs">
-        <%= f.input :email,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "email" }, class: 'login-input'%>
-        <%= f.input :password,
+        <div class="row">
+          <div class="col-12">
+            <%= f.input :email,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" }, class: 'login-input'%>
+          </div>
+          <div class="col-12">
+            <%= f.input :password,
                     required: true,
                     label: 'Mot de passe',
                     hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                     input_html: { autocomplete: "new-password" }, class: 'login-input' %>
-        <%= f.input :password_confirmation,
+          </div>
+          <div class="col-12">
+            <%= f.input :password_confirmation,
                     label: 'Confirmation du mot de passe',
                     required: true,
                     input_html: { autocomplete: "new-password" }, class: 'login-input' %>
-        <%= f.input :prenom %>
-        <%= f.input :nom %>
-        <%= f.input :adresse %>
-        <%= f.input :ville %>
-        <%= f.input :naissance, as: :date, start_year: Date.today.year - 13,
+          </div>
+          <div class="col-12 col-sm-6">
+              <%= f.input :prenom %>
+          </div>
+          <div class="col-12 col-sm-6">
+            <%= f.input :nom %>
+          </div>
+          <div class="col-12 col-sm-6">
+            <%= f.input :adresse %>
+          </div>
+          <div class="col-12 col-sm-6">
+            <%= f.input :ville %>
+          </div>
+          <div class="col-12 col-sm-6">
+            <%= f.input :naissance, as: :date, start_year: Date.today.year - 13,
                           end_year: Date.today.year - 7,
                           order: [:day, :month, :year] %>
-        <%= f.input :sexe , collection: ["Garçon", "Fille"] %>
-        <%= f.input :photo, input_html: {value: f.object.photo || "https://hadeplatform.com/img/default.png" } %>
-        <%= f.input :photo_cache, as: :hidden %>
+          </div>
+          <div class="col-12 col-sm-6">
+             <%= f.input :sexe , collection: ["Garçon", "Fille"] %>
+          </div>
+          <div class="col-12 col-sm-6">
+            <%= f.input :photo, input_html: {value: f.object.photo || "https://hadeplatform.com/img/default.png" } %>
+          </div>
+          <div class="col-6">
+            <%= f.input :photo_cache, as: :hidden %>
+          </div>
+        </div>
+
+
       </div>
 
       <div class="form-actions">

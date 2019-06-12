@@ -21,6 +21,10 @@ ar:
     sous_titre_2: "👇 2019 شارك وحاول أن تصبح ماستر شيف جنيور"
     inscription: "Inscription"
     comment: "Comment ça marche ?"
+    episodes: "La saison dernière sur MasterChef ..."
+    jury: "Le jury"
+    candidats: 'Les candidats'
+    follow: 'Suivez nous'
     step_1:
       title: "Inscrivez-vous"
       text_1: "Remplissez le "
