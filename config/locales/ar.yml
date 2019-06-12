@@ -10,36 +10,63 @@ ar:
     dashboard: "Dashboard"
     a_propos: "A propos"
     contact: "Contact"
-    inscription: "Inscription"
+    inscription: "التسجيل"
     edit: "Editer profil"
     logout: "Deconexion"
     login: "Se connecter"
+    episodes: "الحلقات"
+    jury: "الحكام"
+    candidats: "المرشحين"
   home:
-  home:
-    titre: "! عاد ماستر شيف لموسم جديد"
-    sous_titre_1: "يتراوح عمرك بين 8 و 12 عامًا وأنت شغوف بالطهي ؟"
-    sous_titre_2: "👇 2019 شارك وحاول أن تصبح ماستر شيف جنيور"
-    inscription: "Inscription"
-    comment: "Comment ça marche ?"
-    episodes: "La saison dernière sur MasterChef ..."
-    jury: "Le jury"
-    candidats: 'Les candidats'
+    titre: "من جديد، هاهم و لمرة أخرى في منافسة الطبخ الأكبر و الأكثر اثارة ،و التي لم يسبق و أن شهدت لها التلفزة مثيلا"
+    sous_titre_1: "عمرك يتراوح بين 8 و 12 عاما ؟ تحب المنافسة و مستعد للتحدي ؟"
+    sous_titre_2: "👇 لا تفكر مرتين ، اشترك معنا الآن و لا تفوت فرصتك  في الحصول على تجربة مميزة"
+    inscription: "التسجيل"
+    comment: "طريقة الاشتراك"
+    episodes: "... الموسم الماضي على ماسترشيف جونيور"
+    jury: "الحكام"
+    jury_base: "إنهم یثیرون إعجاب وتخوف المشاركین بحكم تجربتهم ومصارهما لفرید. الشیف مریم و السیف موحا حكام ماسترشیف جو  سیرافقون و یرشدون طباخنا الصغاز خلال التنافس على لقب ماسترشیف"
+    candidats: "😍 المرشحين"
+    candidats_base: 'صغار السن .. مواهب كبيرة .. و ثقة أكب. تعرفوا على طباخينا الصغار خريجي الموسم الاول من ماسترشيف جونيور'
     follow: 'Suivez nous'
     step_1:
-      title: "Inscrivez-vous"
-      text_1: "Remplissez le "
-      text_2: "formulaire d''inscrition"
-      text_3: "afin que nous puissions en savoir d''avantage sur vos compétences et votre personalité"
+      title: "التسجيل"
+      text_1: " املأ"
+      text_2: "استمارة التسجيل"
+      text_3: "للتعرف على شخصيتك ومهاراتك"
     step_2:
-      title: "Participez au casting"
-      text_1: "Surveillez votre boite mail où une "
-      text_2: "convocation"
-      text_3: "vous sera envoyée. Elle vous donnera plus d'informations concernant le "
-      text_4: "casting"
+      title: " للمشاركة في الكاستينغ"
+      text_1: "ستتوصل بدعوة على"
+      text_2: "صندوق البريد الخاص بك"
+      text_3: "، تتضمن جميع المعلومات اللازمة للمشاركة في الكاستينغ"
+      text_4: " نحن في انتظارك"
     step_3:
-      title: "Participez MasterChef Junior 2019"
-      text_1: "Le jury selectionnera les candidats qui participeront à la deuxième édition de MasterChef Junior."
-      text_2: "Bonne chance à tous!"
+      title: "شارك بمسابقة ماسترشيف جونيور 2019"
+      text_1: "يقوم أعضاء اللجنة باختيار المشاركين المتأهلين للمشاركة في النسخة الثانية من ماسترشيف جينيور"
+      text_2: "حظ سعيد للجميع"
+
+    episode_1: "الحلقة 1"
+    episode_2: "الحلقة 2"
+    episode_3: "الحلقة 3"
+    episode_4: "الحلقة 4"
+    episode_5: "الحلقة 5"
+    episode_6: "الحلقة 6"
+    chef:
+      moha: "تخرج الشیف موحا من المدرسة الفندقیة بجنیف وهو خبیر بالطبخ المغربي. بعد تجربة دامت أربعة عشر سنة بأوروبا، قرر   الشیف موحا فتح مطعم یحمل اسم دار موحا بالمدینة العتیقة بمراكش حیث أظهرمهارته وحنكته في فن الطبخ ومع تزاید شهرته، عمل الشیف موحا على فتح مطعم بمدرید بفكرة  إبراز ثقافة الطبخ المغربي الشهیر. و یعود الشیف موحا خلال هذا الموسم الثاني لیعزز التمیز الذي یطبع المنافسة"
+      mimi: "بدأت مصارها بدراسة فن الطهي بأكادیمة  bleu Cordon le قبل أن تغیر مصارها باكتشافها للثقافة الشرقیة. وهكذا تنقلت إلى سنغافورة ثم إلى المملكة المتحدة قبل عودتها إلى المغرب وبالخصوص .إلى مدینة فاس ثم استقرت بمدینة الدار البیضاء بفضل تراكم تجربتها الدولیة الغنیة، اكتسبت الشیف مریم حنكة ومهارة .بفن الطبخ وتوجهت إلى میادین الاستشارة والابتكار خلال المسابقة، ستعطي الشیف مریم رأیها البناء حول أطباق المتبارین. الخمسة عشر للقب ماسترشی"
+    candidat:
+      douaa: "Meryem Douaa"
+      aya: "Aya"
+      lina: "Lina"
+      rana: "Rana"
+      rania: "Rania"
+      mya: "Mya"
+      samy: "Samy"
+      omar: "Omar"
+      abdou: "Abdou"
+      salma: "Salma"
+      kamil: "Kamil"
+      nada: "Nada"
   stepper:
     title1: 'Perso'
     title2: 'Tuteur'
@@ -47,7 +74,7 @@ ar:
     title4: 'Cuisine & Motivation'
     title5: 'Plus sur toi'
     photos: 'Quelque photos de tes plats'
-    add_photo: 'Glissez une photo iciddd'
+    add_photo: 'Glissez une photo ici'
     suivant: 'Suivant'
     precedent: 'Precedent'
     inscription: 'Inscription'
@@ -67,10 +94,6 @@ ar:
       perso: "Nous avons envie d'en savoir davantage sur toi !"
   question:
     personnel:
-      taille: 'Taille'
-      vetement: 'Taille de vêtement'
-      pointure: 'Pointure'
-      nationalite_residence: 'Es-tu marocain ou résident au Maroc ?'
       allergie_intolerance: 'As-tu des allergies ou intolérances ?'
       allergie_intolerance_contenu: 'Lesquelles ?'
       medicament: 'Prends-tu des médicaments ?'
@@ -88,8 +111,6 @@ ar:
       nom: 'Nom :'
       adresse: 'Adresse :'
       ville: 'Ville :'
-      contact: 'Contact au sein de l''établissement :'
-      tel: 'Numéro de téléphone :'
     motivation:
       participation: 'Pourquoi veux-tu participer à MasterChef Junior ?'
       competitif: 'A quel point es-tu compétitif ?'
@@ -111,7 +132,9 @@ ar:
     perso:
       fraterie: 'Parle nous de tes freres et soeurs si tu en as :'
       classe: 'En quelle classe es-tu à l’école ?'
-      loisirs: 'Quels sont les loisirs et sports que tu aimes ?'
+      sports: 'Quels sont les sports que tu aimes ?'
+      loisirs: 'Quels sont les loisirs que tu aimes ?'
+      assos: 'Es-tu membre d''associations ?'
       grand: 'Qu’aimerais-tu faire quand tu seras grand ?'
       qualites: 'Si on demande à ton/ta meilleur(e) ami(e) de nous citer tes 3 qualités, que dirait-t-il(elle) ?'
       defauts: 'Si on demande à ton/ta meilleur(e) ami(e) de nous citer tes 3 défauts, que dirait-t-il(elle) ?'

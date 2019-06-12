@@ -1,34 +1,3 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 fr:
   fr: "france.png"
   ar: "morocco.png"
@@ -49,29 +18,31 @@ fr:
     jury: "Jury"
     candidats: "Candidats"
   home:
-    titre: "MasterChef Junior est de retour pour une nouvelle saison !"
-    sous_titre_1: "Vous avez entre 8 à 12 ans et êtes passionnés de cuisine ?"
-    sous_titre_2: "Participer et tentez de devenir le MasterChef Junior Maroc 2019 👇"
+    titre: "ILS SONT DE RETOUR POUR LA PLUS GRANDE, ET LA PLUS SPECTACULAIRE COMPÉTITION DE CUISINE JAMAIS VUE À LA TÉLÉVISION !"
+    sous_titre_1: "Tu as entre 8 et 12 ans et tu penses être prêts à relever le défi ?"
+    sous_titre_2: "Inscris-toi et viens vivre une expérience inoubliable avec nous !  👇"
     inscription: "Inscription"
     comment: "Comment ça marche ?"
     episodes: "La saison dernière sur MasterChef ..."
     jury: "Le jury"
-    candidats: 'Les candidats'
+    jury_base: "Grâce à leur expérience et leurs parcours uniques, il n'est pas étonnant qu'ils provoquent admiration et intimidation de la part des participants. Ce sont les juges du MasterChef Junior. Chef Moha et Chef Myriam seront de réel mentors pour nos petits chefs alors qu'ils se disputeront le titre de MasterChef."
+    candidats: "Nos candidats 😍"
+    candidats_base: 'ILS SONT PETITS… ILS ONT DU TALENT… ILS ONT CONFIANCE EN EUX. Rencontrez nos petits chefs de la première saison de MasterChef'
     follow: 'Suivez nous'
     step_1:
       title: "Inscrivez-vous"
-      text_1: "Remplissez le "
+      text_1: "Remplissez ce "
       text_2: "formulaire d''inscrition"
-      text_3: "afin que nous puissions en savoir d''avantage sur vos compétences et votre personalité"
+      text_3: "pour nous permettre d’en savoir davantage sur vous, vos compétences et votre personnalité."
     step_2:
       title: "Participez au casting"
-      text_1: "Surveillez votre boite mail où une "
-      text_2: "convocation"
-      text_3: "vous sera envoyée. Elle vous donnera plus d'informations concernant le "
-      text_4: "casting"
+      text_1: "Une invitation vous sera envoyée sur votre "
+      text_2: "boite mail "
+      text_3: "contenant toutes les informations nécessaires pour participer au casting. "
+      text_4: "Nous avons hâte de vous rencontrer !"
     step_3:
       title: "Participez MasterChef Junior 2019"
-      text_1: "Le jury selectionnera les candidats qui participeront à la deuxième édition de MasterChef Junior."
+      text_1: "Notre jury sélectionnera les candidats élus pour concourir à la deuxième édition de MasterChef Junior."
       text_2: "Bonne chance à tous!"
 
     episode_1: "Episode 1"
@@ -81,8 +52,8 @@ fr:
     episode_5: "Episode 5"
     episode_6: "Episode 6"
     chef:
-      moha: "Moha: Some quick example text to build on the card title and make up the bulk of the card's content."
-      mimi: "Meryem: Some quick example text to build on the card title and make up the bulk of the card's content."
+      moha: "Diplômé de l’école hôtelière de Genève, Chef Moha est un véritable érudit de la cuisine marocaine. Après 14 ans d’expériences en Europe, il a ouvert son propre restaurant le nommant « Dar Moha » situé dans un riad au sein de la médina de la ville mythique de Marrakech où il met en avant ses compétences considérables de chef cuisinier. Son éminence culinaire l’a mené également à être propriétaire d’un restaurant gastronomique à Madrid, en Espagne, où il met en valeur la culture culinaire marocaine avec brio. Il revient aujourd'hui pour cette deuxième saison perpétuer la tradition d'excellence dont les candidats devront faire preuve durant toute la compétition."
+      mimi: "Commençant son parcours par des études d’art culinaire à l’académie le Cordon bleu au Canada avant de changer de direction et d’aller découvrir la culture orientale. Son parcours professionnel l’a mené jusqu’à Singapour puis au Royaume-Uni avant de la rapatrier au Maroc et plus particulièrement à Fès puis à Casablanca. Suite à son parcours massif et débordant d’expériences enrichissantes à l’international, elle a su s’approprier un savoir-faire et une excellence en art culinaire qui s’orientent aujourd’hui vers le conseil et l’innovation. Elle posera ainsi son regard critique sur les plats que les 15 candidats en lice pour le titre de MasterChef Maroc."
     candidat:
       douaa: "Meryem Douaa"
       aya: "Aya"
@@ -123,10 +94,6 @@ fr:
       perso: "Nous avons envie d'en savoir davantage sur toi !"
   question:
     personnel:
-      taille: 'Taille'
-      vetement: 'Taille de vêtement'
-      pointure: 'Pointure'
-      nationalite_residence: 'Es-tu marocain ou résident au Maroc ?'
       allergie_intolerance: 'As-tu des allergies ou intolérances ?'
       allergie_intolerance_contenu: 'Lesquelles ?'
       medicament: 'Prends-tu des médicaments ?'
@@ -144,8 +111,6 @@ fr:
       nom: 'Nom :'
       adresse: 'Adresse :'
       ville: 'Ville :'
-      contact: 'Contact au sein de l''établissement :'
-      tel: 'Numéro de téléphone :'
     motivation:
       participation: 'Pourquoi veux-tu participer à MasterChef Junior ?'
       competitif: 'A quel point es-tu compétitif ?'
@@ -167,7 +132,9 @@ fr:
     perso:
       fraterie: 'Parle nous de tes freres et soeurs si tu en as :'
       classe: 'En quelle classe es-tu à l’école ?'
-      loisirs: 'Quels sont les loisirs et sports que tu aimes ?'
+      sports: 'Quels sont les sports que tu aimes ?'
+      loisirs: 'Quels sont les loisirs que tu aimes ?'
+      assos: 'Es-tu membre d''associations ?'
       grand: 'Qu’aimerais-tu faire quand tu seras grand ?'
       qualites: 'Si on demande à ton/ta meilleur(e) ami(e) de nous citer tes 3 qualités, que dirait-t-il(elle) ?'
       defauts: 'Si on demande à ton/ta meilleur(e) ami(e) de nous citer tes 3 défauts, que dirait-t-il(elle) ?'
