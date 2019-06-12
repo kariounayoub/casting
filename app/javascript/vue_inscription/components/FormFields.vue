@@ -1,8 +1,8 @@
 <template>
   <div>
     <p>{{question.text}}</p>
-    <v-textarea v-model="question.contenu" solo box :rules="[]" v-if='question.type === "text"'  @change='reponse'></v-textarea>
-    <v-text-field v-model="question.contenu" solo box :rules="[]" v-if='question.type === "string"'  @change='reponse'></v-text-field>
+    <v-textarea v-model="question.contenu" solo box  :rules='[setRequired(question.required)]'v-if='question.type === "text"'  @change='reponse'></v-textarea>
+    <v-text-field v-model="question.contenu" solo box :rules='[setRequired(question.required)]' v-if='question.type === "string"'  @change='reponse'></v-text-field>
     <v-text-field v-model="question.contenu" solo box :rules="[number, minLength(10)]" v-if='question.type === "tel"' @change='reponse'></v-text-field>
     <v-text-field v-model="question.contenu" solo box :rules="[isEmail]" v-if='question.type === "email"' @change='reponse'></v-text-field>
     <v-switch  v-model="question.contenu" :label='booleanToString(question.contenu)' color='error' v-if='question.type === "boolean"' @change='reponse'></v-switch>
@@ -28,6 +28,9 @@
         if(param) return 'Oui'
         if(!param) return 'Non'
       },
+      setRequired(val) {
+         if (val) return required
+      }
     }
   }
 </script>

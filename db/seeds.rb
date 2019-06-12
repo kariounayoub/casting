@@ -17,8 +17,8 @@ puts 'creating questions'
 
 mcjr2 = Evenement.create(nom: 'MCJR2', date: '15/06/2019', adresse: 'Hotel Grand Mogador, Casablanca', actif: true)
 
-Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'taille', data_type: 'string')
-Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'vetement', data_type: 'string')
+Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'taille', data_type: 'string', required: true)
+Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'vetement', data_type: 'string', required: true)
 Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'pointure', data_type: 'string')
 Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'nationalite_residence', data_type: 'string')
 Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'allergie_intolerance', data_type: 'boolean')

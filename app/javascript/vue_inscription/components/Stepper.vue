@@ -8,7 +8,7 @@
       <button type="button" data-dismiss="alert" aria-label="alertClose" class="close" @click="closeFlash()"><span aria-hidden="true">x</span></button>
       {{flash.message}}
     </div>
-    <div v-if="flash.show && flash.variant === 'error'" role="alert" aria-live="polite" aria-atomic="true" class="show-alert alert alert-error offset" >
+    <div v-if="flash.show && flash.variant === 'error'" role="alert" aria-live="polite" aria-atomic="true" class="show-alert alert alert-danger offset" >
       <button type="button" data-dismiss="alert" aria-label="alertClose" class="close" @click="closeFlash()"><span aria-hidden="true">x</span></button>
       {{flash.message}}
     </div>
@@ -205,61 +205,65 @@ const config = {
         flash.variant = null
       },
       validate (step,page) {
-        let form = null // This if loop is for partial validation of each form individually
+        const forms = [this.$refs.form1,this.$refs.form2,this.$refs.form3,this.$refs.form4,this.$refs.form5]
+        let form = null
         if (step === 1) {
-          form = this.$refs.form1
+          form = forms[0]
           this.completed.push(1)
         } else if (step === 2) {
-          form = this.$refs.form2
+          form = forms[1]
           this.completed.push(2)
         } else if (step === 3) {
-          form = this.$refs.form3
+          form = forms[2]
           this.completed.push(3)
         } else if (step === 4) {
-          form = this.$refs.form4
+          form = forms[3]
           this.completed.push(4)
         } else if (step === 5) {
-          form = this.$refs.form5
-          this.completed.push(5)
+          form = forms[4]
         }
         if (form.validate()) {
           this.e1 = page
           if (step === 5) { // This is where all the form data is cleaned and sent to post requests
-            const formFields = {
-              inscription: {
-                photo_1: document.querySelector('#drop1').dropzone.getAcceptedFiles()[0] === undefined ? null : document.querySelector('#drop1').dropzone.getAcceptedFiles()[0].dataURL,
-                photo_2: document.querySelector('#drop2').dropzone.getAcceptedFiles()[0] === undefined ? null : document.querySelector('#drop2').dropzone.getAcceptedFiles()[0].dataURL,
-                photo_3: document.querySelector('#drop3').dropzone.getAcceptedFiles()[0] === undefined ? null : document.querySelector('#drop3').dropzone.getAcceptedFiles()[0].dataURL,
+            if (forms.every(f => f.validate())) {
+              const formFields = {
+                inscription: {
+                  photo_1: document.querySelector('#drop1').dropzone.getAcceptedFiles()[0] === undefined ? null : document.querySelector('#drop1').dropzone.getAcceptedFiles()[0].dataURL,
+                  photo_2: document.querySelector('#drop2').dropzone.getAcceptedFiles()[0] === undefined ? null : document.querySelector('#drop2').dropzone.getAcceptedFiles()[0].dataURL,
+                  photo_3: document.querySelector('#drop3').dropzone.getAcceptedFiles()[0] === undefined ? null : document.querySelector('#drop3').dropzone.getAcceptedFiles()[0].dataURL,
 
-                id: this.inscription === false ? null : this.inscription,
-                reponses_attributes: this.reponses
-              },
-            }
-            if (this.inscription === false) {
-              axios.post(`/inscriptions`, formFields, config)
-              .then((res) => {
-                if(res.data.success) {
-                  this.flash = {message: "L'inscription a été validé", variant: 'success', show: 'true'}
-                  window.location = `${ROOT_URL}/inscriptions`
-                } else {
-                  this.flash = {message: "Erreur l'inscription n'a pas été validé", variant: 'error', show: 'true'}
-                }
-              })
-              .catch(err => this.flash = {message: err, variant: 'error', show: 'true'})
-            }
+                  id: this.inscription === false ? null : this.inscription,
+                  reponses_attributes: this.reponses
+                },
+              }
+              if (this.inscription === false) {
+                axios.post(`/inscriptions`, formFields, config)
+                .then((res) => {
+                  if(res.data.success) {
+                    this.flash = {message: "L'inscription a été validé", variant: 'success', show: 'true'}
+                    window.location = `${ROOT_URL}/inscriptions`
+                  } else {
+                    this.flash = {message: "Erreur l'inscription n'a pas été validé", variant: 'error', show: 'true'}
+                  }
+                })
+                .catch(err => this.flash = {message: err, variant: 'error', show: 'true'})
+              }
 
-            if (this.inscription !== false) {
-              axios.patch(`/inscriptions/${this.inscription}`, formFields, config)
-              .then((res) => {
-                if(res.data.success) {
-                  this.flash = {message: "L'inscription a été modifié", variant: 'success', show: 'true'}
-                   window.location = `${ROOT_URL}/inscriptions`
-                } else {
-                  this.flash = {message: "Erreur l'inscription n'a pas été modifié", variant: 'error', show: 'true'}
-                }
-              })
-              .catch(err => this.flash = {message: err, variant: 'error', show: 'true'})
-            }
+              if (this.inscription !== false) {
+                axios.patch(`/inscriptions/${this.inscription}`, formFields, config)
+                .then((res) => {
+                  if(res.data.success) {
+                    this.flash = {message: "L'inscription a été modifié", variant: 'success', show: 'true'}
+                     window.location = `${ROOT_URL}/inscriptions`
+                  } else {
+                    this.flash = {message: "Erreur l'inscription n'a pas été modifié", variant: 'error', show: 'true'}
+                  }
+                })
+                .catch(err => this.flash = {message: err, variant: 'error', show: 'true'})
+              }
+            } else (
+              this.flash = {message: 'Certains champs obligatoire ne sont pas remplies', variant: 'error', show: 'true'}
+            )
           }
         }
       },

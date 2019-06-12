@@ -9,6 +9,7 @@ class EvenementsSerializer
         categorie: q.categorie,
         contenu: (response ? response.contenu : nil),
         r_id: (response ? response.id : nil) ,
+        required: q.required,
         text: I18n.translate("question.#{q.categorie}.#{q.contenu}"),
         categorie_text: I18n.translate("inscription.cat.#{q.categorie}."),
         type: q.data_type
