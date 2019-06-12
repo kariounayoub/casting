@@ -45,6 +45,9 @@ fr:
     edit: "Editer profil"
     logout: "Deconexion"
     login: "Se connecter"
+    episodes: "Episodes"
+    jury: "Jury"
+    candidats: "Candidats"
   home:
     titre: "MasterChef Junior est de retour pour une nouvelle saison !"
     sous_titre_1: "Vous avez entre 8 à 12 ans et êtes passionnés de cuisine ?"
