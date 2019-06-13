@@ -1,43 +1,44 @@
 <p id="notice"><%= notice %></p>
 <div class="container offset-top">
     <h2 class='page-title text-center'><%= t("pages.insc_show")%> # <%= @inscription.id %></h2>
-    <br>
-    <h3>Utilisateur : <span><%= @inscription.user.email %></span></h3>
-    <h3>Evenement : <span><%= @inscription.evenement.nom %></span></h3>
-    <br>
-    <hr>
-    <br>
-    <h3>Photos</h3>
-  <div class="row">
-    <div class="col-12 col-sm-4">
-      <%= cl_image_tag @inscription.photo_1, height: 300, class: 'w-100', crop: :fit %>
+    <br><br>
+    <div class="show-card">
+      <div class="row">
+        <div class="col-12 col-sm-4 offset-sm-4">
+          <%= cl_image_tag @inscription.photo_candidat, height: 300, class: 'w-100', crop: :fit %>
+        </div>
+      </div>
+      <h3><span class="text-gray">Utilisateur :</span> <span><%= @inscription.user.email %></span></h3>
+      <h3><span class="text-gray">Evenement :</span> <span><%= @inscription.evenement.nom %></span></h3>
     </div>
-    <div class="col-12 col-sm-4">
-      <%= cl_image_tag @inscription.photo_2, height: 300, class: 'w-100', crop: :fit %>
+    <div class="show-card">
+        <h3 class='card-title'>Photos</h3>
+      <div class="row">
+        <div class="col-12 col-sm-4">
+          <%= cl_image_tag @inscription.photo_1, height: 300, class: 'w-100', crop: :fit %>
+        </div>
+        <div class="col-12 col-sm-4">
+          <%= cl_image_tag @inscription.photo_2, height: 300, class: 'w-100', crop: :fit %>
+        </div>
+        <div class="col-12 col-sm-4">
+          <%= cl_image_tag @inscription.photo_3, height: 300, class: 'w-100', crop: :fit %>
+        </div>
+      </div>
     </div>
-    <div class="col-12 col-sm-4">
-      <%= cl_image_tag @inscription.photo_3, height: 300, class: 'w-100', crop: :fit %>
-    </div>
-  </div>
 
-    <br>
-    <hr>
-    <br>
-    <h3><strong>Reponses:</strong></h3>
-    <br>
+    <div class="show-card">
+      <h3 class='card-title'>Reponses</h3>
+        <% new_category = nil %>
+        <% @inscription.reponses.joins(:question).order(question_id: :asc).each do |reponse| %>
+          <% if new_category != reponse.question.categorie %>
+            <h3 class="category-title"><%= t("inscription.cat.#{reponse.question.categorie}") %></h3>
+            <% new_category = reponse.question.categorie %>
+          <% end %>
+          <h4 class='text-gray'><%= t("question.#{reponse.question.categorie}.#{reponse.question.contenu}") %></h4>
+          <h5 class='response'><%= reponse.contenu %></h5>
+        <% end %>
+    </div>
 
-    <% new_category = nil %>
-    <% @inscription.reponses.joins(:question).order(question_id: :asc).each do |reponse| %>
-      <% if new_category != reponse.question.categorie %>
-        <hr>
-        <h3><strong><%= t("inscription.cat.#{reponse.question.categorie}") %><strong></h3>
-        <hr>
-        <% new_category = reponse.question.categorie %>
-      <% end %>
-      <h4><%= t("question.#{reponse.question.categorie}.#{reponse.question.contenu}") %></h4>
-      <h5><%= reponse.contenu %></h5>
-      <br/><br/>
-    <% end %>
   <%= link_to 'Modifier', edit_inscription_path(I18n.locale, @inscription) %> |
   <%= link_to 'Retour', inscriptions_path %>
 </div>
