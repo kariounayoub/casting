@@ -12,6 +12,12 @@
 
       <div class="form-inputs">
         <div class="row">
+          <div class="col-12 col-sm-6">
+              <%= f.input :prenom %>
+          </div>
+          <div class="col-12 col-sm-6">
+            <%= f.input :nom %>
+          </div>
           <div class="col-12">
             <%= f.input :email,
                         required: true,
@@ -30,12 +36,6 @@
                     label: 'Confirmation du mot de passe',
                     required: true,
                     input_html: { autocomplete: "new-password" }, class: 'login-input' %>
-          </div>
-          <div class="col-12 col-sm-6">
-              <%= f.input :prenom %>
-          </div>
-          <div class="col-12 col-sm-6">
-            <%= f.input :nom %>
           </div>
         </div>
 
