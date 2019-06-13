@@ -1,26 +1,28 @@
 #login-form {
     background: linear-gradient(251.31deg, $red -32.76%, #FFFFFF 217.09%);
-    min-height: 140vh;
+    min-height: 100vh;
     .small-logo {
-      width: 100px;
+      width: 150px;
       text-align: center;
     }
   .half-screen {
-    width: 500px;
+    width: 550px;
     left: 50%;
     top: 50%;
     position: absolute;
-    -webkit-transform: translate3d(-50%, -40%, 0);
-    -moz-transform: translate3d(-50%, -40%, 0);
-    transform: translate3d(-50%, -40%, 0);
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
     box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+    padding: 0 25px;
   }
 
   h2 {
     text-align: center;
-    padding: 20px 0px;
+    padding: 10px 0px 20px 0;
     font-weight: 700;
-    color: rgba(0,0,0,0.8);
+    color: rgba(0,0,0,0.7);
+    font-size: 28px;
 
   }
 
@@ -33,9 +35,22 @@
     }
   }
 
+  label {
+    color: #777;
+  }
+
   .form-actions {
     display: flex;
     justify-content: center;
+  }
+
+  .form-control {
+    border-radius: 0;
+    border: 1px solid #eee;
+    background-color: #eee;
+    &:focus {
+      background-color: #eee;
+    }
   }
 
   a.link-button {
@@ -52,9 +67,24 @@
       background-color: #ddd;
     }
   }
+  @media only screen and (max-width: 900px) {
+    .half-screen {
+      -webkit-transform: translate3d(-50%, -80%, 0);
+      -moz-transform: translate3d(-50%, -80%, 0);
+      transform: translate3d(-50%, -80%, 0);
+  }
+
+}
+
 
   @media only screen and (max-width: 600px) {
-    .half-screen {width: 90%}
+      min-height: 140vh;
+    .half-screen {
+      width: 90%;
+      -webkit-transform: translate3d(-50%, -30%, 0);
+      -moz-transform: translate3d(-50%, -30%, 0);
+      transform: translate3d(-50%, -30%, 0);
+    }
     a.link-button {max-width:90%}
   }
 

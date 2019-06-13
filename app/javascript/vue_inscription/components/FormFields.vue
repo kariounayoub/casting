@@ -25,7 +25,7 @@
             :value="formatedDate(question.contenu)"
           ></v-text-field>
         </template>
-        <v-date-picker v-model="question.contenu" scrollable  color='error'  @change='reponse' :locale="locale === 'ar' ? 'ar' : 'fr'">
+        <v-date-picker v-model="question.contenu" scrollable  color='error'  :min='minDate()' :max='maxDate()' @change='reponse' :locale="locale === 'ar' ? 'fr' : 'fr'">
           <v-spacer></v-spacer>
           <v-btn flat color="error" @click="modal = false">Annuler</v-btn>
           <v-btn flat color="error" @click="$refs.dialog.save(question.contenu)">OK</v-btn>
@@ -67,6 +67,21 @@
       formatedDate(date) {
         return  moment(date).format('DD-MM-YYYY')
       },
+      minDate() {
+        const date = new Date()
+        date.setFullYear(date.getFullYear() - 12);
+        return date.toISOString().substr(0, 10);
+      },
+      maxDate() {
+        const date = new Date()
+        date.setFullYear(date.getFullYear() - 8);
+        return date.toISOString().substr(0, 10);
+      }
+    },
+    mounted() {
+      if (this.question.type === 'date' && this.question.contenu === null) {
+        this.question.contenu = this.maxDate()
+      }
     }
   }
 </script>
@@ -84,11 +99,3 @@
   }
 </style>
 
-<style>
-  .arabic input {
-    text-align: right;
-  }
-  .arabic textarea {
-    text-align: right;
-  }
-</style>

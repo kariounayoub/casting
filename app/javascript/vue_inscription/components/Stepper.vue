@@ -106,18 +106,21 @@
                 <v-container>
                   <v-layout row wrap>
                     <v-flex xs12 sm4>
+                      <h5 class='text-center'>{{translations.photo_sucre}}</h5>
                       <vue-dropzone v-if='activeDropzone' ref="dropzone1" id="drop1" :options='dropOptions' class="dropzone-message"></vue-dropzone>
                       <div class='thumb-wrapper'>
                         <img :src="photo1" alt="" class='thumb'>
                       </div>
                     </v-flex>
                     <v-flex xs12 sm4>
+                      <h5 class='text-center'>{{translations.photo_sale}}</h5>
                       <vue-dropzone v-if='activeDropzone' ref="dropzone2" id="drop2" :options='dropOptions' class="dropzone-message"></vue-dropzone>
                       <div class='thumb-wrapper'>
                         <img :src="photo2" alt="" class='thumb'>
                       </div>
                     </v-flex>
                     <v-flex xs12 sm4>
+                      <h5 class='text-center'>{{translations.photo_autre}}</h5>
                      <vue-dropzone v-if='activeDropzone' ref="dropzone3" id="drop3" :options='dropOptions' class="dropzone-message"></vue-dropzone>
                       <div class='thumb-wrapper'>
                         <img :src="photo3" alt="" class='thumb'>

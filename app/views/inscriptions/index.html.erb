@@ -3,7 +3,7 @@
   <br><br>
   <% if policy(Inscription).create? %>
   <div class="d-flex justicy-content-center">
-    <%= link_to new_inscription_path(I18n.locale), class: "btn btn-lg inscription-btn btn-success" do%>
+    <%= link_to new_inscription_path(I18n.locale), class: "btn btn-lg btn-circle inscription-btn btn-success" do%>
       <span class='btn-plus'>+</span> <%=  t('home.inscription') %>
       <% end %>
   </div>

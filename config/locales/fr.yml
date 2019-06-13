@@ -17,6 +17,9 @@ fr:
     episodes: "Episodes"
     jury: "Jury"
     candidats: "Candidats"
+    password: 'Mot de passe oublié'
+    connexion: 'Connexion'
+    modifier: 'Modifier mon Profile'
   pages:
     insc_index: 'Toutes mes inscriptions'
     insc_new: 'Nouvelle Inscription'
@@ -81,6 +84,9 @@ fr:
     photos: 'Quelque photos de tes plats'
     profile: 'Une photo de toi'
     add_photo: 'Glissez une photo ici'
+    photo_sucre: 'Un plat sucré'
+    photo_sale: 'Un plat salé'
+    photo_autre: 'autre'
     suivant: 'Suivant'
     precedent: 'Precedent'
     inscription: 'Inscription'
