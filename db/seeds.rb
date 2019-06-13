@@ -18,9 +18,7 @@ puts 'creating questions'
 mcjr2 = Evenement.create(nom: 'MCJR2', date: '15/06/2019', adresse: 'Hotel Grand Mogador, Casablanca', actif: true)
 
 Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'allergie_intolerance', data_type: 'boolean')
-Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'allergie_intolerance_contenu', data_type: 'text')
 Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'medicament', data_type: 'boolean')
-Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'medicament_contenu', data_type: 'text')
 Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'autre', data_type: 'text')
 
 Question.create(evenement: mcjr2, categorie: 'tuteur', contenu: 'nom', data_type: 'string', required: true)
@@ -33,7 +31,8 @@ Question.create(evenement: mcjr2, categorie: 'tuteur', contenu: 'email', data_ty
 
 Question.create(evenement: mcjr2, categorie: 'ecole', contenu: 'nom', data_type: 'string', required: true)
 Question.create(evenement: mcjr2, categorie: 'ecole', contenu: 'adresse', data_type: 'text')
-Question.create(evenement: mcjr2, categorie: 'ecole', contenu: 'ville')
+Question.create(evenement: mcjr2, categorie: 'ecole', contenu: 'ville', data_type: 'text')
+Question.create(evenement: mcjr2, categorie: 'ecole', contenu: 'classe', data_type: 'text')
 
 Question.create(evenement: mcjr2, categorie: 'motivation', contenu: 'participation', data_type: 'text', required: true)
 Question.create(evenement: mcjr2, categorie: 'motivation', contenu: 'competitif', data_type: 'text')
@@ -54,7 +53,6 @@ Question.create(evenement: mcjr2, categorie: 'competence', contenu: 'desastre', 
 Question.create(evenement: mcjr2, categorie: 'competence', contenu: 'habitude', data_type: 'text')
 
 Question.create(evenement: mcjr2, categorie: 'perso', contenu: 'fraterie', data_type: 'text')
-Question.create(evenement: mcjr2, categorie: 'perso', contenu: 'classe', data_type: 'text')
 Question.create(evenement: mcjr2, categorie: 'perso', contenu: 'sports', data_type: 'text')
 Question.create(evenement: mcjr2, categorie: 'perso', contenu: 'loisirs', data_type: 'text')
 Question.create(evenement: mcjr2, categorie: 'perso', contenu: 'assos', data_type: 'text')

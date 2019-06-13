@@ -94,10 +94,8 @@ fr:
       perso: "Nous avons envie d'en savoir davantage sur toi !"
   question:
     personnel:
-      allergie_intolerance: 'As-tu des allergies ou intolérances ?'
-      allergie_intolerance_contenu: 'Lesquelles ?'
-      medicament: 'Prends-tu des médicaments ?'
-      medicament_contenu: 'Lesquels ?'
+      allergie_intolerance: 'As-tu des allergies ou intolérances ? Si oui, lesquelles ?'
+      medicament: 'Prends-tu des médicaments ? Si oui, lesquelles ?'
       autre: 'Y a-t-il autre chose que nous devrions avoir à l''esprit ?'
     tuteur:
       nom: 'Nom :'
@@ -111,6 +109,7 @@ fr:
       nom: 'Nom :'
       adresse: 'Adresse :'
       ville: 'Ville :'
+      classe: 'En quelle classe es-tu à l’école ?'
     motivation:
       participation: 'Pourquoi veux-tu participer à MasterChef Junior ?'
       competitif: 'A quel point es-tu compétitif ?'
@@ -131,10 +130,9 @@ fr:
       habitude: 'Est-ce que tu as l''habitude de cuisiner seul ou avec de l''aide ?'
     perso:
       fraterie: 'Parle nous de tes freres et soeurs si tu en as :'
-      classe: 'En quelle classe es-tu à l’école ?'
       sports: 'Quels sont les sports que tu aimes ?'
       loisirs: 'Quels sont les loisirs que tu aimes ?'
-      assos: 'Es-tu membre d''associations ?'
+      assos: 'Es-tu membre d''une association ou d''un club ?'
       grand: 'Qu’aimerais-tu faire quand tu seras grand ?'
       qualites: 'Si on demande à ton/ta meilleur(e) ami(e) de nous citer tes 3 qualités, que dirait-t-il(elle) ?'
       defauts: 'Si on demande à ton/ta meilleur(e) ami(e) de nous citer tes 3 défauts, que dirait-t-il(elle) ?'
