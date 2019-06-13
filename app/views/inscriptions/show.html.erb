@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
-<div class="container">
-    <h2 class='page-title text-center'>Inscription # <%= @inscription.id %></h2>
+<div class="container offset-top">
+    <h2 class='page-title text-center'><%= t("pages.insc_show")%> # <%= @inscription.id %></h2>
     <br>
     <h3>Utilisateur : <span><%= @inscription.user.email %></span></h3>
     <h3>Evenement : <span><%= @inscription.evenement.nom %></span></h3>

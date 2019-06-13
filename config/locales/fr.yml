@@ -17,6 +17,11 @@ fr:
     episodes: "Episodes"
     jury: "Jury"
     candidats: "Candidats"
+  pages:
+    insc_index: 'Toutes mes inscriptions'
+    insc_new: 'Nouvelle Inscription'
+    insc_edit: 'Modifier Mon Inscription'
+    insc_show: 'Inscription'
   home:
     titre: "ILS SONT DE RETOUR POUR LA PLUS GRANDE, ET LA PLUS SPECTACULAIRE COMPÉTITION DE CUISINE JAMAIS VUE À LA TÉLÉVISION !"
     sous_titre_1: "Tu as entre 8 et 12 ans et tu penses être prêts à relever le défi ?"
@@ -74,6 +79,7 @@ fr:
     title4: 'Cuisine & Motivation'
     title5: 'Plus sur toi'
     photos: 'Quelque photos de tes plats'
+    profile: 'Une photo de toi'
     add_photo: 'Glissez une photo ici'
     suivant: 'Suivant'
     precedent: 'Precedent'
@@ -94,6 +100,11 @@ fr:
       perso: "Nous avons envie d'en savoir davantage sur toi !"
   question:
     personnel:
+      nom: 'Nom :'
+      prenom: 'Prénom :'
+      adresse: 'Adresse :'
+      ville: 'Ville :'
+      date_naissance: 'Date de Naissance :'
       allergie_intolerance: 'As-tu des allergies ou intolérances ? Si oui, lesquelles ?'
       medicament: 'Prends-tu des médicaments ? Si oui, lesquelles ?'
       autre: 'Y a-t-il autre chose que nous devrions avoir à l''esprit ?'

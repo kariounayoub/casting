@@ -1,5 +1,5 @@
-<div class="container min-height-full">
-  <h2 class='page-title text-center'>Toutes mes inscriptions</h2>
+<div class="container min-height-full offset-top">
+  <h2 class='page-title text-center'><%= t("pages.insc_index")%></h2>
   <br><br>
   <% if policy(Inscription).create? %>
   <div class="d-flex justicy-content-center">
@@ -14,7 +14,8 @@
     <% @inscriptions.each do |inscription| %>
     <div class="col-12 col-sm-6">
       <div class="card-product">
-        <img src="https://picsum.photos/id/429/400/600">
+
+        <img src="<%= inscription.photo_candidat.blank? ? 'https://picsum.photos/id/429/400/600' : inscription.photo_candidat.url%>">
         <div class="card-product-infos">
           <% rep = inscription.reponses.reject { |r| r.contenu.blank? }.count %>
           <% tot = inscription.reponses.count.to_f %>

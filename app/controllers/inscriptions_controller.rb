@@ -58,7 +58,7 @@ class InscriptionsController < ApplicationController
     end
 
     def inscription_params
-      params.require(:inscription).permit(:id, :photo_1, :photo_2, :photo_3, reponses_attributes: [:question_id, :contenu, :id, :inscription_id])
+      params.require(:inscription).permit(:id, :photo_candidat, :photo_1, :photo_2, :photo_3, reponses_attributes: [:question_id, :contenu, :id, :inscription_id])
     end
 
     def vue_translations
@@ -70,6 +70,7 @@ class InscriptionsController < ApplicationController
         stepper_title4: I18n.translate("stepper.title4"),
         stepper_title5: I18n.translate("stepper.title5"),
         stepper_photos: I18n.translate("stepper.photos"),
+        stepper_profile: I18n.translate("stepper.profile"),
         stepper_add_photo: I18n.translate("stepper.add_photo"),
         stepper_previous: I18n.translate("stepper.precedent"),
         stepper_next: I18n.translate("stepper.suivant"),

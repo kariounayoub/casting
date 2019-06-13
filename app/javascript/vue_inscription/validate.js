@@ -9,6 +9,6 @@ export const betweenValues = (min, max) => value => value && (value > max || val
 export const minLength = min => value => value && value.length < min ? `Minimum ${min} characters` : false
 export const maxLength = max => value => value && value.length > max ? `Maximum ${max} characters` : false
 export const isPhone =  value =>  !phoneRegex.test(value)  ? false : `Ce n'est pas un numéro de téléphone valide`
-export const isEmail =  value =>  !emailRegex.test(value)  ? false : `Ce n'est pas un email valide`
+export const isEmail =  value =>  emailRegex.test(value)  ? false : `Ce n'est pas un email valide`
 
 

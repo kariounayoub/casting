@@ -32,6 +32,17 @@
           <!-- STEP 1 -->
             <v-stepper-content step="1">
               <v-form ref="form1" v-model="valid" lazy-validation>
+                <h4 class='question-title'>{{translations.stepper_profile}}</h4>
+                <v-container>
+                  <v-layout row wrap>
+                    <v-flex xs12 sm4 offset-sm-4>
+                      <vue-dropzone v-if='activeDropzone' ref="dropzone0" id="drop0" :options='dropOptions' class="dropzone-message"></vue-dropzone>
+                      <div class='thumb-wrapper'>
+                        <img :src="photo_candidat" alt="" class='thumb'>
+                      </div>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
                 <h4 class='question-title'>{{evenement.questions.find(q => q.categorie === 'personnel').categorie_text}}</h4>
                 <div v-for="question in evenement.questions">
                   <FormFields v-bind:question='question' v-if='question.categorie === "personnel" ' v-bind:reponses='reponses'/>
@@ -160,6 +171,7 @@ const config = {
         photo1: root.dataset.photo1,
         photo2: root.dataset.photo2,
         photo3: root.dataset.photo3,
+        photo_candidat: root.dataset.photo_candidat,
         translations: JSON.parse(root.dataset.translations),
         activeDropzone: false,
         flash: {
@@ -229,6 +241,7 @@ const config = {
             if (forms.every(f => f.validate())) {
               const formFields = {
                 inscription: {
+                  photo_candidat: document.querySelector('#drop0').dropzone.getAcceptedFiles()[0] === undefined ? null : document.querySelector('#drop0').dropzone.getAcceptedFiles()[0].dataURL,
                   photo_1: document.querySelector('#drop1').dropzone.getAcceptedFiles()[0] === undefined ? null : document.querySelector('#drop1').dropzone.getAcceptedFiles()[0].dataURL,
                   photo_2: document.querySelector('#drop2').dropzone.getAcceptedFiles()[0] === undefined ? null : document.querySelector('#drop2').dropzone.getAcceptedFiles()[0].dataURL,
                   photo_3: document.querySelector('#drop3').dropzone.getAcceptedFiles()[0] === undefined ? null : document.querySelector('#drop3').dropzone.getAcceptedFiles()[0].dataURL,
