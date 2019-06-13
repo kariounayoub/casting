@@ -17,6 +17,11 @@ ar:
     episodes: "الحلقات"
     jury: "الحكام"
     candidats: "المرشحين"
+  pages:
+    insc_index: 'Toutes mes inscriptions'
+    insc_new: 'Nouvelle Inscription'
+    insc_edit: 'Modifier Mon Inscription'
+    insc_show: 'Inscription'
   home:
     titre: "من جديد، هاهم و لمرة أخرى في منافسة الطبخ الأكبر و الأكثر اثارة ،و التي لم يسبق و أن شهدت لها التلفزة مثيلا"
     sous_titre_1: "عمرك يتراوح بين 8 و 12 عاما ؟ تحب المنافسة و مستعد للتحدي ؟"
@@ -74,6 +79,7 @@ ar:
     title4: 'Cuisine & Motivation'
     title5: 'Plus sur toi'
     photos: 'Quelque photos de tes plats'
+    profile: 'Une photo de toi'
     add_photo: 'Glissez une photo ici'
     suivant: 'Suivant'
     precedent: 'Precedent'
@@ -94,6 +100,11 @@ ar:
       perso: "Nous avons envie d'en savoir davantage sur toi !"
   question:
     personnel:
+      nom: ': الاسم'
+      prenom: 'Prénom :'
+      adresse: ': العنوان'
+      ville: ': العنوان'
+      date_naissance: 'Date de Naissance :'
       allergie_intolerance: 'تعاني من حساسية أو شيء ما ؟'
       medicament: 'هل تتناول دواء ما ؟'
       autre: 'هل هناك أي شيء آخر يجب أن نضعه في الاعتبار'

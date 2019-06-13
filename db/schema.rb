@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_12_151521) do
+ActiveRecord::Schema.define(version: 2019_06_13_105419) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2019_06_12_151521) do
     t.string "photo_1"
     t.string "photo_2"
     t.string "photo_3"
+    t.string "photo_candidat"
     t.index ["evenement_id"], name: "index_inscriptions_on_evenement_id"
     t.index ["user_id"], name: "index_inscriptions_on_user_id"
   end

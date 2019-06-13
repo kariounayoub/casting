@@ -37,26 +37,6 @@
           <div class="col-12 col-sm-6">
             <%= f.input :nom %>
           </div>
-          <div class="col-12 col-sm-6">
-            <%= f.input :adresse %>
-          </div>
-          <div class="col-12 col-sm-6">
-            <%= f.input :ville %>
-          </div>
-          <div class="col-12 col-sm-6">
-            <%= f.input :naissance, as: :date, start_year: Date.today.year - 13,
-                          end_year: Date.today.year - 7,
-                          order: [:day, :month, :year] %>
-          </div>
-          <div class="col-12 col-sm-6">
-             <%= f.input :sexe , collection: ["Garçon", "Fille"] %>
-          </div>
-          <div class="col-12 col-sm-6">
-            <%= f.input :photo, input_html: {value: f.object.photo || "https://hadeplatform.com/img/default.png" } %>
-          </div>
-          <div class="col-6">
-            <%= f.input :photo_cache, as: :hidden %>
-          </div>
         </div>
 
 
