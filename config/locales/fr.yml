@@ -1,6 +1,8 @@
 fr:
   fr: "france.png"
   ar: "morocco.png"
+  lang_fr: "Français"
+  lang_ar: "العربية"
   retour: "Retour"
   voir: "Voir"
   cree: "Créée le "
@@ -12,7 +14,7 @@ fr:
     contact: "Contact"
     inscription: "Inscription"
     edit: "Editer profil"
-    logout: "Deconexion"
+    logout: "Deconnexion"
     login: "Se connecter"
     episodes: "Episodes"
     jury: "Jury"
@@ -30,9 +32,9 @@ fr:
     sous_titre_1: "Tu as entre 8 et 12 ans et tu penses être prêts à relever le défi ?"
     sous_titre_2: "Inscris-toi et viens vivre une expérience inoubliable avec nous !  👇"
     inscription: "Inscription"
-    comment: "Comment ça marche ?"
-    episodes: "La saison dernière sur MasterChef ..."
-    jury: "Le jury"
+    comment: "Comment ça marche ? 🤔"
+    episodes: "La saison dernière sur MasterChef 🤩"
+    jury: "Le jury 👨‍🍳👩‍🍳"
     jury_base: "Grâce à leur expérience et leurs parcours uniques, il n'est pas étonnant qu'ils provoquent admiration et intimidation de la part des participants. Ce sont les juges du MasterChef Junior. Chef Moha et Chef Myriam seront de réel mentors pour nos petits chefs alors qu'ils se disputeront le titre de MasterChef."
     candidats: "Nos candidats 😍"
     candidats_base: 'ILS SONT PETITS… ILS ONT DU TALENT… ILS ONT CONFIANCE EN EUX. Rencontrez nos petits chefs de la première saison de MasterChef'
@@ -126,7 +128,7 @@ fr:
       nom: 'Nom :'
       adresse: 'Adresse :'
       ville: 'Ville :'
-      classe: 'En quelle classe es-tu à l’école ?'
+      classe: 'En quelle classe es-tu ?'
     motivation:
       participation: 'Pourquoi veux-tu participer à MasterChef Junior ?'
       competitif: 'A quel point es-tu compétitif ?'
