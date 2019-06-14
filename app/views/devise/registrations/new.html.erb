@@ -4,7 +4,7 @@
       <%= link_to root_path(I18n.locale) do %>
       <%= image_tag 'logo-MCJR.png', class: 'small-logo' %>
       <% end %>
-      <h2>Inscription</h2>
+      <h2><%= t('navbar.inscription') %></h2>
     </div>
 
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -41,7 +41,7 @@
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, "S'inscrire", class: 'login-submit v-btn rounded' %>
+        <%= f.button :submit, t('navbar.inscription'), class: 'login-submit v-btn rounded' %>
       </div>
     <% end %>
 

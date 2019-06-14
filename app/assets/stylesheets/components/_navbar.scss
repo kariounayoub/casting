@@ -28,3 +28,16 @@
 .navbar-lewagon .navbar-brand img {
   width: 100px;
 }
+
+.navbar-flex {
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-flex {
+    flex-direction: column;
+    transform: scale(0.8);
+    max-width: 150px;
+    align-items: center;
+  }
+}

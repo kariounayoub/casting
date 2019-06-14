@@ -1,7 +1,7 @@
 import "particles.js";
 
 const particle = () => {
-  if (document.getElementById('login-form')) {
+  if (document.getElementById('login-forms')) {
     particlesJS('login-form', {
     "particles": {
       "number": {

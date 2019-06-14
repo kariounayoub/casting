@@ -19,6 +19,9 @@ ar:
     episodes: "الحلقات"
     jury: "الحكام"
     candidats: "المرشحين"
+    password: 'Mot de passe oublié'
+    connexion: 'Connexion'
+    modifier: 'Modifier mon Profile'
   pages:
     insc_index: 'جميع التسجيلات'
     insc_new: 'تسجيل جديد'
@@ -83,6 +86,9 @@ ar:
     photos: 'بعض الصور من أطباقك'
     profile: 'صورة شخصية'
     add_photo: 'ضع الصورة هنا'
+    photo_sucre: 'Un plat sucré'
+    photo_sale: 'Un plat salé'
+    photo_autre: 'autre'
     suivant: 'التالي'
     precedent: 'السابق'
     inscription: 'تسجيل'

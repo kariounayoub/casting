@@ -2,70 +2,60 @@
   <div class="container card half-screen">
     <div class="flex-column">
       <%= link_to root_path(I18n.locale) do %>
-        <%= image_tag 'logo-MCJR.png', class: 'small-logo' %>
+      <%= image_tag 'logo-MCJR.png', class: 'small-logo' %>
       <% end %>
-      <h2>Edit</h2>
+      <h2><%= t('navbar.modifier') %></h2>
     </div>
+
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-      <%= f.error_notification %>
+    <%= f.error_notification %>
 
       <div class="form-inputs">
-        <div class="row">
-          <div class="col-12 col-sm-6">
-              <%= f.input :prenom %>
-          </div>
-          <div class="col-12 col-sm-6">
-            <%= f.input :nom %>
-          </div>
-          <div class="col-12">
-            <%= f.input :email, required: true, autofocus: true %>
-          </div>
-          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-            <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-          <% end %>
-          <div class="col-12 col-sm-6">
-            <%= f.input :password,
-                      hint: "Laisser vide si vous ne voulez pas modifier",
-                      required: false,
-                      input_html: { autocomplete: "new-password" } %>
-          </div>
-          <div class="col-12 col-sm-6">
-            <%= f.input :password_confirmation,
-                      required: false,
-                      input_html: { autocomplete: "new-password" } %>
-          </div>
-          <div class="col-12">
-            <%= f.input :adresse %>
-          </div>
-          <div class="col-12">
-            <%= f.input :ville %>
-          </div>
-          <div class="col-12">
-            <%= f.input :naissance, as: :date, start_year: Date.today.year - 13,
-                            end_year: Date.today.year - 7,
-                            order: [:day, :month, :year] %>
-          </div>
-          <div class="col-12">
-            <%= f.input :sexe , collection: ["Garçon", "Fille"] %>
-          </div>
-          <div class="col-12">
-            <%= f.input :photo %>
-          </div>
-          <%= f.input :photo_cache, as: :hidden %>
-          <div class="col-12">
-            <%= f.input :current_password,
-                      hint: "Nous avons besoin de votre mot de passe actuel pour valider les modifications",
-                      required: true,
-                      input_html: { autocomplete: "current-password" } %>
-          </div>
-        </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                  <%= f.input :prenom %>
+              </div>
+              <div class="col-12 col-sm-6">
+                <%= f.input :nom %>
+              </div>
+              <div class="col-12">
+                <%= f.input :email,
+                            required: true,
+                            autofocus: true,
+                            input_html: { autocomplete: "email" }, class: 'login-input'%>
+              </div>
+              <div class="col-12">
+                <%= f.input :password,
+                            hint: "Laisser vide si vous ne voulez pas modifier",
+                            label: 'Mot de passe',
+                            required: false,
+                            input_html: { autocomplete: "new-password" }, class: 'login-input' %>
+              </div>
+              <div class="col-12">
+                <%= f.input :password_confirmation,
+                    required: false,
+                    label: 'Confirmation mot de passe',
+                    input_html: { autocomplete: "new-password" }, class: 'login-input' %>
+              </div>
+              <div class="col-12">
+                <%= f.input :current_password,
+                            hint: "Nous avons besoin de votre mot de passe actuel pour valider les modifications",
+                            label: 'Mot de passe actuel',
+                            required: true,
+                            input_html: { autocomplete: "current-password" }, class: 'login-input' %>
+              </div>
       </div>
 
       <div class="form-actions">
         <%= f.button :submit, "Mettre à jour", class: 'login-submit v-btn rounded' %>
       </div>
     <% end %>
+    <br><br>
+    <h5>Supprmier mon compte</h5>
 
-    <%= render "devise/shared/links" %>
+    <p>Changer d'avis? <%= link_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Etes-vous sure?" }, method: :delete %></p>
+
+    <%= link_to "Retour", :back %>
+    <br>
   </div>
 </div>

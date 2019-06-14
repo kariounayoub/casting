@@ -4,7 +4,7 @@
       <%= link_to root_path(I18n.locale) do %>
       <%= image_tag 'logo-MCJR.png', class: 'small-logo' %>
       <% end %>
-      <h2>Connexion</h2>
+      <h2><%= t('navbar.connexion') %></h2>
     </div>
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-inputs">
@@ -20,7 +20,7 @@
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, "Connexion", class: 'login-submit v-btn rounded' %>
+        <%= f.button :submit, t('navbar.connexion'), class: 'login-submit v-btn rounded' %>
       </div>
     <% end %>
 
