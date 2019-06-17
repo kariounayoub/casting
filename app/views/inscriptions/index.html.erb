@@ -22,7 +22,7 @@
           <div class="progress">
             <div class="progress-bar" role="progressbar" style="width: <%= (rep / tot * 100).round %>%;" aria-valuenow= <%= (rep / tot * 100).round %> aria-valuemin="0" aria-valuemax="100"><%= (rep / tot * 100).round %>%</div>
           </div>
-          <h2><%= inscription.evenement.nom %> - <%= inscription.user.prenom %> <%= inscription.user.prenom %> </h2>
+          <h2><%= inscription.evenement.nom %> - <%= inscription.user.prenom %> <%= inscription.user.nom %> </h2>
           <% if policy(inscription).edit? %>
             <p>
               <%= link_to edit_inscription_path(I18n.locale, inscription) do %>
