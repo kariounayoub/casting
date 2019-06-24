@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_13_105419) do
+ActiveRecord::Schema.define(version: 2019_06_24_161444) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,17 @@ ActiveRecord::Schema.define(version: 2019_06_13_105419) do
     t.string "photo_candidat"
     t.index ["evenement_id"], name: "index_inscriptions_on_evenement_id"
     t.index ["user_id"], name: "index_inscriptions_on_user_id"
+  end
+
+  create_table "notes", force: :cascade do |t|
+    t.bigint "inscription_id"
+    t.integer "note_cuisine"
+    t.integer "note_personalite"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["inscription_id"], name: "index_notes_on_inscription_id"
+    t.index ["user_id"], name: "index_notes_on_user_id"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -74,12 +85,15 @@ ActiveRecord::Schema.define(version: 2019_06_13_105419) do
     t.string "sexe"
     t.boolean "admin"
     t.string "photo"
+    t.boolean "caster"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "inscriptions", "evenements"
   add_foreign_key "inscriptions", "users"
+  add_foreign_key "notes", "inscriptions"
+  add_foreign_key "notes", "users"
   add_foreign_key "questions", "evenements"
   add_foreign_key "reponses", "inscriptions"
   add_foreign_key "reponses", "questions"

@@ -11,6 +11,25 @@
       <h3><span class="text-gray">Utilisateur :</span> <span><%= @inscription.user.email %></span></h3>
       <h3><span class="text-gray">Evenement :</span> <span><%= @inscription.evenement.nom %></span></h3>
     </div>
+    <% if current_user.caster %>
+    <div class="show-card" id='note-inscription'>
+      <h3 class="card-title">Notes</h3>
+      <% unless @inscription.notes.find_by_user_id(current_user.id) %>
+        <button class="btn btn-lg btn-danger float-right" data-toggle="modal" data-target="#note" id="button-modal-note">Ajouter Une Note</button>
+        <div id="modal-note">
+          <%= render 'inscriptions/shared/note_form', inscription: @inscription, note: Note.new %>
+        </div>
+      <% end %>
+      <h4 class='text-gray'>Note Cuisine</h4>
+      <% if @inscription.notes.map{|n| n.note_cuisine}&.size > 0 %>
+        <div id='avg-note-cuisine' data-rating='<%= (@inscription.notes.map{|n| n.note_cuisine}&.sum.to_f / @inscription.notes.map{|n| n.note_cuisine}&.size)  %>'></div>
+      <% end %>
+      <h4 class='text-gray'>Note Personalité</h4>
+      <% if @inscription.notes.map{|n| n.note_personalite}&.size > 0%>
+        <div  id='avg-note-personalite' data-rating='<%= (@inscription.notes.map{|n| n.note_personalite}&.sum.to_f / @inscription.notes.map{|n| n.note_personalite}&.size)  %>'></div>
+      <% end %>
+    </div>
+    <% end %>
     <div class="show-card">
         <h3 class='card-title'>Photos</h3>
       <div class="row">

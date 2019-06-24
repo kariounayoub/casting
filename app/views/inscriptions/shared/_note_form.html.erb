@@ -1,0 +1,22 @@
+<div class="modal  fade in" id="note" tabindex="-1" role="dialog" >
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content ">
+      <div class="modal-header bg-danger text-white">
+        <h4 class="modal-title text-center">Note</h4>
+        <button type="button" class="close text-white" data-dismiss="modal"  id="button-close-note"aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div><!-- modal-header close -->
+        <%= simple_form_for [inscription,note] do |f| %>
+
+          <div class="modal-body text-left">
+            <%= f.input :note_cuisine, collection: Note::NOTES, label: "Note Cuisine"  %>
+            <%= f.input :note_personalite, collection: Note::NOTES, label: "Note Personalité" %>
+          </div><!-- modal-body close -->
+          <div class="modal-footer">
+            <%= f.button :submit, class: 'btn btn-outline-danger  btn-block btn-lg ', value: "Valider Notes"%>
+          </div><!-- modal-footer close -->
+        <% end %>
+
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
+
