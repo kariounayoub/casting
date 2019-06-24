@@ -21,17 +21,23 @@ class InscriptionsController < ApplicationController
 
   def create
     inscription = Inscription.new(inscription_params)
-    inscription.evenement = Evenement.where(actif: true).first
+    evenement = Evenement.where(actif: true).first
+    inscription.evenement = evenement
     inscription.user = current_user
     authorize inscription
-    if inscription.save
-      inscription_params[:reponses_attributes].each do |r|
-        Reponse.create(question_id: r[:question_id], contenu: r[:contenu], inscription_id: inscription.id)
-      end
-      render json: {success: true}
+    existing_insc = Inscription.where(user_id: current_user.id, evenement_id: evenement.id)
+    if existing_insc.count < 1
+      if inscription.save
+        inscription_params[:reponses_attributes].each do |r|
+          Reponse.create(question_id: r[:question_id], contenu: r[:contenu], inscription_id: inscription.id)
+        end
+        render json: {success: true}
 
+      else
+        render json: {success: false, message: I18n.translate("stepper.newErr")}
+      end
     else
-      render json: {success: false}
+      render json: {success: false, message: I18n.translate("stepper.alreadyCreated")}
     end
   end
 
@@ -80,7 +86,6 @@ class InscriptionsController < ApplicationController
         stepper_inscription: I18n.translate("stepper.inscription"),
         insc_new: I18n.translate("stepper.new"),
         insc_edit: I18n.translate("stepper.edit"),
-        insc_new_err: I18n.translate("stepper.newErr"),
         insc_edit_err: I18n.translate("stepper.editErr"),
         insc_incomplete: I18n.translate("stepper.incomplete"),
       }

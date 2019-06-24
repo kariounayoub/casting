@@ -96,6 +96,7 @@ ar:
     edit: "تم تغيير التسجيل"
     newErr: "لم يتم التسجيل"
     editErr: "لم يتم تغيير التسجيل"
+    alreadyCreated: "Vous êtes déjà inscrit pour cette évenement"
     incomplete: "لم يتم ملىء جميع الخانات"
   inscription:
     cat:
