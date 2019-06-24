@@ -16,5 +16,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :questions, only: [:destroy]
   resources :evenements, only: [:destroy]
-  resources :inscriptions, only: [:destroy, :create]
+  resources :inscriptions, only: [:destroy, :create] do
+    resources :notes, only: [:create, :update]
+  end
 end
