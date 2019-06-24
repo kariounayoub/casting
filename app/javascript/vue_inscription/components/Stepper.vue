@@ -1,14 +1,14 @@
 <template>
   <div>
-        <div v-if="flash.show && flash.variant === 'success'" role="alert" aria-live="polite" aria-atomic="true" class="show-alert alert alert-success offset" >
+        <div v-if="flash.show && flash.variant === 'success'" role="alert" aria-live="polite" aria-atomic="true" class="show-alert sticky-alert alert alert-success offset" >
       <button type="button" data-dismiss="alert" aria-label="alertClose" class="close" @click="closeFlash()"><span aria-hidden="true">x</span></button>
       {{flash.message}}
     </div>
-    <div v-if="flash.show && flash.variant === 'warning'" role="alert" aria-live="polite" aria-atomic="true" class="show-alert alert alert-warning offset" >
+    <div v-if="flash.show && flash.variant === 'warning'" role="alert" aria-live="polite" aria-atomic="true" class="show-alert sticky-alert alert alert-warning offset" >
       <button type="button" data-dismiss="alert" aria-label="alertClose" class="close" @click="closeFlash()"><span aria-hidden="true">x</span></button>
       {{flash.message}}
     </div>
-    <div v-if="flash.show && flash.variant === 'error'" role="alert" aria-live="polite" aria-atomic="true" class="show-alert alert alert-danger offset" >
+    <div v-if="flash.show && flash.variant === 'error'" role="alert" aria-live="polite" aria-atomic="true" class="show-alert sticky-alert alert alert-danger offset" >
       <button type="button" data-dismiss="alert" aria-label="alertClose" class="close" @click="closeFlash()"><span aria-hidden="true">x</span></button>
       {{flash.message}}
     </div>
@@ -260,7 +260,7 @@ const config = {
                     this.flash = {message: this.translations.insc_new, variant: 'success', show: 'true'}
                     window.location = `${ROOT_URL}/inscriptions`
                   } else {
-                    this.flash = {message: this.translations.insc_new_err, variant: 'error', show: 'true'}
+                    this.flash = {message: res.data.message, variant: 'error', show: 'true'}
                   }
                 })
                 .catch(err => this.flash = {message: err, variant: 'error', show: 'true'})
@@ -342,5 +342,11 @@ const config = {
   }
   .pointer {
     cursor: pointer;
+  }
+
+  .sticky-alert {
+    position: sticky;
+    top: 100px;
+    z-index: 10000;
   }
 </style>
