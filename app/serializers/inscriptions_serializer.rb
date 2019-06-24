@@ -2,11 +2,11 @@ class InscriptionsSerializer
   include FastJsonapi::ObjectSerializer
   attributes :id
   attribute :reponses do |object|
-    array = object.reponses.includes(:question).map do |r|
-      if r.question.categorie == 'personnel' && (r.question.contenu == 'nom' || r.question.contenu == 'prenom' || r.question.contenu == 'date_naissance' || r.question.contenu == 'sexe')
-        {categorie: r.question.categorie, question: r.question.contenu, reponse: r.contenu}
-      end
-    end
-    array.compact
+    responses = object.reponses.includes(:question)
+    nom = responses.find { |r| r.question.categorie == 'personnel' && r.question.contenu == 'nom' }&.contenu
+    prenom = responses.find { |r| r.question.categorie == 'personnel' && r.question.contenu == 'prenom' }&.contenu
+    date_naissance = responses.find { |r| r.question.categorie == 'personnel' && r.question.contenu == 'date_naissance' }&.contenu
+    sexe = responses.find { |r| r.question.categorie == 'personnel' && r.question.contenu == 'sexe' }&.contenu
+    {nom: nom, prenom: prenom, date_naissance: date_naissance, sexe: sexe}
   end
 end

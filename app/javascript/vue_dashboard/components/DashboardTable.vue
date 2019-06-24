@@ -36,11 +36,10 @@
             <v-data-table :headers="headers":items="items" item-key="title" :rows-per-page-items="[10,25,50,100]" rows-per-page-text="Résultats par page" must-sort :search="filters" :custom-filter="customFilter"           :no-data-text="'Aucune donnée disponible'" id='my-datatable'>
               <template v-slot:items="props">
                 <tr >
-                  <td class="text-xs-left" >{{ props.item.reponses[0].reponse }}</td>
-                  <td class="text-xs-left">{{ props.item.reponses[1].reponse }}</td>
-                  <td class="text-xs-left">{{ props.item.reponses[2].reponse }}</td>
-                  <td class="text-xs-left">placeholder</td>
-                  <td class="text-xs-left ">placeholder</td>
+                  <td class="text-xs-left" >{{ props.item.reponses.nom }}</td>
+                  <td class="text-xs-left">{{ props.item.reponses.prenom }}</td>
+                  <td class="text-xs-left">{{ props.item.reponses.date_naissance }}</td>
+                  <td class="text-xs-left">{{ props.item.reponses.sexe }}</td>
                   <td class="text-xs-left"><v-icon>visibility</v-icon></td>
                 </tr>
               </template>
@@ -67,7 +66,6 @@ export default {
       { text: 'Prénom', value: 'prenom', align: 'left'},
       { text: 'Date Naissance', value: 'date_naissance', align: 'left'},
       { text: 'Sexe', value: 'sexe', align: 'left'},
-      { text: 'Statut', value: 'status', align: 'left'},
       { text: 'Actions', value: 'actions', align: 'left'},
     ],
   }),
@@ -84,8 +82,8 @@ export default {
         if (searchWord.trim() === "") return items;
 
         return items.filter(item => {
-          if (item.reponses === null) return ''
-          return item.reponses[0].toLowerCase().includes(searchWord.toLowerCase());
+          if (item.reponses.nom === null) return ''
+          return item.reponses.nom.toLowerCase().includes(searchWord.toLowerCase());
         }, searchWord)
       });
       return cf.runFilters();
