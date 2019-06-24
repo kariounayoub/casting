@@ -6,6 +6,7 @@
     <v-text-field v-bind:class="{arabic: locale === 'ar' }" v-model="question.contenu" solo box :rules="[setRequired(question.required), number, minLength(10)]" v-if='question.type === "tel"' @change='reponse'></v-text-field>
     <v-text-field v-bind:class="{arabic: locale === 'ar' }" v-model="question.contenu" solo box :rules="[setRequired(question.required), isEmail]" v-if='question.type === "email"' @change='reponse'></v-text-field>
     <v-switch  v-bind:class="{arabic: locale === 'ar' }" v-model="question.contenu" :label='booleanToString(question.contenu)' color='error' v-if='question.type === "boolean"' @change='reponse'></v-switch>
+    <v-select  v-bind:class="{arabic: locale === 'ar' }" v-model="question.contenu" solo box :rules='[setRequired(question.required)]' :items='sexe_items' color='error' v-if='question.type === "sexe"' @change='reponse'></v-select>
     <v-flex xs12 v-if='question.type === "date"'>
       <v-dialog
         ref="dialog"
@@ -49,6 +50,7 @@
     data: () => ({
       required: required, number: number, isPhone: isPhone, isEmail: isEmail, minLength: minLength,
       locale: JSON.parse(root.dataset.translations).locale,
+      sexe_items: [JSON.parse(root.dataset.translations).sexe_m, JSON.parse(root.dataset.translations).sexe_f],
       modal: false,
    }),
     methods: {

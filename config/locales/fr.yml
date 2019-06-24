@@ -98,6 +98,8 @@ fr:
     editErr: "L'inscription n'a pas été modifié"
     alreadyCreated: "Vous êtes déjà inscrit pour cette évenement"
     incomplete: "Un ou plusieurs champs obligatoires n'ont pas été remplies"
+    sexe_m: 'Garçon'
+    sexe_f: 'Fille'
   inscription:
     cat:
       personnel: 'A propos de toi'
@@ -117,6 +119,7 @@ fr:
       allergie_intolerance: 'As-tu des allergies ou intolérances ? Si oui, lesquelles ?'
       medicament: 'Prends-tu des médicaments ? Si oui, lesquelles ?'
       autre: 'Y a-t-il autre chose que nous devrions avoir à l''esprit ?'
+      sexe: 'Sexe :'
     tuteur:
       nom: 'Nom :'
       prenom: 'Prénom :'

@@ -98,6 +98,8 @@ ar:
     editErr: "لم يتم تغيير التسجيل"
     alreadyCreated: "Vous êtes déjà inscrit pour cette évenement"
     incomplete: "لم يتم ملىء جميع الخانات"
+    sexe_m: 'Garçon'
+    sexe_f: 'Fille'
   inscription:
     cat:
       personnel: 'تفاصيل عن المشارك'
@@ -117,6 +119,7 @@ ar:
       allergie_intolerance: 'تعاني من حساسية أو شيء ما ؟'
       medicament: 'هل تتناول دواء ما ؟'
       autre: 'هل هناك أي شيء آخر يجب أن نضعه في الاعتبار'
+      sexe: 'Sexe :'
     tuteur:
       nom: ': الاسم العائلي'
       prenom: ': الاسم الشخصي'

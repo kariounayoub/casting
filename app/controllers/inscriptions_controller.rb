@@ -88,6 +88,8 @@ class InscriptionsController < ApplicationController
         insc_edit: I18n.translate("stepper.edit"),
         insc_edit_err: I18n.translate("stepper.editErr"),
         insc_incomplete: I18n.translate("stepper.incomplete"),
+        sexe_m: I18n.translate("stepper.sexe_m"),
+        sexe_f: I18n.translate("stepper.sexe_f"),
       }
     end
 

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       end
     end
     resources :inscriptions, except: [:destroy, :create]
-    get 'dashboard', to: 'pages#dashboard'
+    get 'dashboard', to: 'pages#dashboard', as: :dashboard
     get 'contact', to: 'pages#contact'
     get 'a_propos', to: 'pages#a_propos'
     get '/change/:lang', to: 'pages#lang', as: 'lang'
