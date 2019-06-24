@@ -10,6 +10,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @inscriptions = InscriptionsSerializer.new(Inscription.all).serialized_json
   end
 
   def contact
