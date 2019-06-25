@@ -31,6 +31,7 @@ class InscriptionsController < ApplicationController
         inscription_params[:reponses_attributes].each do |r|
           Reponse.create(question_id: r[:question_id], contenu: r[:contenu], inscription_id: inscription.id)
         end
+        inscription.send_inscription_email
         render json: {success: true}
 
       else

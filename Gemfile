@@ -16,10 +16,17 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'pundit'
+
 gem 'i18n'
+
+
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
 gem 'carrierwave-base64'
+
+gem 'sidekiq'
+gem 'sidekiq-failures', '~> 1.0'
+
 gem 'letter_opener', group: :development
 gem 'postmark-rails'
 gem 'gibbon'

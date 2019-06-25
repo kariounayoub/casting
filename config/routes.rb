@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
+  require "sidekiq/web"
+  authenticate :user, lambda { |u| u.admin } do
+    mount Sidekiq::Web => '/sidekiq'
+  end
+
   scope "(:locale)", locale: /fr|ar/ do
     resources :questions, except: [:show, :destroy]
     resources :evenements, except: [:show, :destroy] do

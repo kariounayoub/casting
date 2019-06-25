@@ -162,7 +162,7 @@
           <tr>
             <td bgcolor="#ffffff" align="left" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
               <h1 style="margin: 0 0 12px; font-size: 32px; font-weight: 400; line-height: 48px;"><%= t('email.welcome.welcome') %> <%= @display_name %></h1>
-              <p style="margin: 0;"><%= t('email.welcome.subheading') %></p>
+              <p style="margin: 0; white-space: pre-wrap;"><%= t('email.welcome.subheading') %></p>
               <p style="margin: 0;"><%= t('email.welcome.update_profile') if @first_name%></p>
             </td>
           </tr>
@@ -191,6 +191,7 @@
           <!-- start copy -->
           <tr>
             <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf">
+              <p style="margin: 0;"><%= t('email.cordialement') %></p>
               <p style="margin: 0;"><%= t('email.signature') %></p>
             </td>
           </tr>

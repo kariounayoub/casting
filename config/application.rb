@@ -42,5 +42,6 @@ module Casting
     config.generators.system_tests = nil
     config.i18n.default_locale = :fr
     I18n.available_locales = [:fr, :ar]
+    config.active_job.queue_adapter = :sidekiq
   end
 end
