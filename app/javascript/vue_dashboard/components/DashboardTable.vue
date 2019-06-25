@@ -52,6 +52,7 @@
                   <td class="text-xs-left">{{ props.item.reponses.sexe }}</td>
                   <td class="text-xs-left">{{ props.item.note_cuisine }}</td>
                   <td class="text-xs-left">{{ props.item.note_personalite }}</td>
+                  <td class="text-xs-left"> <div class='with-border'><div class="progress-bar left-border" role="progressbar" v-bind:style="{ width: props.item.percent_complete + '%' }" aria-valuenow='props.item.percent_complete' aria-valuemin="0" aria-valuemax="100">{{ props.item.percent_complete }} %</div></div></td>
                   <td class="text-xs-left"><a :href="originURL + '/inscriptions/' + props.item.id" class='link'><v-icon>visibility</v-icon></a></td>
                 </tr>
               </template>
@@ -86,6 +87,7 @@ export default {
       { text: 'Sexe', value: 'reponses.sexe', align: 'left'},
       { text: 'Note Cuisine', value: 'note_cuisine', align: 'left'},
       { text: 'Note Personalité', value: 'note_personalite', align: 'left'},
+      { text: 'Formulaire', value: 'percent_complete', align: 'left'},
       { text: 'Voir Réponses', value: 'actions', align: 'left'},
     ],
   }),
@@ -166,6 +168,14 @@ export default {
     i {
           color: var(--v-error-base);
     }
+  }
+
+  .with-border {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+  }
+  .left-border {
+    border-radius: 20px 0 0 20px;
   }
 
 </style>

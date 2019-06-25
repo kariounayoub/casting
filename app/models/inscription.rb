@@ -20,10 +20,16 @@ class Inscription < ApplicationRecord
     (self.notes.map{|n| n.note_personalite}&.sum.to_f / self.notes.map{|n| n.note_personalite}&.size)
   end
 
+  def percent_complete
+    rep = self.reponses.reject { |r| r.contenu.blank? }.count
+    tot = self.reponses.count.to_f
+    tot == 0 ? 0 : (rep / tot * 100).round
+  end
+
   private
 
   def send_inscription_email
-    UserMailer.with(inscription: self).inscription.deliver_now
+    # UserMailer.with(inscription: self).inscription.deliver_now
   end
 
 end

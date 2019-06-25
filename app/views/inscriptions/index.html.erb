@@ -17,10 +17,8 @@
 
         <img src="<%= inscription.photo_candidat.blank? ? 'https://picsum.photos/id/429/400/600' : inscription.photo_candidat.url%>">
         <div class="card-product-infos">
-          <% rep = inscription.reponses.reject { |r| r.contenu.blank? }.count %>
-          <% tot = inscription.reponses.count.to_f %>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: <%= (rep / tot * 100).round %>%;" aria-valuenow= <%= (rep / tot * 100).round %> aria-valuemin="0" aria-valuemax="100"><%= (rep / tot * 100).round %>%</div>
+            <div class="progress-bar" role="progressbar" style="width: <%= inscription.percent_complete %>%;" aria-valuenow= <%= inscription.percent_complete %> aria-valuemin="0" aria-valuemax="100"><%= inscription.percent_complete %>%</div>
           </div>
           <h2><%= inscription.evenement.nom %> - <%= inscription.user.prenom %> <%= inscription.user.nom %> </h2>
           <% if policy(inscription).edit? %>

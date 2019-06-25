@@ -160,6 +160,18 @@ ar:
       qualites: 'إذا طلبنا من أحد أصدقائك أن يسرد علينا 3 مميزات فيك، ماذا يمكن أن يقول عنك ؟'
       defauts: 'إذا طلبنا من أحد أصدقائك أن يسرد علينا 3 عيوب فيك، ماذا يمكن أن يقول عنك ؟'
       tele: 'هل سبق لك أن لعبت أو ظهرت على شاشة التلفزيون أو في السينما من قبل ؟ إذا كان الرد بالإيجاب، يرجى ذكر ذلك'
+  email:
+    welcome:
+      welcome: 'Bienvenue'
+      subheading: 'Merci de vous être connécté sur MasterChef Junior!'
+      update_profile: "Nous n'avons pas votre nom - merci de vous connécter pour compléter votre profile"
+      inscription: 'Commencer votre inscription'
+    inscription:
+      hello: 'Salut'
+      subheading: 'Merci de vous être connécté sur MasterChef Junior!'
+      update_profile: "Nous n'avons pas votre nom - merci de vous connécter pour compléter votre profile"
+      inscription: 'Compléter votre inscription'
+    signature: "L'équipe MasterChef Junior"
   simple_form:
     labels:
       user:
