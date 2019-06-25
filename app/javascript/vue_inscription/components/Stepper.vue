@@ -343,10 +343,4 @@ const config = {
   .pointer {
     cursor: pointer;
   }
-
-  .sticky-alert {
-    position: sticky;
-    top: 100px;
-    z-index: 10000;
-  }
 </style>

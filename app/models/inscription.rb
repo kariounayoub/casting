@@ -12,9 +12,18 @@ class Inscription < ApplicationRecord
   mount_base64_uploader :photo_2, PhotoUploader
   mount_base64_uploader :photo_3, PhotoUploader
 
+  def avg_note_cuisine
+    (self.notes.map{|n| n.note_cuisine}&.sum.to_f / self.notes.map{|n| n.note_cuisine}&.size)
+  end
+
+  def avg_note_personalite
+    (self.notes.map{|n| n.note_personalite}&.sum.to_f / self.notes.map{|n| n.note_personalite}&.size)
+  end
+
   private
 
   def send_inscription_email
     UserMailer.with(inscription: self).inscription.deliver_now
   end
+
 end

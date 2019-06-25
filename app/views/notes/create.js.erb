@@ -1,0 +1,13 @@
+<% if @note.errors.any? %>
+  document.getElementById("button-close-note").click();
+  document.getElementById('note-inscription').innerHTML = '<%= j render "inscriptions/shared/notes_card", inscription: @inscription %>';
+  document.getElementById("button-modal-note").click();
+<% else %>
+  document.getElementById("button-close-note").click();
+  document.getElementById('note-inscription').innerHTML = '<%= j render "inscriptions/shared/notes_card", inscription: @inscription %>';
+  document.sweetAlert('la note a été crée');
+<% end %>
+
+document.avgNotes();
+document.rateNote('#rating-note-cuisine', '#note_note_cuisine')
+document.rateNote('#rating-note-personalite', '#note_note_personalite')
