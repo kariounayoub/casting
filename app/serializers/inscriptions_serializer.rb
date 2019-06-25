@@ -5,7 +5,7 @@ class InscriptionsSerializer
     responses = object.reponses.includes(:question)
     nom = responses.find { |r| r.question.categorie == 'personnel' && r.question.contenu == 'nom' }&.contenu
     prenom = responses.find { |r| r.question.categorie == 'personnel' && r.question.contenu == 'prenom' }&.contenu
-    age = get_age(Date.parse(responses.find { |r| r.question.categorie == 'personnel' && r.question.contenu == 'date_naissance' }&.contenu))
+    age = get_age(Date.parse(responses.find { |r| r.question.categorie == 'personnel' && r.question.contenu == 'date_naissance' }&.contenu || Date.today.strftime()) )
     sexe = responses.find { |r| r.question.categorie == 'personnel' && r.question.contenu == 'sexe' }&.contenu
     {nom: nom, prenom: prenom, age: age, sexe: sexe}
   end
@@ -15,13 +15,17 @@ class InscriptionsSerializer
   attribute :note_cuisine do |object|
     object.avg_note_cuisine
   end
+  attribute :percent_complete do |object|
+    object.percent_complete
+  end
 
 end
 
 def get_age(date)
-  unless date == nil
-    age = Date.today.year - date.year
-    age -= 1 if Date.today < date + age.years
-  end
+  age = Date.today.year - date.year
+  age -= 1 if Date.today < date + age.years
+  age = '' if date == Date.today
   return age
 end
+
+
