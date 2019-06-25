@@ -29,7 +29,7 @@ class Inscription < ApplicationRecord
   private
 
   def send_inscription_email
-    UserMailer.with(inscription: self).inscription.deliver_now
+    # UserMailer.with(inscription: self).inscription.deliver_now
   end
 
 end

@@ -167,7 +167,10 @@ fr:
       update_profile: "Nous n'avons pas votre nom - merci de vous connécter pour compléter votre profile"
       inscription: 'Commencer votre inscription'
     inscription:
-
+      hello: 'Salut'
+      subheading: 'Merci de vous être connécté sur MasterChef Junior!'
+      update_profile: "Nous n'avons pas votre nom - merci de vous connécter pour compléter votre profile"
+      inscription: 'Compléter votre inscription'
     signature: "L'équipe MasterChef Junior"
   simple_form:
     labels:

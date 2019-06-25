@@ -22,13 +22,14 @@ class UserMailer < ApplicationMailer
     @nom = @inscription.reponses.where(question_id: question_nom.to_i).first&.contenu&.strip
     @prenom = @inscription.reponses.where(question_id: question_prenom.to_i).first&.contenu&.strip
 
+    @first_name = @user.prenom.nil?
 
-    @display_name = @user.prenom.nil? && @prenom.nil? ? @user.email + " (please edit your profile and tell us your name)" : "#{@nom} #{@prenom}"
+    @display_name = @user.prenom.nil? && @prenom.nil? ? @user.email : "#{@nom} #{@prenom}"
     if @mail_tuteur == nil
       @greeting = "#{@display_name_tuteur}, #{@display_name}"
       mail(to: @user.email, subject: "Ton inscription a bien été prise en compte pour participer à MasterChef Junior !")
     else
-      @display_name_tuteur = @prenom_tuteur == "" ? @mail_tuteur + " (please complete the inscription and tell us your name)" : @prenom_tuteur + " " + @nom_tuteur
+      @display_name_tuteur = @prenom_tuteur == "" ? @mail_tuteur : @prenom_tuteur + " " + @nom_tuteur
       @greeting = @display_name
       mail(to: @user.email, cc: @mail_tuteur, subject: "Ton inscription a bien été prise en compte pour participer à MasterChef Junior !")
     end
