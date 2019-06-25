@@ -24,8 +24,6 @@ class Inscription < ApplicationRecord
     tot == 0 ? 0 : (rep / tot * 100).round
   end
 
-  private
-
   def send_inscription_email
     UserMailer.with(inscription: self).inscription.deliver_later
   end
