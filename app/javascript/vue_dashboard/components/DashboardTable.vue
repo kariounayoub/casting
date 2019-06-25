@@ -1,24 +1,5 @@
 <template>
   <div>
-    Dashboard Table
-    {{inscriptions}}
-  </div>
-</template>
-
-<script>
-  const root = document.getElementById('dashboard')
-
-  export default {
-    name: 'DashboardTable',
-    data: () => ({
-      inscriptions: JSON.parse(root.dataset.inscriptions)
-    })
-  }
-</script>
-
-
-<template>
-  <div>
     <!-- Main Table -->
       <v-card >
         <v-layout row wrap class='inside-card'>
@@ -103,8 +84,8 @@ export default {
       { text: 'Prénom', value: 'reponses.prenom', align: 'left'},
       { text: 'Age', value: 'reponses.age', align: 'left'},
       { text: 'Sexe', value: 'reponses.sexe', align: 'left'},
-      { text: 'Note Cuisine', value: 'sexe', align: 'left'},
-      { text: 'Note Personalité', value: 'sexe', align: 'left'},
+      { text: 'Note Cuisine', value: 'note_cuisine', align: 'left'},
+      { text: 'Note Personalité', value: 'note_personalite', align: 'left'},
       { text: 'Voir Réponses', value: 'actions', align: 'left'},
     ],
   }),

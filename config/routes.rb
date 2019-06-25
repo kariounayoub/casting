@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   scope "(:locale)", locale: /fr|ar/ do
     resources :questions, except: [:show, :destroy]
     resources :evenements, except: [:show, :destroy] do
