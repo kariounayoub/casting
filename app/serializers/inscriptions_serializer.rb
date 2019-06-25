@@ -10,10 +10,10 @@ class InscriptionsSerializer
     {nom: nom, prenom: prenom, age: age, sexe: sexe}
   end
   attribute :note_personalite do |object|
-    object.notes.map{|n| n.note_personalite}&.sum.to_f / object.notes.map{|n| n.note_personalite}&.size
+    object.avg_note_personalite
   end
   attribute :note_cuisine do |object|
-    object.notes.map{|n| n.note_cuisine}&.sum.to_f / object.notes.map{|n| n.note_cuisine}&.size
+    object.avg_note_cuisine
   end
 
 end

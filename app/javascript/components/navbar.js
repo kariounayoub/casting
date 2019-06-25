@@ -1,5 +1,4 @@
 const initUpdateNavbarOnScroll = () => {
-  console.log('aaa')
   const navbar = document.querySelector('.navbar-lewagon');
   if (navbar) {
     window.addEventListener('scroll', () => {

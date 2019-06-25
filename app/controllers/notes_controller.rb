@@ -6,9 +6,31 @@ class NotesController < ApplicationController
     @note.inscription = @inscription
     authorize @note
     if @note.save
-      redirect_to inscription_path('fr',@inscription)
+      respond_to do |format|
+       format.html {redirect_to inscription_path('fr', @inscription), notice: "la note a été validé"}
+       format.js
+      end
     else
-      redirect_to inscription_path('fr',@inscription)
+      respond_to do |format|
+       format.html {redirect_to inscription_path('fr',@inscription), alert: "la note n'est pas validé"}
+       format.js
+      end
+    end
+  end
+
+  def update
+    @note = Note.find(params[:id])
+    authorize @note
+    if @note.update(note_params)
+      respond_to do |format|
+       format.html {redirect_to inscription_path('fr', @inscription), notice: "la note a été validé"}
+       format.js
+      end
+    else
+      respond_to do |format|
+       format.html {redirect_to inscription_path('fr',@inscription), alert: "la note n'est pas validé"}
+       format.js
+      end
     end
   end
 
