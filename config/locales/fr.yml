@@ -163,14 +163,20 @@ fr:
   email:
     welcome:
       welcome: 'Bienvenue'
-      subheading: 'Merci de vous être connécté sur MasterChef Junior!'
+      subheading: |
+          Nous vous remercions d’avoir soumis une application pour participer au Casting de la 2ème saison de MasterChef Junior ! Nous tenons à vous informer que la candidature de votre enfant a bien été enregistrée.
+
+          Votre dossier de candidature est actuellement en train d’être examiné par nos équipes. Si le profil corresponds à nos attentes, votre enfant sera invité à participer au Casting. Plus d’informations concernant les dates et lieu de Casting vous seront également communiqués à ce moment là.
+
+          Prière de veiller à remplir 100% du formulaire pour maximiser vos chances d’être invité au Casting.
       update_profile: "Nous n'avons pas votre nom - merci de vous connécter pour compléter votre profile"
       inscription: 'Commencer votre inscription'
     inscription:
       hello: 'Salut'
-      subheading: 'Merci de vous être connécté sur MasterChef Junior!'
+      subheading: "Merci d'avoir soumis votre inscription sur MasterChef Junior!"
       update_profile: "Nous n'avons pas votre nom - merci de vous connécter pour compléter votre profile"
       inscription: 'Compléter votre inscription'
+    cordialement: 'Cordialement, '
     signature: "L'équipe MasterChef Junior"
   simple_form:
     labels:
