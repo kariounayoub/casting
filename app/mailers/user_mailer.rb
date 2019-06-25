@@ -1,7 +1,8 @@
 class UserMailer < ApplicationMailer
   def welcome
     @user = params[:user]
-    @display_name = @user.prenom.nil? ? @user.email + " (please edit your profile and tell us your name)" : @user.prenom
+    @first_name = @user.prenom.nil?
+    @display_name = @first_name ? @user.email : @user.prenom
     mail(to: @user.email, subject: "Bienvenue dans l'aventure MasterChef Junior")
   end
 
@@ -24,11 +25,11 @@ class UserMailer < ApplicationMailer
 
     @display_name = @user.prenom.nil? && @prenom.nil? ? @user.email + " (please edit your profile and tell us your name)" : "#{@nom} #{@prenom}"
     if @mail_tuteur == nil
-      @tuteur = false
+      @greeting = "#{@display_name_tuteur}, #{@display_name}"
       mail(to: @user.email, subject: "Ton inscription a bien été prise en compte pour participer à MasterChef Junior !")
     else
       @display_name_tuteur = @prenom_tuteur == "" ? @mail_tuteur + " (please complete the inscription and tell us your name)" : @prenom_tuteur + " " + @nom_tuteur
-      @tuteur = true
+      @greeting = @display_name
       mail(to: @user.email, cc: @mail_tuteur, subject: "Ton inscription a bien été prise en compte pour participer à MasterChef Junior !")
     end
   end

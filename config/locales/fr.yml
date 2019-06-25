@@ -160,6 +160,15 @@ fr:
       qualites: 'Si on demande à ton/ta meilleur(e) ami(e) de nous citer tes 3 qualités, que dirait-t-il(elle) ?'
       defauts: 'Si on demande à ton/ta meilleur(e) ami(e) de nous citer tes 3 défauts, que dirait-t-il(elle) ?'
       tele: 'As-tu déjà joué, ou apparu à la télévision ou au cinéma auparavant ? Si oui, veuillez décrire'
+  email:
+    welcome:
+      welcome: 'Bienvenue'
+      subheading: 'Merci de vous être connécté sur MasterChef Junior!'
+      update_profile: "Nous n'avons pas votre nom - merci de vous connécter pour compléter votre profile"
+      inscription: 'Commencer votre inscription'
+    inscription:
+
+    signature: "L'équipe MasterChef Junior"
   simple_form:
     labels:
       user:
