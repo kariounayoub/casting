@@ -10,7 +10,7 @@ class InscriptionPolicy < ApplicationPolicy
   end
 
   def show?
-    user.admin || record.user == user
+    user.admin || record.user == user || user.caster
   end
 
   def new?

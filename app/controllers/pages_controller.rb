@@ -11,6 +11,7 @@ class PagesController < ApplicationController
 
   def dashboard
     @inscriptions = InscriptionsSerializer.new(Inscription.all).serialized_json
+    authorize current_user
   end
 
   def contact

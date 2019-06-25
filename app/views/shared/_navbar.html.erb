@@ -35,11 +35,15 @@
           <li class="nav-item active">
             <%= link_to t('navbar.dashboard'), dashboard_path(I18n.locale), class: "nav-link" %>
           </li>
+        <% elsif current_user.caster %>
+          <li class="nav-item active">
+            <%= link_to t('navbar.dashboard'), dashboard_path(I18n.locale), class: "nav-link" %>
+          </li>
         <% else %>
           <li class="nav-item active">
             <%= link_to t('navbar.inscription'), inscriptions_path(I18n.locale), class: "nav-link" %>
           </li>
-<!--           <li class="nav-item">
+          <!--           <li class="nav-item">
             <%= link_to t('navbar.a_propos'), a_propos_path(I18n.locale), class: "nav-link" %>
           </li>
           <li class="nav-item">
