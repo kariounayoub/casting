@@ -24,7 +24,7 @@ gem 'letter_opener', group: :development
 gem 'postmark-rails'
 gem 'gibbon'
 
-
+gem 'rails_admin', '~> 2.0.0.beta'
 gem 'fast_jsonapi'
 
 group :development do
