@@ -10,16 +10,18 @@ class InscriptionsSerializer
     ville = responses.find { |r| r.question.categorie == 'personnel' && r.question.contenu == 'ville' }&.contenu
     {nom: nom, prenom: prenom, age: age, sexe: sexe, ville: ville}
   end
-  attribute :note_personalite do |object|
-    object.avg_note_personalite
+
+  attribute :note_moyenne do |object|
+    (object.avg_note_personalite + object.avg_note_cuisine) / 2
   end
-  attribute :note_cuisine do |object|
-    object.avg_note_cuisine
+
+  attribute :convocation do |object|
+    {id: object.convocation&.id, date: object.convocation&.date&.strftime('%d/%m/%y'), heure: object.convocation&.heure&.strftime('%R')}
   end
+
   attribute :percent_complete do |object|
     object.percent_complete
   end
-
 end
 
 def get_age(date)
