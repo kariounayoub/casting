@@ -162,22 +162,62 @@ fr:
       tele: 'As-tu déjà joué, ou apparu à la télévision ou au cinéma auparavant ? Si oui, veuillez décrire'
   email:
     welcome:
-      welcome: 'Bienvenue'
-      subheading: |
-          Nous vous remercions d’avoir soumis une application pour participer au Casting de la 2ème saison de MasterChef Junior ! Nous tenons à vous informer que la candidature de votre enfant a bien été enregistrée.
+      welcome_fr: 'Bienvenue'
+      subheading_fr: |
+          Nous vous remercions pour l’intérêt que vous portez à la plus grande compétition culinaire MasterChef Junior !
 
-          Votre dossier de candidature est actuellement en train d’être examiné par nos équipes. Si le profil corresponds à nos attentes, votre enfant sera invité à participer au Casting. Plus d’informations concernant les dates et lieu de Casting vous seront également communiqués à ce moment là.
+          Nous vous informons que votre session a été enregistrée avec succès.
+
+          Merci de remplir le formulaire de participation afin de finaliser votre inscription et tenter de participer au Casting MasterChef Junior 2.
+
+          Bonne chance à toutes et à tous !
+      update_profile_fr: "PS : Nous n'avons pas votre nom - merci de vous connecter et d'éditer votre profil."
+      inscription_fr: 'Commencer votre inscription'
+      welcome_ar: 'مرحبا'
+      subheading_ar: |
+          نشكركم على أهتمامكم الكبیر لمسابقة الطبخ ماسترشیف جونیور
+
+          ونخبركم بأن تسجیلكم لكستینغ ماسترشیف قد تم بنجاح
+
+          المرجو ملء استمارة المشاركة لإتمام تسجيلكم والظفور بحظ المشاركة
+
+          حظ سعيد للجميع
+      update_profile_ar: 'لا نتوفر على إسمك. المرجو إدخال جميع المعلومات'
+      inscription_ar: "التسجيل"
+    inscription:
+      welcome_fr: 'Bonjour'
+      subheading_fr:  |
+          Nous vous remercions d’avoir soumis une application pour participer au Casting de la 2ème saison de MasterChef Junior !
+
+          Nous tenons à vous informer que la candidature de votre enfant a bien été enregistrée.
+
+          Votre dossier de candidature est actuellement en train d’être examiné par nos équipes. Si le profil correspond à nos attentes, votre enfant sera invité à participer au Casting.
+
+          Plus d’informations concernant les dates et lieu de Casting vous seront également communiqués à ce moment là.
 
           Prière de veiller à remplir 100% du formulaire pour maximiser vos chances d’être invité au Casting.
-      update_profile: "Nous n'avons pas votre nom - merci de vous connécter pour compléter votre profile"
-      inscription: 'Commencer votre inscription'
-    inscription:
-      hello: 'Salut'
-      subheading: "Merci d'avoir soumis votre inscription sur MasterChef Junior!"
-      update_profile: "Nous n'avons pas votre nom - merci de vous connécter pour compléter votre profile"
-      inscription: 'Compléter votre inscription'
-    cordialement: 'Cordialement, '
-    signature: "L'équipe MasterChef Junior"
+
+          Bonne chance à toutes et à tous !
+      update_profile_fr: "PS : Nous n'avons pas votre nom - merci de vous connecter et d'éditer votre profil."
+      inscription_fr: 'Compléter votre inscription'
+      welcome_ar: 'مرحبا'
+      subheading_ar:  |
+          نشكركم على تقديم طلبكم للمشاركة لكستینغ الموسم الثاني لمسترشیف جونیور
+
+          نود أن نخبركم أن ترشح طفلكم قد تم تسجيله وبأن ملف الترشح هو حالیا في طور الدراسة من طرف لجنة التحكيم
+
+          وعند قبول الترشح سيتم استدعاء طفلكم للمشاركة للكستینغ وسيتم حينئذ تزويدكم بالمزيد من المعلومات بخصوص موعد ومكان الكستینغ
+
+          لرفع حظوظكم في المشاركة، يرجى ملء جميع معلومات الإسثمارة
+
+          حظ سعيد للجميع
+      update_profile_ar: 'لا نتوفر على إسمك. المرجو إدخال جميع المعلومات'
+      inscription_ar: "التسجيل"
+    cordialement_fr: 'Cordialement, '
+    signature_fr: "L'équipe MasterChef Junior"
+    cordialement_ar: 'مع خالص التقدير'
+    signature_ar: 'فريق ماسترشيف جونيور '
+
   simple_form:
     labels:
       user:
