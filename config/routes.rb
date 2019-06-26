@@ -26,4 +26,5 @@ Rails.application.routes.draw do
   resources :inscriptions, only: [:destroy, :create] do
     resources :notes, only: [:create, :update]
   end
+  resources :convocations, only: [:create]
 end

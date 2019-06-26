@@ -33,7 +33,6 @@
         </v-date-picker>
       </v-dialog>
     </v-flex>
-      </v-date-picker>
   </div>
 </template>
 

@@ -4,6 +4,7 @@ class Inscription < ApplicationRecord
   validates_uniqueness_of :user_id, scope: :evenement_id, on: :create
   has_many :reponses, dependent: :destroy
   has_many :notes
+  has_one :convocation, dependent: :destroy
   accepts_nested_attributes_for :reponses
   mount_base64_uploader :photo_candidat, PhotoUploader
   mount_base64_uploader :photo_1, PhotoUploader

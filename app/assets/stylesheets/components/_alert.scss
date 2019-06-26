@@ -4,7 +4,7 @@
 }
 
 .sticky-alert {
-  position: sticky;
+  position: sticky !important;
   top: 100px;
   z-index: 10000;
 }

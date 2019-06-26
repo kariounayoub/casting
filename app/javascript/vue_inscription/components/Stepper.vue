@@ -1,10 +1,6 @@
 <template>
   <div>
-        <div v-if="flash.show && flash.variant === 'success'" role="alert" aria-live="polite" aria-atomic="true" class="show-alert sticky-alert alert alert-success offset" >
-      <button type="button" data-dismiss="alert" aria-label="alertClose" class="close" @click="closeFlash()"><span aria-hidden="true">x</span></button>
-      {{flash.message}}
-    </div>
-    <div v-if="flash.show && flash.variant === 'warning'" role="alert" aria-live="polite" aria-atomic="true" class="show-alert sticky-alert alert alert-warning offset" >
+    <div v-if="flash.show && flash.variant === 'success'" role="alert" aria-live="polite" aria-atomic="true" class="show-alert sticky-alert alert alert-success offset" >
       <button type="button" data-dismiss="alert" aria-label="alertClose" class="close" @click="closeFlash()"><span aria-hidden="true">x</span></button>
       {{flash.message}}
     </div>
@@ -216,9 +212,9 @@ const config = {
     },
     methods: {
       closeFlash() {
-        flash.show = false
-        flash.message = null
-        flash.variant = null
+        this.flash.show = false
+        this.flash.message = null
+        this.flash.variant = null
       },
       validate (step,page) {
         const forms = [this.$refs.form1,this.$refs.form2,this.$refs.form3,this.$refs.form4,this.$refs.form5]
