@@ -17,10 +17,10 @@
             <v-text-field
               class="with-margin"
               append-icon="search"
-              label="Prénom"
+              label="Ville"
               single-line
               hide-details
-              @input="filterPrenoms"
+              @input="filterVilles"
             ></v-text-field>
           </v-flex>
           <v-flex xs12 sm3 >
@@ -50,9 +50,10 @@
                   <td class="text-xs-left">{{ props.item.reponses.prenom }}</td>
                   <td class="text-xs-left">{{ props.item.reponses.age }} ans</td>
                   <td class="text-xs-left">{{ props.item.reponses.sexe }}</td>
+                  <td class="text-xs-left">{{ props.item.reponses.ville }}</td>
                   <td class="text-xs-left">{{ props.item.note_cuisine }}</td>
                   <td class="text-xs-left">{{ props.item.note_personalite }}</td>
-                  <td class="text-xs-left"> <div class='with-border'><div class="progress-bar left-border" role="progressbar" v-bind:style="{ width: props.item.percent_complete + '%' }" aria-valuenow='props.item.percent_complete' aria-valuemin="0" aria-valuemax="100">{{ props.item.percent_complete }} %</div></div></td>
+                  <td class="text-xs-left"> <div class='with-border'><div :class="{'progress-bar': true, 'left-border': true, 'right-border': completionRate(props.item.percent_complete)}" role="progressbar" v-bind:style="{ width: props.item.percent_complete + '%' }" aria-valuenow='props.item.percent_complete' aria-valuemin="0" aria-valuemax="100">{{ props.item.percent_complete }} %</div></div></td>
                   <td class="text-xs-left"><a :href="originURL + '/inscriptions/' + props.item.id" class='link'><v-icon>visibility</v-icon></a></td>
                 </tr>
               </template>
@@ -72,7 +73,7 @@ export default {
   data: () => ({
     filters: {
       nom: '',
-      prenom: '',
+      ville: '',
       sexe: '',
       age: '',
     },
@@ -85,6 +86,7 @@ export default {
       { text: 'Prénom', value: 'reponses.prenom', align: 'left'},
       { text: 'Age', value: 'reponses.age', align: 'left'},
       { text: 'Sexe', value: 'reponses.sexe', align: 'left'},
+      { text: 'Ville', value: 'reponses.ville', align: 'left'},
       { text: 'Note Cuisine', value: 'note_cuisine', align: 'left'},
       { text: 'Note Personalité', value: 'note_personalite', align: 'left'},
       { text: 'Formulaire', value: 'percent_complete', align: 'left'},
@@ -97,6 +99,9 @@ export default {
     },
   },
   methods: {
+    completionRate(item) {
+      return item > 95
+    },
     customFilter(items, filters, filter, headers) {
       const cf = new this.$MultiFilters(items, filters, filter, headers);
 
@@ -109,12 +114,12 @@ export default {
         }, searchWord)
       });
 
-      cf.registerFilter('prenom', function(searchWord, items) {
+      cf.registerFilter('ville', function(searchWord, items) {
         if (searchWord.trim() === "") return items;
 
         return items.filter(item => {
-          if (item.reponses.prenom === null) return ''
-          return item.reponses.prenom.toLowerCase().includes(searchWord.toLowerCase());
+          if (item.reponses.ville === null) return ''
+          return item.reponses.ville.toLowerCase().includes(searchWord.toLowerCase());
         }, searchWord)
       });
 
@@ -142,8 +147,8 @@ export default {
     filterNoms(val) {
       this.filters = this.$MultiFilters.updateFilters(this.filters, {nom: val});
     },
-    filterPrenoms(val) {
-      this.filters = this.$MultiFilters.updateFilters(this.filters, {prenom: val});
+    filterVilles(val) {
+      this.filters = this.$MultiFilters.updateFilters(this.filters, {ville: val});
     },
     filterSexes(val) {
       this.filters = this.$MultiFilters.updateFilters(this.filters, {sexe: val});
@@ -176,6 +181,10 @@ export default {
   }
   .left-border {
     border-radius: 20px 0 0 20px;
+  }
+
+  .right-border {
+    border-radius: 20px;
   }
 
 </style>
