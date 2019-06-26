@@ -7,7 +7,8 @@ class InscriptionsSerializer
     prenom = responses.find { |r| r.question.categorie == 'personnel' && r.question.contenu == 'prenom' }&.contenu
     age = get_age(Date.parse(responses.find { |r| r.question.categorie == 'personnel' && r.question.contenu == 'date_naissance' }&.contenu || Date.today.strftime()) )
     sexe = responses.find { |r| r.question.categorie == 'personnel' && r.question.contenu == 'sexe' }&.contenu
-    {nom: nom, prenom: prenom, age: age, sexe: sexe}
+    ville = responses.find { |r| r.question.categorie == 'personnel' && r.question.contenu == 'ville' }&.contenu
+    {nom: nom, prenom: prenom, age: age, sexe: sexe, ville: ville}
   end
   attribute :note_personalite do |object|
     object.avg_note_personalite
