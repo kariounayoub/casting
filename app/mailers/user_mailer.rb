@@ -8,6 +8,32 @@ class UserMailer < ApplicationMailer
 
   def inscription
     @inscription = params[:inscription]
+    reponses
+    if @mail_tuteur == nil
+      @greeting = "#{@display_name_tuteur}, #{@display_name}"
+      mail(to: @user.email, subject: "Ton inscription a bien été prise en compte pour participer à MasterChef Junior !")
+    else
+      @display_name_tuteur = @prenom_tuteur == "" ? @mail_tuteur : @prenom_tuteur + " " + @nom_tuteur
+      @greeting = @display_name
+      mail(to: @user.email, cc: @mail_tuteur, subject: "Ton inscription a bien été prise en compte pour participer à MasterChef Junior !")
+    end
+  end
+
+  def convocation
+    @convocation = params[:convocation]
+    @inscription = @convocation.inscription
+    reponses
+    if @mail_tuteur == nil
+      @greeting = "#{@display_name_tuteur}, #{@display_name}"
+      mail(to: @user.email, subject: "Convocation pour le casting MasterChef Junior !")
+    else
+      @display_name_tuteur = @prenom_tuteur == "" ? @mail_tuteur : @prenom_tuteur + " " + @nom_tuteur
+      @greeting = @display_name
+      mail(to: @user.email, cc: @mail_tuteur, subject: "Convocation pour le casting MasterChef Junior !")
+    end
+  end
+
+  def reponses
     @user = @inscription.user
     evenement = Evenement.first
     question_mail = Question.where(evenement_id: evenement.id, categorie: "tuteur", contenu: "email").first.id
@@ -25,16 +51,5 @@ class UserMailer < ApplicationMailer
     @first_name = @user.prenom.nil?
 
     @display_name = @user.prenom.nil? && @prenom.nil? ? @user.email : "#{@nom} #{@prenom}"
-    if @mail_tuteur == nil
-      @greeting = "#{@display_name_tuteur}, #{@display_name}"
-      mail(to: @user.email, subject: "Ton inscription a bien été prise en compte pour participer à MasterChef Junior !")
-    else
-      @display_name_tuteur = @prenom_tuteur == "" ? @mail_tuteur : @prenom_tuteur + " " + @nom_tuteur
-      @greeting = @display_name
-      mail(to: @user.email, cc: @mail_tuteur, subject: "Ton inscription a bien été prise en compte pour participer à MasterChef Junior !")
-    end
-  end
-
-  def convocation
   end
 end
