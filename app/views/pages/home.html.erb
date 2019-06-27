@@ -230,7 +230,7 @@
             <div class=" card home-card card-horizontal" >
               <div style="background-image: url(<%= image_path('moha.jpg') %>" class="card-image"></div>
                 <div class="card-body">
-                <p class="card-text"><%= t("home.chef.moha") %></p>
+                <p class="card-text <%= 'text-right' if I18n.locale == :ar %>"><%= t("home.chef.moha") %></p>
               </div>
             </div>
           </div>
@@ -238,7 +238,7 @@
             <div class=" card home-card card-horizontal" >
               <div style="background-image: url(<%= image_path('mimi.jpg') %>" class="card-image"></div>
               <div class="card-body">
-                <p class="card-text"><%= t("home.chef.mimi") %></p>
+                <p class="card-text <%= 'text-right' if I18n.locale == :ar %>"><%= t("home.chef.mimi") %></p>
               </div>
             </div>
           </div>
