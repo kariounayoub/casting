@@ -33,7 +33,6 @@ class InscriptionsController < ApplicationController
         end
         inscription.send_inscription_email
         render json: {success: true}
-
       else
         render json: {success: false, message: I18n.translate("stepper.newErr")}
       end
