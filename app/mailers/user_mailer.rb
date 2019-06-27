@@ -34,4 +34,7 @@ class UserMailer < ApplicationMailer
       mail(to: @user.email, cc: @mail_tuteur, subject: "Ton inscription a bien été prise en compte pour participer à MasterChef Junior !")
     end
   end
+
+  def convocation
+  end
 end
