@@ -36,11 +36,11 @@
         <% new_category = nil %>
         <% @inscription.reponses.joins(:question).order(question_id: :asc).each do |reponse| %>
           <% if new_category != reponse.question.categorie %>
-            <h3 class="category-title"><%= t("inscription.cat.#{reponse.question.categorie}") %></h3>
+            <h3 class="category-title <%= 'text-right' if I18n.locale == :ar %>"><%= t("inscription.cat.#{reponse.question.categorie}") %></h3>
             <% new_category = reponse.question.categorie %>
           <% end %>
-          <h4 class='text-gray'><%= t("question.#{reponse.question.categorie}.#{reponse.question.contenu}") %></h4>
-          <h5 class='response'><%= reponse.contenu %></h5>
+          <h4 class='text-gray <%= 'text-right' if I18n.locale == :ar %>'><%= t("question.#{reponse.question.categorie}.#{reponse.question.contenu}") %></h4>
+          <h5 class='response <%= 'text-right' if I18n.locale == :ar %>'><%= reponse.contenu %></h5>
         <% end %>
     </div>
 

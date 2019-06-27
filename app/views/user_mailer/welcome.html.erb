@@ -106,7 +106,7 @@
         <tr>
         <td align="center" valign="top" width="600">
         <![endif]-->
-        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 500px;">
           <tr>
             <td align="center" valign="top" style="padding: 36px 24px;">
               <a href="https://www.masterchefmaroc.ma" target="_blank" rel="noopener noreferrer" style="display: inline-block;">
@@ -132,7 +132,7 @@
         <tr>
         <td align="center" valign="top" width="600">
         <![endif]-->
-        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 500px;">
           <tr>
             <td bgcolor="#ffffff" align="left">
               <img src="<%= image_path 'banner_1.jpg' %>" alt="Welcome" width="600" style="display: block; width: 100%; max-width: 100%;">
@@ -156,7 +156,7 @@
         <tr>
         <td align="center" valign="top" width="600">
         <![endif]-->
-        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 500px;">
 
           <!-- start copy -->
           <tr>
@@ -201,28 +201,28 @@
 
 
 
-        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 500px;">
 
           <!-- start copy -->
           <tr>
-            <td bgcolor="#ffffff" align="left" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-              <h1 style="margin: 0 0 12px; font-size: 32px; font-weight: 400; line-height: 48px;"><%= t('email.welcome.welcome_ar') %> <%= @display_name %></h1>
-              <p style="margin: 0; white-space: pre-wrap;"><%= t('email.welcome.subheading_ar') %></p>
-              <p style="margin: 0;"><%= t('email.welcome.update_profile_ar') if @first_name%></p>
+            <td bgcolor="#ffffff" align="right" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
+              <h1 style="margin: 0 0 12px; font-size: 32px; font-weight: 400; line-height: 48px; text-align: right;"><%= t('email.welcome.welcome_ar') %> <%= @display_name %></h1>
+              <p style="margin: 0; white-space: pre-wrap; text-align: right;"><%= t('email.welcome.subheading_ar') %></p>
+              <p style="margin: 0; text-align: right;"><%= t('email.welcome.update_profile_ar') if @first_name%></p>
             </td>
           </tr>
           <!-- end copy -->
 
           <!-- start button -->
           <tr>
-            <td align="left" bgcolor="#ffffff">
-              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <td align="center" bgcolor="#ffffff">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style=''>
                 <tr>
                   <td align="center" bgcolor="#ffffff" style="padding: 12px;">
                     <table border="0" cellpadding="0" cellspacing="0">
                       <tr>
-                        <td align="center" bgcolor="#B0303D" style="border-radius: 15px 2px 15px 2px;">
-                          <a href="https://www.masterchefmaroc.ma/ar/inscriptions" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 15px 2px 15px 2px;"><%= t('email.welcome.inscription_ar') %></a>
+                        <td align="center" bgcolor="#B0303D" style="border-radius: 15px 2px 15px 2px ;">
+                          <a href="https://www.masterchefmaroc.ma/ar/inscriptions" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 15px 2px 15px 2px; text-align: right;"><%= t('email.welcome.inscription_ar') %></a>
                         </td>
                       </tr>
                     </table>
@@ -235,9 +235,9 @@
 
           <!-- start copy -->
           <tr>
-            <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf">
-              <p style="margin: 0;"><%= t('email.cordialement_ar') %></p>
-              <p style="margin: 0;"><%= t('email.signature_ar') %></p>
+            <td align="center" bgcolor="#ffffff" style="text-align: right; padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf">
+              <p style="margin: 0; text-align: right;"><%= t('email.cordialement_ar') %></p>
+              <p style="margin: 0; text-align: right;"><%= t('email.signature_ar') %></p>
             </td>
           </tr>
           <!-- end copy -->
