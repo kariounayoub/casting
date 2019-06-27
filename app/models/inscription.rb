@@ -26,7 +26,7 @@ class Inscription < ApplicationRecord
   end
 
   def send_inscription_email
-    # UserMailer.with(inscription: self).inscription.deliver_later
+    UserMailer.with(inscription: self).inscription.deliver_later
   end
 
 end
