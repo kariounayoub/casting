@@ -6,5 +6,8 @@ class Convocation < ApplicationRecord
   validates :heure, :date, :lieu, presence: true
 
   def send_convocation_email
+    # UserMailer.with(convocation: self).convocation.deliver_later
+    # self.mail_envoye = true
+    # self.save
   end
 end
