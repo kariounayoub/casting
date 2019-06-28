@@ -170,12 +170,12 @@
               this.date = ''
               this.heure = ''
               this.$emit('resetSelected')
-              this.$emit('flash', {message: 'Les convocations ont été envoyés', variant: 'success', show: 'true'})
+              document.sweetAlert('Les convocations ont été envoyés')
             } else {
-              this.$emit('flash', {message: res.data.errors, variant: 'error', show: 'true'})
+              document.sweetError(res.data.errors)
             }
           })
-          .catch(err => this.$emit('flash', {message: err, variant: 'error', show: 'true'}))
+          .catch(err => document.sweetError(err))
         }
       }
     }

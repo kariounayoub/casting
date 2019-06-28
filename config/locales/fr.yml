@@ -22,6 +22,7 @@ fr:
     password: 'Mot de passe oublié'
     connexion: 'Connexion'
     modifier: 'Modifier mon Profile'
+    casting: 'Casting'
   pages:
     insc_index: 'Toutes mes inscriptions'
     insc_new: 'Nouvelle Inscription'

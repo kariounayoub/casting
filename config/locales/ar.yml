@@ -22,6 +22,7 @@ ar:
     password: 'Mot de passe oublié'
     connexion: 'Connexion'
     modifier: 'Modifier mon Profile'
+    casting: 'Casting'
   pages:
     insc_index: 'جميع التسجيلات'
     insc_new: 'تسجيل جديد'

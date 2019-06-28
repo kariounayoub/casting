@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     end
     resources :inscriptions, except: [:destroy, :create]
     get 'dashboard', to: 'pages#dashboard', as: :dashboard
+    get 'casting', to: 'pages#casting', as: :casting
     get 'contact', to: 'pages#contact'
     get 'a_propos', to: 'pages#a_propos'
     get '/change/:lang', to: 'pages#lang', as: 'lang'
@@ -27,4 +28,7 @@ Rails.application.routes.draw do
     resources :notes, only: [:create, :update]
   end
   resources :convocations, only: [:create]
+  patch 'convocations/:id/present', to: 'convocations#present'
+  post 'convocations/:convocation_id/notes', to: 'notes#create_convocation'
+  patch 'convocations/:convocation_id/notes/:id', to: 'notes#update_convocation'
 end
