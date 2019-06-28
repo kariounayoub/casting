@@ -1,13 +1,5 @@
 <template>
   <div>
-    <div v-if="flash.show && flash.variant === 'success'" role="alert" aria-live="polite" aria-atomic="true" class="show-alert sticky-alert alert alert-success offset" >
-      <button type="button" data-dismiss="alert" aria-label="alertClose" class="close" @click="closeFlash()"><span aria-hidden="true">x</span></button>
-      {{flash.message}}
-    </div>
-    <div v-if="flash.show && flash.variant === 'error'" role="alert" aria-live="polite" aria-atomic="true" class="show-alert sticky-alert alert alert-danger offset" >
-      <button type="button" data-dismiss="alert" aria-label="alertClose" class="close" @click="closeFlash()"><span aria-hidden="true">x</span></button>
-      {{flash.message}}
-    </div>
     <!-- Create Convocation -->
       <v-dialog v-model="dialog" max-width="700px" v-if="admin">
         <template v-slot:activator="{ on }">
@@ -15,7 +7,7 @@
             <v-btn color="error" dark class="mb-3" v-on="on" :disabled='selected.length === 0'>Nouvelle Convocation</v-btn>
           </div>
         </template>
-        <ConvocationForm v-bind:selected='selected' v-on:close='dialog = false' v-on:updateItems='updateInscriptions' v-on:flash='setFlash' v-on:resetSelected='selected = []'/>
+        <ConvocationForm v-bind:selected='selected' v-on:close='dialog = false' v-on:updateItems='updateInscriptions' v-on:resetSelected='selected = []'/>
       </v-dialog>
     <!-- Main Table -->
       <v-card >
@@ -133,11 +125,6 @@ export default {
       sexe: '',
       age: '',
     },
-    flash: {
-      message: null,
-      show: false,
-      variant: null,
-    },
     ages: ['Tout', 8,9,10,11,12],
     originURL: window.location.origin,
     inscriptions: JSON.parse(root.dataset.inscriptions),
@@ -166,14 +153,6 @@ export default {
     },
   },
   methods: {
-    setFlash(message) {
-      this.flash = message
-    },
-    closeFlash() {
-      this.flash.show = false
-      this.flash.message = null
-      this.flash.variant = null
-    },
     updateInscriptions(inscriptions) {
       this.inscriptions = JSON.parse(inscriptions)
     },
