@@ -19,8 +19,10 @@ document.rateNote = function rateNote(noteId, inputId) {
   if(document.getElementById('modal-note')) {
     $(noteId).rateYo({numStars: 10, fullStar: true});
     if (!document.querySelector('#new_note')) {
-      $(noteId).rateYo('rating', parseFloat(document.querySelector(inputId).value)/2);
+      $(noteId).rateYo('rating', parseFloat(document.querySelector(inputId).value)/2 || 0);
     }
+              console.log('running')
+
     $(noteId).rateYo("option", "onSet", function (rating) {
         document.querySelector(inputId).value = rating*2;
     });

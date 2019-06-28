@@ -1,0 +1,11 @@
+<div class="container-fluid offset-top">
+  <h1 class='page-title text-center'>Casting</h1>
+  <br><br>
+  <% content_for :after_js do %>
+      <%= javascript_pack_tag 'vue_casting' %>
+  <% end %>
+
+  <div id='casting' data-convocations='<%= @convocations %>' data-admin='<%= current_user.admin %>'></div>
+</div>
+
+

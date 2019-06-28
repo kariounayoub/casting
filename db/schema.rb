@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_26_084546) do
+ActiveRecord::Schema.define(version: 2019_06_28_074901) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2019_06_26_084546) do
     t.boolean "mail_envoye"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "venu"
     t.index ["inscription_id"], name: "index_convocations_on_inscription_id"
   end
 
@@ -55,6 +56,8 @@ ActiveRecord::Schema.define(version: 2019_06_26_084546) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "convocation_id"
+    t.index ["convocation_id"], name: "index_notes_on_convocation_id"
     t.index ["inscription_id"], name: "index_notes_on_inscription_id"
     t.index ["user_id"], name: "index_notes_on_user_id"
   end
@@ -104,6 +107,7 @@ ActiveRecord::Schema.define(version: 2019_06_26_084546) do
   add_foreign_key "convocations", "inscriptions"
   add_foreign_key "inscriptions", "evenements"
   add_foreign_key "inscriptions", "users"
+  add_foreign_key "notes", "convocations"
   add_foreign_key "notes", "inscriptions"
   add_foreign_key "notes", "users"
   add_foreign_key "questions", "evenements"

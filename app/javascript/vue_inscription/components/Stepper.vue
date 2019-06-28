@@ -1,13 +1,5 @@
 <template>
   <div>
-    <div v-if="flash.show && flash.variant === 'success'" role="alert" aria-live="polite" aria-atomic="true" class="show-alert sticky-alert alert alert-success offset" >
-      <button type="button" data-dismiss="alert" aria-label="alertClose" class="close" @click="closeFlash()"><span aria-hidden="true">x</span></button>
-      {{flash.message}}
-    </div>
-    <div v-if="flash.show && flash.variant === 'error'" role="alert" aria-live="polite" aria-atomic="true" class="show-alert sticky-alert alert alert-danger offset" >
-      <button type="button" data-dismiss="alert" aria-label="alertClose" class="close" @click="closeFlash()"><span aria-hidden="true">x</span></button>
-      {{flash.message}}
-    </div>
     <v-container>
       <v-stepper v-model="e1" alt-labels non-linear>
         <!-- HEADER -->
@@ -173,11 +165,6 @@ const config = {
         photo_candidat: root.dataset.photo_candidat,
         translations: JSON.parse(root.dataset.translations),
         activeDropzone: false,
-        flash: {
-          message: null,
-          show: false,
-          variant: null,
-        },
         dropOptions: {
           url: 'localhost:3000/encaissement/fichiers',
           thumbnailWidth: 150,
@@ -211,11 +198,6 @@ const config = {
       }
     },
     methods: {
-      closeFlash() {
-        this.flash.show = false
-        this.flash.message = null
-        this.flash.variant = null
-      },
       validate (step,page) {
         const forms = [this.$refs.form1,this.$refs.form2,this.$refs.form3,this.$refs.form4,this.$refs.form5]
         let form = null
@@ -253,29 +235,29 @@ const config = {
                 axios.post(`/inscriptions`, formFields, config)
                 .then((res) => {
                   if(res.data.success) {
-                    this.flash = {message: this.translations.insc_new, variant: 'success', show: 'true'}
                     window.location = `${ROOT_URL}/inscriptions`
+                    document.sweetAlert(this.translations.insc_new)
                   } else {
-                    this.flash = {message: res.data.message, variant: 'error', show: 'true'}
+                    document.sweetError(res.data.message)
                   }
                 })
-                .catch(err => this.flash = {message: err, variant: 'error', show: 'true'})
+                .catch(err => document.sweetError(err))
               }
 
               if (this.inscription !== false) {
                 axios.patch(`/inscriptions/${this.inscription}`, formFields, config)
                 .then((res) => {
                   if(res.data.success) {
-                    this.flash = {message: this.translations.insc_edit, variant: 'success', show: 'true'}
                      window.location = `${ROOT_URL}/inscriptions`
+                     document.sweetAlert(this.translations.insc_edit)
                   } else {
-                    this.flash = {message: this.translations.insc_edit_err, variant: 'error', show: 'true'}
+                    document.sweetError(this.translations.insc_edit_err)
                   }
                 })
-                .catch(err => this.flash = {message: err, variant: 'error', show: 'true'})
+                .catch(err => document.sweetError(err))
               }
             } else (
-              this.flash = {message: this.translations.insc_incomplete, variant: 'error', show: 'true'}
+              document.sweetError(this.translations.insc_incomplete)
             )
           }
         }

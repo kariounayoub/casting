@@ -14,6 +14,10 @@ class PagesController < ApplicationController
     authorize current_user
   end
 
+  def casting
+    @convocations = ConvocationsSerializer.new(Convocation.all, {params: {current_user: current_user}}).serialized_json
+    authorize current_user
+  end
   def contact
   end
 
