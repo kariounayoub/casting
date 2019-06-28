@@ -216,24 +216,32 @@ ar:
     convocation:
       title_fr: "Invitation de participation au casting de Masterchef Junior"
       welcome_fr: 'Bonjour'
-      subheading_fr:  |
-          Félicitations à (Nom complet du candidat)
+      felicitation_fr: 'Félicitations à'
+      retenu_fr:  "La candidature de votre enfant a été retenue pour la plus grande compétition télévisée pour les cuisiniers en herbe Masterchef Junior dans sa deuxième édition."
+      date_fr: "Le casting aura lieu le "
+      lieu_fr: "à "
+      instructions_fr:  |
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit magni placeat cum illum molestiae harum hic perspiciatis, saepe nesciunt voluptas amet ratione odio provident. Dolorem tempora minima aspernatur totam at
 
-          La candidature de votre enfant a été retenue pour la plus grande compétition télévisée pour les cuisiniers en herbe Masterchef Junior dans sa deuxième édition.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit magni placeat cum illum molestiae harum hic perspiciatis, saepe nesciunt voluptas amet ratione odio provident. Dolorem tempora minima aspernatur totam at
 
-          Le casting aura lieu les 06 et 07 juillet à l'Hôtel Four Seasons à Casablanca.
-
-          L’ensemble de l’équipe de Masterchef Junior vous remercie pour votre participation et espère vivement partager avec vous et avec (prénom du candidat) une aventure inoubliable‫.‬
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit magni placeat cum illum molestiae harum hic perspiciatis, saepe nesciunt voluptas amet ratione odio provident. Dolorem tempora minima aspernatur totam at
+      remerciement_1_fr: "L’ensemble de l’équipe de Masterchef Junior vous remercie pour votre participation et espère vivement partager avec vous et avec"
+      remerciement_2_fr: "une aventure inoubliable."
       title_ar: "دوعة المشاركة في كاستينغ لمسترشیف جونیور"
-      welcome_ar: 'مرحبا'
-      subheading_fr:  |
-          هنيئا ل الإسم الكامل للمترشح
+      welcome_ar: "مرحبا"
+      felicitation_ar : "هنيئا"
+      retenu_ar: "لقد تم قبول ترشيح طفلكم  في أكبر مسابقة تلفزية الطباخين الصغار في موسمها الثاني لمسترشیف جونیور"
+      date_ar: "سيجرى الكاستينغ يوم "
+      lieu_ar: "بفندق "
+      instructions_ar:  |
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit magni placeat cum illum molestiae harum hic perspiciatis, saepe nesciunt voluptas amet ratione odio provident. Dolorem tempora minima aspernatur totam at
 
-          لقد تم قبول ترشيح طفلكم  في أكبر مسابقة تلفزية الطباخين الصغار في موسمها الثاني‫‬ لمسترشیف جونیور
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit magni placeat cum illum molestiae harum hic perspiciatis, saepe nesciunt voluptas amet ratione odio provident. Dolorem tempora minima aspernatur totam at
 
-          سيجرى الكاستينغ يومي السادس والسابع يوليوز بفندق فور سيزنس بالدار البيضاء
-
-          فريق ماستر شيف جونيور يشكركم على مشاركتكم ويتمنى أن يتقاسم معكم ومع ……… ‫(اسم الطفل)‬ مغامرة اسثتنائية
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit magni placeat cum illum molestiae harum hic perspiciatis, saepe nesciunt voluptas amet ratione odio provident. Dolorem tempora minima aspernatur totam at
+      remerciement_1_ar: "فريق ماستر شيف جونيور يشكركم على مشاركتكم ويتمنى أن يتقاسم معكم ومع "
+      remerciement_2_ar: "مغامرة اسثتنائية"
     cordialement_fr: 'Cordialement,'
     signature_fr: "L'équipe MasterChef Junior"
     cordialement_ar: 'مع خالص التقدير'

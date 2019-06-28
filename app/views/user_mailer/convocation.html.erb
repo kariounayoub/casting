@@ -161,9 +161,14 @@
           <!-- start copy -->
           <tr>
             <td bgcolor="#ffffff" align="left" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-              <h1 style="margin: 0 0 12px; font-size: 32px; font-weight: 400; line-height: 48px;"><%= t('email.convocation.title_fr') %> <%= @display_name %></h1>
-              <h1 style="margin: 0 0 12px; font-size: 32px; font-weight: 400; line-height: 48px;"><%= t('email.convocation.welcome_fr') %> <%= @display_name %></h1>
-              <p style="margin: 0; white-space: pre-wrap;"><%= t('email.convocation.subheading_fr') %></p>
+              <h1 style="margin: 0 0 25px; font-size: 48px; font-weight: 400; line-height: 48px;     text-align: center; color: #B0303D;"><%= t('email.convocation.title_fr') %></h1>
+              <h3 style="margin: 0 0 12px; font-size: 32px; font-weight: 400; line-height: 48px;"><%= t('email.convocation.welcome_fr') %> <%= @prenom_tuteur %> <%= @nom_tuteur %></h3>
+              <p style="margin: 0; white-space: pre-wrap; padding-bottom: 15px;"><%= t('email.convocation.felicitation_fr') %> <%= @prenom %>!</p>
+              <p style="margin: 0; white-space: pre-wrap; padding-bottom: 15px;"><%= t('email.convocation.retenu_fr') %></p>
+              <p style="margin: 0; white-space: pre-wrap; padding-bottom: 15px;"><%= t('email.convocation.date_fr') %> <strong><%= @convocation.date %> <%=@convocation.heure %></strong> <%= t('email.convocation.lieu_fr') %> <strong><%= @convocation.lieu %></strong></p>
+              <p style="margin: 0; white-space: pre-wrap; padding-bottom: 15px;"><%= t('email.convocation.instructions_fr') %></p>
+              <p style="margin: 0; white-space: pre-wrap; padding-bottom: 15px;"><%= t('email.convocation.remerciement_1_fr') %> <%= @prenom %> <%= t('email.convocation.remerciement_2_fr') %></p>
+              <p style="margin: 0; white-space: pre-wrap; padding-bottom: 15px;"><%= t('email.convocation.identifiant_fr') %><%= @user.id %></p>
             </td>
           </tr>
           <!-- end copy -->
@@ -185,10 +190,15 @@
 
           <!-- start copy -->
           <tr>
-            <td bgcolor="#ffffff" align="right" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-              <h1 style="margin: 0 0 12px; font-size: 32px; font-weight: 400; line-height: 48px; text-align: right;"><%= t('email.convocation.title_ar') %> <%= @display_name %></h1>
-              <h1 style="margin: 0 0 12px; font-size: 32px; font-weight: 400; line-height: 48px; text-align: right;"><%= t('email.convocation.welcome_ar') %> <%= @display_name %></h1>
-              <p style="margin: 0; white-space: pre-wrap; text-align: right;"><%= t('email.convocation.subheading_ar') %></p>
+            <td bgcolor="#ffffff" align="left" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
+              <h1 style="margin: 0 0 25px; font-size: 48px; font-weight: 400; line-height: 48px;  text-align: center; color: #B0303D"><%= t('email.convocation.title_ar') %></h1>
+              <h3 style="margin: 0 0 12px; font-size: 32px; font-weight: 400; line-height: 48px; color: $red;text-align: right;"><%= t('email.convocation.welcome_ar') %> <%= @prenom_tuteur %> <%= @nom_tuteur %></h3>
+              <p style="margin: 0; white-space: pre-wrap; padding-bottom: 15px; text-align: right;"><%= t('email.convocation.felicitation_ar') %> <%= @prenom %>!</p>
+              <p style="margin: 0; white-space: pre-wrap; padding-bottom: 15px;text-align: right;"><%= t('email.convocation.retenu_ar') %></p>
+              <p style="margin: 0; white-space: pre-wrap; padding-bottom: 15px; text-align: right;"><%= t('email.convocation.date_ar') %> <strong><%= @convocation.date %> <%= @convocation.heure %></strong> <%= t('email.convocation.lieu_ar') %> <strong><%= @convocation.lieu %></strong></p>
+              <p style="margin: 0; white-space: pre-wrap; padding-bottom: 15px; text-align: right;"><%= t('email.convocation.instructions_ar') %></p>
+              <p style="margin: 0; white-space: pre-wrap; padding-bottom: 15px; text-align: right;"><%= t('email.convocation.remerciement_1_ar') %> <%= @prenom %> <%= t('email.convocation.remerciement_2_ar') %></p>
+              <p style="margin: 0; white-space: pre-wrap; padding-bottom: 15px; text-align: right;"><%= t('email.convocation.identifiant_ar') %><%= @user.id %></p>
             </td>
           </tr>
           <!-- end copy -->
@@ -196,8 +206,8 @@
           <!-- start copy -->
           <tr>
             <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf">
-              <p style="margin: 0 ; text-align: right;"><%= t('email.cordialement_ar') %></p>
-              <p style="margin: 0;  text-align: right;"><%= t('email.signature_ar') %></p>
+              <p style="margin: 0; text-align: right;"><%= t('email.cordialement_ar') %></p>
+              <p style="margin: 0; text-align: right;"><%= t('email.signature_ar') %></p>
             </td>
           </tr>
           <!-- end copy -->
