@@ -7,7 +7,7 @@ puts 'delete complted'
 puts ''
 
 puts 'creating admin'
-User.create(email: 'a.karioun@medprod.ma', password: 'adminpass123!', admin: true)
+User.create(email: 'a.karioun@medprod.ma', password: 'adminpass123!', admin: true, caster: true)
 
 puts 'creating user'
 User.create(email: 'user@gmail.com', password: 'azerty', admin: false)
