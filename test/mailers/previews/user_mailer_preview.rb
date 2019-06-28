@@ -1,11 +1,11 @@
 class UserMailerPreview < ActionMailer::Preview
   def welcome
-    user = User.first
+    user = User.last
     UserMailer.with(user: user).welcome
   end
 
   def inscription
-    user = User.first
+    user = User.last
     inscription = user.inscriptions.last
     UserMailer.with(inscription: inscription).inscription
   end
