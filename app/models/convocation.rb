@@ -3,7 +3,7 @@ class Convocation < ApplicationRecord
   after_commit :send_convocation_email, on: :create
 
   belongs_to :inscription
-  has_many :notes
+  has_many :notes, dependent: :destroy
   validates :heure, :date, :lieu, presence: true
 
   def avg_note_cuisine
@@ -15,8 +15,8 @@ class Convocation < ApplicationRecord
   end
 
   def send_convocation_email
-    # UserMailer.with(convocation: self).convocation.deliver_later
-    # self.mail_envoye = true
-    # self.save
+    UserMailer.with(convocation: self).convocation.deliver_later
+    self.mail_envoye = true
+    self.save
   end
 end
