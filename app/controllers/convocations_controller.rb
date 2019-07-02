@@ -1,4 +1,4 @@
-class ConvocationsController < ApplicationController
+ class ConvocationsController < ApplicationController
   before_action :find_convocation, only: [:present]
   def create
     errors = []
