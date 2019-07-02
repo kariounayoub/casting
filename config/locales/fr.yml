@@ -215,36 +215,94 @@ fr:
       update_profile_ar: 'لا نتوفر على إسمك. المرجو إدخال جميع المعلومات'
       inscription_ar: "التسجيل"
     convocation:
-      title_fr: "Invitation de participation au casting de Masterchef Junior"
+      title_1_fr: "Casting de MasterChef Junior"
+      title_2_fr: "INVITATION"
       welcome_fr: 'Bonjour'
       felicitation_fr: 'Félicitations à'
-      retenu_fr:  "La candidature de votre enfant a été retenue pour la plus grande compétition télévisée pour les cuisiniers en herbe Masterchef Junior dans sa deuxième édition."
-      date_fr: "Le casting aura lieu le "
-      lieu_fr: "à l'hôtel"
+      retenu_1_fr: "Toute l’équipe de MasterChef Maroc JUNIOR a le plaisir de vous informer que la candidature de votre enfant a retenu toute notre attention pour la deuxième saison."
+      retenu_2_fr:  |
+          a été sélectionné pour participer au casting de la 2ème édition de MasterChef MAROC JUNIOR, l’événement télévisuel de la rentrée.
+
+          Cette invitation permettra à votre enfant d’accéder à la dernière phase de sélection: le casting !
+          Ne l’oubliez surtout pas lorsque votre enfant se présentera à notre bureau d’accueil.
+
+      date_fr: "Vous êtes invités à vous présenter avec votre enfant le : "
+      lieu_fr: "à l’adresse suivante:"
+      felicitation_enfant_fr: "FÉLICITATION"
+      instructions_1_fr: "Pour ton grand jour de casting, tu devras venir accompagné d’au moins un parent (tuteur légal ou autre responsable qui devra signer une décharge) et qui restera à tes côtés pour te soutenir et remplir les formalités. Cette personne sera susceptible d’être filmée."
+      instructions_2_fr: "Lors de cette journée de sélection, tu devras venir muni de :"
+      li_1_fr: "Une pièce d’identité de ton parent accompagnateur"
+      li_2_fr: "Cette Invitation"
+      li_3_fr: "2 photos d’identité"
+      li_4_fr: "Un plat froid confectionné par tes soins*"
       instructions_fr:  |
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit magni placeat cum illum molestiae harum hic perspiciatis, saepe nesciunt voluptas amet ratione odio provident. Dolorem tempora minima aspernatur totam at
+          Inutile de te rappeler d’accorder la plus grande attention à ce plat car c’est grâce à lui que tu seras peut-être sélectionné pour faire partie de l’aventure inoubliable MasterChef Junior!
 
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit magni placeat cum illum molestiae harum hic perspiciatis, saepe nesciunt voluptas amet ratione odio provident. Dolorem tempora minima aspernatur totam at
+          Il faut que ce soit un plat froid, car tu n’auras pas de moyen de réchauffer/cuire quoique ce soit.
 
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit magni placeat cum illum molestiae harum hic perspiciatis, saepe nesciunt voluptas amet ratione odio provident. Dolorem tempora minima aspernatur totam at
+          Le dressage se fera dans nos salles entièrement. Il faudra donc apporter toutes tes préparations dans des boîtes.
+
+          A l’issu de cette journée de sélection, les meilleurs cuisiniers JUNIORS seront invités à nous rejoindre pour le tournage de l’émission.
+
+          *Fait très attention à respecter la chaine du froid, sac congélation / glacière (obligatoire) de tes plats (salés ou sucrés), car ils seront goûtés par le jury.
+
+
+          Si vous avez la moindre question, n’hésitez pas à nous contacter :
+          Téléphone : +212 (0)6 61 95 34 19
+          Email : contact.masterchefjunior@gmail.com
+
+          Ces sélections seront filmées. Ainsi, pour ta tenue vestimentaire, nous te conseillons de ne pas porter de vêtements :
+          - Avec des marque et logo apparents 
+          - Blancs ou avec des couleurs flashy
+
+
+          Pour conclure, notre équipe te donne un dernier conseil :
+
+          PRENDS PLAISIR À PRÉPARER TON PLAT POUR PARTICIPER À CETTE PREMIÈRE ÉDITION DE MASTERCHEF JUNIOR.
+
+          SOIS INVENTIF, CRÉATIF ET MONTRE LE MEILLEUR DE TOI-MÊME DANS CE MONDE MERVEILLEUX DE LA CUISINE !
+
       remerciement_1_fr: "L’ensemble de l’équipe de Masterchef Junior vous remercie pour votre participation et espère vivement partager avec vous et avec"
       remerciement_2_fr: "une aventure inoubliable."
       identifiant_fr: "Identifiant #"
-      title_ar: "دوعة المشاركة في كاستينغ لمسترشیف جونیور"
+      title_1_ar: "كاستینغ ماسترشیف جونیور"
+      title_2_ar: "دعوة"
       welcome_ar: "مرحبا"
-      felicitation_ar : "هنيئا"
-      retenu_ar: "لقد تم قبول ترشيح طفلكم  في أكبر مسابقة تلفزية الطباخين الصغار في موسمها الثاني لمسترشیف جونیور"
-      date_ar: "سيجرى الكاستينغ يوم "
-      lieu_ar: "بفندق "
+      felicitation_ar: "هنيئا"
+      retenu_1_ar: "یتشرف فریق ماسترشیف جونیور بإخباركم بأن اشتراك طفلكم قد حضى بإهتمامنا"
+      retenu_2_ar:  |
+          لقد تم اختیار طفلكم للمشاركة في كاستینغ الدورة الثانیة لماسترشیف جونیور، الحدث التلفزي لهذه السنة
+
+          هذه الدعوة ستمكن طفلكم من ولوج آخر مرحلة من التصفیات : الكاستینغ
+          لدى نطلب منكم ضرورة إحضار الدعوة عند وصول طفلكم .بمكتب الاستقبال
+      date_ar: "أنتم مدعوون"
+      lieu_ar: "بفندق"
+      felicitation_enfant_ar: "هنیئا"
+      instructions_1_ar: "یوم الكاستینغ، یجب أن تكون مرفوقا بأحد الأبوین أو الواصي علیك أو المسؤول علیك سیضل بجانبك لدعمك واستكمال الإجراءات. من المحتمل أن یتم تصویر هذا الشخص"
+      instructions_2_ar: "خلال الكاستینغ، علیك إحضار الوثائق التالیة"
+      li_4_ar: "بطاقة التعريف ولي الأمر"
+      li_2_ar: "الدعوة"
+      li_3_ar: "صورتان شمسیتان"
+      li_4_ar: "طبق بارد من إعدادك"
       instructions_ar:  |
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit magni placeat cum illum molestiae harum hic perspiciatis, saepe nesciunt voluptas amet ratione odio provident. Dolorem tempora minima aspernatur totam at
+          یجب إعطاء أھمیة کبیرة للطبق الذي سوف یقّدم من طرف المشترك
 
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit magni placeat cum illum molestiae harum hic perspiciatis, saepe nesciunt voluptas amet ratione odio provident. Dolorem tempora minima aspernatur totam at
+          المرجو مراعات درجة حرارة تحافظ علی جودة الطبق الذي سوف للجنة التحکیم
 
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit magni placeat cum illum molestiae harum hic perspiciatis, saepe nesciunt voluptas amet ratione odio provident. Dolorem tempora minima aspernatur totam at
+          یجب أن یكون طبقك باردا، لن یكون لدیك الوسیلة لتسخینه أو لطهیه
+
+          نعلمكم أننا نتوفر على قاعة خاصة بالتقدیم في عین المكان، یجب علیكم .إعداد جمیع التحضیرات الخاصة بطبقكم في علب
+
+          لدیك أسئلة، لا تتردد في الاتصال علی
+
+          Téléphone : +212 (0)6 61 95 34 19
+          Email : contact.masterchefjunior@gmail.com
+
       remerciement_1_ar: "فريق ماستر شيف جونيور يشكركم على مشاركتكم ويتمنى أن يتقاسم معكم ومع "
       remerciement_2_ar: "مغامرة اسثتنائية"
       identifiant_ar: "Identifiant #"
+
+
     cordialement_fr: 'Cordialement,'
     signature_fr: "L'équipe MasterChef Junior"
     cordialement_ar: 'مع خالص التقدير'
@@ -258,7 +316,6 @@ fr:
         edit:
           username: 'Change user name'
           password: 'Change password'
-
 
   activerecord:
     errors:
