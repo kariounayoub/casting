@@ -70,12 +70,12 @@
       },
       minDate() {
         const date = new Date()
-        date.setFullYear(date.getFullYear() - 12);
+        date.setFullYear(date.getFullYear() - 35);
         return date.toISOString().substr(0, 10);
       },
       maxDate() {
         const date = new Date()
-        date.setFullYear(date.getFullYear() - 8);
+        date.setFullYear(date.getFullYear() - 18);
         return date.toISOString().substr(0, 10);
       }
     },
