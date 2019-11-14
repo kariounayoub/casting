@@ -12,16 +12,16 @@ class InscriptionsController < ApplicationController
   def new
     @inscription = Inscription.new
     authorize @inscription
-    @evenement = EvenementsSerializer.new(Evenement.where(actif: true).first, {params: {inscription: @inscription.id}}).serialized_json
+    @evenement = EvenementsSerializer.new(Evenement.where(actif: true).last, {params: {inscription: @inscription.id}}).serialized_json
   end
 
   def edit
-    @evenement = EvenementsSerializer.new(Evenement.where(actif: true).first, {params: {inscription: @inscription.id}}).serialized_json
+    @evenement = EvenementsSerializer.new(Evenement.where(actif: true).last, {params: {inscription: @inscription.id}}).serialized_json
   end
 
   def create
     inscription = Inscription.new(inscription_params)
-    evenement = Evenement.where(actif: true).first
+    evenement = Evenement.where(actif: true).last
     inscription.evenement = evenement
     inscription.user = current_user
     authorize inscription
