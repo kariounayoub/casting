@@ -15,8 +15,9 @@ class Convocation < ApplicationRecord
   end
 
   def send_convocation_email
-    UserMailer.with(convocation: self).convocation.deliver_later
-    self.mail_envoye = true
-    self.save
+    # UserMailer.with(convocation: self).convocation.deliver_later
+    # self.mail_envoye = true
+    # self.save
+    # No mail send for SB
   end
 end

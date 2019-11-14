@@ -11,6 +11,7 @@ class User < ApplicationRecord
   private
 
   def send_welcome_email
-    UserMailer.with(user: self).welcome.deliver_later
+    # UserMailer.with(user: self).welcome.deliver_later
+    # No mail send for SB
   end
 end
