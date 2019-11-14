@@ -10,12 +10,12 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @inscriptions = InscriptionsSerializer.new(Inscription.all).serialized_json
+    @inscriptions = InscriptionsSerializer.new(policy_scope(Inscription)).serialized_json
     authorize current_user
   end
 
   def casting
-    @convocations = ConvocationsSerializer.new(Convocation.all, {params: {current_user: current_user}}).serialized_json
+    @convocations = ConvocationsSerializer.new(policy_scope(Convocation), {params: {current_user: current_user}}).serialized_json
     authorize current_user
   end
   def contact

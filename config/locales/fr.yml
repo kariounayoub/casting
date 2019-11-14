@@ -19,15 +19,15 @@ fr:
     episodes: "Episodes"
     jury: "Jury"
     candidats: "Candidats"
-    password: 'Mot de passe oublié'
-    connexion: 'Connexion'
-    modifier: 'Modifier mon Profile'
-    casting: 'Casting'
+    password: "Mot de passe oublié"
+    connexion: "Connexion"
+    modifier: "Modifier mon Profile"
+    casting: "Casting"
   pages:
-    insc_index: 'Toutes mes inscriptions'
-    insc_new: 'Nouvelle Inscription'
-    insc_edit: 'Modifier Mon Inscription'
-    insc_show: 'Inscription'
+    insc_index: "Toutes mes inscriptions"
+    insc_new: "Nouvelle Inscription"
+    insc_edit: "Modifier Mon Inscription"
+    insc_show: "Inscription"
   home:
     titre: "Sanaat Bladi, première émission de téléréalité au monde dédiée aux apprentis artisans revient dans sa 8ème édition !"
     sous_titre_1: "Vous vous êtes toujours intéressé(e) aux métiers du bois, de la broderie , de la céramique, du cuir, des métaux, ou de la tapisserie ?"
@@ -41,8 +41,8 @@ fr:
     jury: "Le jury 👨‍🍳👩‍🍳"
     jury_base: "Grâce à leur expérience et leurs parcours uniques, il n'est pas étonnant qu'ils provoquent admiration et intimidation de la part des participants. Ce sont les juges du MasterChef Junior. Chef Moha et Chef Myriam seront de réel mentors pour nos petits chefs alors qu'ils se disputeront le titre de MasterChef."
     candidats: "Nos candidats 😍"
-    candidats_base: 'ILS SONT PETITS… ILS ONT DU TALENT… ILS ONT CONFIANCE EN EUX. Rencontrez nos petits chefs de la première saison de MasterChef'
-    follow: 'Suivez nous'
+    candidats_base: "ILS SONT PETITS… ILS ONT DU TALENT… ILS ONT CONFIANCE EN EUX. Rencontrez nos petits chefs de la première saison de MasterChef"
+    follow: "Suivez nous"
     step_1:
       title: "Inscrivez-vous"
       text_1: "Remplissez ce "
@@ -82,160 +82,160 @@ fr:
       kamil: "Kamil"
       nada: "Nada"
   stepper:
-    title1: 'Perso'
-    title2: 'Tuteur'
-    title3: 'Ecole'
-    title4: 'Cuisine & Motivation'
-    title5: 'Plus sur toi'
-    photos: 'Quelque photos de tes plats'
-    profile: 'Une photo de toi'
-    add_photo: 'Glissez une photo ici'
-    photo_sucre: 'Un plat sucré'
-    photo_sale: 'Un plat salé'
-    photo_autre: 'autre'
-    suivant: 'Suivant'
-    precedent: 'Precedent'
-    inscription: 'Inscription'
+    title1: "Perso"
+    title2: "Formation"
+    title3: "Catégorie"
+    title4: "Artisanat & Motivation"
+    title5: "Plus sur toi"
+    photos: "Quelques photos supplémentaires"
+    profile: "Une photo de toi"
+    add_photo: "Glissez une photo ici"
+    photo_sucre: "Ta CIN"
+    photo_sale: "Un produit artianale"
+    photo_autre: "autre"
+    suivant: "Suivant"
+    precedent: "Precedent"
+    inscription: "Inscription"
     new: "L'inscription a bien été crée"
     edit: "L'inscription a bien été modifié"
     newErr: "L'inscription n'a pas été crée"
     editErr: "L'inscription n'a pas été modifié"
     alreadyCreated: "Vous êtes déjà inscrit pour cette évenement"
     incomplete: "Un ou plusieurs champs obligatoires n'ont pas été remplies"
-    sexe_m: 'Garçon'
-    sexe_f: 'Fille'
+    sexe_m: "Garçon"
+    sexe_f: "Fille"
   inscription:
     cat:
-      personnel: 'A propos de toi'
+      personnel: "A propos de toi"
       tuteur: "A propos de ton tuteur"
-      ecole: "A propos de ton école"
-      motivation: "A quel point es-tu motivé pour rejoindre l'aventure MasterChef Junior ?"
-      cuisine: "Quelle est ta relation avec la cuisine ?"
-      competence: "Dis nous plus à propos de tes talents de cuisinier"
+      ecole: "A propos de ta formation"
+      motivation: "A quel point es-tu motivé pour rejoindre l'aventure Sanaat Bladi ?"
+      cuisine: "Quelle est ta relation avec l'artisanat ?"
+      competence: "Dis nous plus à propos de tes talents d'artisant"
       perso: "Nous avons envie d'en savoir davantage sur toi !"
-      categorie : "Categorie d'artisanat" #SB
+      categorie: "Categorie d'artisanat" #SB
   question:
     personnel:
-      nom: 'Nom :'
-      prenom: 'Prénom :'
-      adresse: 'Adresse :'
-      ville: 'Ville :'
-      date_naissance: 'Date de Naissance :'
-      allergie_intolerance: 'As-tu des allergies ou intolérances ? Si oui, lesquelles ?'
-      medicament: 'Prends-tu des médicaments ? Si oui, lesquelles ?'
-      autre: 'Y a-t-il autre chose que nous devrions avoir à l''esprit ?'
-      sexe: 'Sexe :'
-      tel: 'Numéro de téléphone :'  # SB
+      nom: "Nom :"
+      prenom: "Prénom :"
+      adresse: "Adresse :"
+      ville: "Ville :"
+      date_naissance: "Date de Naissance :"
+      allergie_intolerance: "As-tu des allergies ou intolérances ? Si oui, lesquelles ?"
+      medicament: "Prends-tu des médicaments ? Si oui, lesquelles ?"
+      autre: "Y a-t-il autre chose que nous devrions avoir à l'esprit ?"
+      sexe: "Sexe :"
+      tel: "Numéro de téléphone :" # SB
     tuteur:
-      nom: 'Nom :'
-      prenom: 'Prénom :'
-      lien: 'Quel est ton lien avec ton tuteur ?'
-      adresse: 'Adresse :'
-      ville: 'Ville :'
-      tel: 'Numéro de téléphone :'
-      email: 'Adresse email :'
+      nom: "Nom :"
+      prenom: "Prénom :"
+      lien: "Quel est ton lien avec ton tuteur ?"
+      adresse: "Adresse :"
+      ville: "Ville :"
+      tel: "Numéro de téléphone :"
+      email: "Adresse email :"
     ecole:
-      nom: 'Nom :'
-      adresse: 'Adresse :'
-      ville: 'Ville :'
-      classe: 'En quelle classe es-tu ?'
-      formation : 'Quelle est votre formation ?' #SB
-      niveau : "Quel est votre niveau d'étude ?" #SB
+      nom: "Nom :"
+      adresse: "Adresse :"
+      ville: "Ville :"
+      classe: "En quelle classe es-tu ?"
+      formation: "Quelle est votre formation ?" #SB
+      niveau: "Quel est votre niveau d'étude ?" #SB
     categorie:
       categorie: "Dans quelle catégorie comptez-vous vous inscrire ?" #SB
     motivation:
-      participation: 'Pourquoi veux-tu participer à MasterChef Junior ?'
-      competitif: 'A quel point es-tu compétitif ?'
+      participation: "Pourquoi veux-tu participer à MasterChef Junior ?"
+      competitif: "A quel point es-tu compétitif ?"
       artisanat: "Pourquoi avez-vous choisi l’artisanat ?" #SB
       sb: "Que représente pour vous Sanaat Bladi ?" #SB
     cuisine:
-      temps: 'Depuis combien de temps cuisines-tu ?'
-      souvenir: 'Quel est ton premier souvenir de cuisine ?'
-      plats: 'Quels sont les 3 plats que tu aimes cuisiner et pourquoi ?'
-      difficile: 'Quelle est la chose la plus difficile que tu as essayé de cuisiner ?'
-      chef: 'Qui est votre chef préféré ?'
+      temps: "Depuis combien de temps cuisines-tu ?"
+      souvenir: "Quel est ton premier souvenir de cuisine ?"
+      plats: "Quels sont les 3 plats que tu aimes cuisiner et pourquoi ?"
+      difficile: "Quelle est la chose la plus difficile que tu as essayé de cuisiner ?"
+      chef: "Qui est votre chef préféré ?"
     competence:
-      frequence: 'À quelle fréquence cuisines-tu ?'
-      plat: 'Quel est le plat que tu préfères cuisiner ?'
-      style: 'Quel style de cuisine maitrises-tu le plus ?'
-      mieux: 'Quel plat cuisines-tu le mieux ?'
-      moins: 'Quel plat cuisines-tu le moins bien ?'
-      competence: 'Quelle est ta plus grande compétence culinaire ? (Maitrise des cuissons, rapidité, etc.)'
-      desastre: 'Parle nous d''un désastre que tu as vécu en cuisine :'
-      habitude: 'Est-ce que tu as l''habitude de cuisiner seul ou avec de l''aide ?'
+      frequence: "À quelle fréquence cuisines-tu ?"
+      plat: "Quel est le plat que tu préfères cuisiner ?"
+      style: "Quel style de cuisine maitrises-tu le plus ?"
+      mieux: "Quel plat cuisines-tu le mieux ?"
+      moins: "Quel plat cuisines-tu le moins bien ?"
+      competence: "Quelle est ta plus grande compétence culinaire ? (Maitrise des cuissons, rapidité, etc.)"
+      desastre: "Parle nous d'un désastre que tu as vécu en cuisine :"
+      habitude: "Est-ce que tu as l'habitude de cuisiner seul ou avec de l'aide ?"
     perso:
-      fraterie: 'Parle nous de tes freres et soeurs si tu en as :'
-      sports: 'Quels sont les sports que tu aimes ?'
-      loisirs: 'Quels sont les loisirs que tu aimes ?'
-      assos: 'Es-tu membre d''une association ou d''un club ?'
-      grand: 'Qu’aimerais-tu faire quand tu seras grand ?'
-      qualites: 'Si on demande à ton/ta meilleur(e) ami(e) de nous citer tes 3 qualités, que dirait-t-il(elle) ?'
-      defauts: 'Si on demande à ton/ta meilleur(e) ami(e) de nous citer tes 3 défauts, que dirait-t-il(elle) ?'
-      tele: 'As-tu déjà joué, ou apparu à la télévision ou au cinéma auparavant ? Si oui, veuillez décrire'
+      fraterie: "Parle nous de tes freres et soeurs si tu en as :"
+      sports: "Quels sont les sports que tu aimes ?"
+      loisirs: "Quels sont les loisirs que tu aimes ?"
+      assos: "Es-tu membre d'une association ou d'un club ?"
+      grand: "Qu’aimerais-tu faire quand tu seras grand ?"
+      qualites: "Si on demande à ton/ta meilleur(e) ami(e) de nous citer tes 3 qualités, que dirait-t-il(elle) ?"
+      defauts: "Si on demande à ton/ta meilleur(e) ami(e) de nous citer tes 3 défauts, que dirait-t-il(elle) ?"
+      tele: "As-tu déjà joué, ou apparu à la télévision ou au cinéma auparavant ? Si oui, veuillez décrire"
   email:
     welcome:
-      welcome_fr: 'Bienvenue'
+      welcome_fr: "Bienvenue"
       subheading_fr: |
-          Nous vous remercions pour l’intérêt que vous portez à la plus grande compétition culinaire MasterChef Junior !
+        Nous vous remercions pour l’intérêt que vous portez à la plus grande compétition culinaire MasterChef Junior !
 
-          Nous vous informons que votre session a été enregistrée avec succès.
+        Nous vous informons que votre session a été enregistrée avec succès.
 
-          Merci de remplir le formulaire de participation afin de finaliser votre inscription pour participer au Casting et tenter de faire partie de l’aventure MasterChef Junior 2.
+        Merci de remplir le formulaire de participation afin de finaliser votre inscription pour participer au Casting et tenter de faire partie de l’aventure MasterChef Junior 2.
 
-          Bonne chance à toutes et à tous !
+        Bonne chance à toutes et à tous !
       update_profile_fr: "PS : Nous n'avons pas votre nom - merci de vous connecter et d'éditer votre profil."
-      inscription_fr: 'Commencer votre inscription'
-      welcome_ar: 'مرحبا'
+      inscription_fr: "Commencer votre inscription"
+      welcome_ar: "مرحبا"
       subheading_ar: |
-          نشكركم على أهتمامكم الكبیر لمسابقة الطبخ ماسترشیف جونیور
+        نشكركم على أهتمامكم الكبیر لمسابقة الطبخ ماسترشیف جونیور
 
-          ونخبركم بأن تسجیلكم لكستینغ ماسترشیف قد تم بنجاح
+        ونخبركم بأن تسجیلكم لكستینغ ماسترشیف قد تم بنجاح
 
-          المرجو ملء استمارة المشاركة لإتمام تسجيلكم والظفور بحظ المشاركة في مسابقة ماسترشيف جونيو في موسمها الثاني
+        المرجو ملء استمارة المشاركة لإتمام تسجيلكم والظفور بحظ المشاركة في مسابقة ماسترشيف جونيو في موسمها الثاني
 
-          حظ سعيد للجميع
-      update_profile_ar: 'لا نتوفر على إسمك. المرجو إدخال جميع المعلومات'
+        حظ سعيد للجميع
+      update_profile_ar: "لا نتوفر على إسمك. المرجو إدخال جميع المعلومات"
       inscription_ar: "التسجيل"
     inscription:
-      welcome_fr: 'Bonjour'
-      subheading_fr:  |
-          Nous vous remercions d’avoir soumis une application pour participer au Casting de la 2ème saison de MasterChef Junior !
+      welcome_fr: "Bonjour"
+      subheading_fr: |
+        Nous vous remercions d’avoir soumis une application pour participer au Casting de la 2ème saison de MasterChef Junior !
 
-          Nous tenons à vous informer que la candidature de votre enfant a bien été enregistrée.
+        Nous tenons à vous informer que la candidature de votre enfant a bien été enregistrée.
 
-          Votre dossier de candidature est actuellement en train d’être examiné par nos équipes. Si le profil correspond à nos attentes, votre enfant sera invité à participer au Casting.
+        Votre dossier de candidature est actuellement en train d’être examiné par nos équipes. Si le profil correspond à nos attentes, votre enfant sera invité à participer au Casting.
 
-          Plus d’informations concernant les dates et lieu de Casting vous seront également communiqués à ce moment là.
+        Plus d’informations concernant les dates et lieu de Casting vous seront également communiqués à ce moment là.
 
-          Prière de veiller à remplir 100% du formulaire pour maximiser vos chances d’être invité(e) au Casting.
+        Prière de veiller à remplir 100% du formulaire pour maximiser vos chances d’être invité(e) au Casting.
 
-          Bonne chance à toutes et à tous !
+        Bonne chance à toutes et à tous !
       update_profile_fr: "PS : Nous n'avons pas votre nom - merci de vous connecter et d'éditer votre profil."
-      inscription_fr: 'Compléter votre inscription'
-      welcome_ar: 'مرحبا'
-      subheading_ar:  |
-          .نشكركم على تقديم طلبكم للمشاركة لكستینغ الموسم الثاني لمسترشیف جونیور
+      inscription_fr: "Compléter votre inscription"
+      welcome_ar: "مرحبا"
+      subheading_ar: |
+        .نشكركم على تقديم طلبكم للمشاركة لكستینغ الموسم الثاني لمسترشیف جونیور
 
-          نرد أن نخبركم أن ترشح طفلكم قد تم تسجيله وبأن ملف الترشح هو حالیا في طور الدراسة من طرف لجنة التحكيم
+        نرد أن نخبركم أن ترشح طفلكم قد تم تسجيله وبأن ملف الترشح هو حالیا في طور الدراسة من طرف لجنة التحكيم
 
-          وعند قبول الترشح سيتم استدعاء طفلكم للمشاركة للكستینغ وسيتم حينئذ تزويدكم بالمزيد من المعلومات بخصوص موعد ومكان الكستینغ
+        وعند قبول الترشح سيتم استدعاء طفلكم للمشاركة للكستینغ وسيتم حينئذ تزويدكم بالمزيد من المعلومات بخصوص موعد ومكان الكستینغ
 
-          لرفع حظوظكم في المشاركة، يرجى ملء جميع معلومات الإسثمارة
+        لرفع حظوظكم في المشاركة، يرجى ملء جميع معلومات الإسثمارة
 
-          حظ سعيد للجميع
-      update_profile_ar: 'لا نتوفر على إسمك. المرجو إدخال جميع المعلومات'
+        حظ سعيد للجميع
+      update_profile_ar: "لا نتوفر على إسمك. المرجو إدخال جميع المعلومات"
       inscription_ar: "التسجيل"
     convocation:
       title_1_fr: "Casting de MasterChef Junior"
       title_2_fr: "INVITATION"
-      welcome_fr: 'Bonjour'
-      felicitation_fr: 'Félicitations à'
+      welcome_fr: "Bonjour"
+      felicitation_fr: "Félicitations à"
       retenu_1_fr: "Toute l’équipe de MasterChef Maroc JUNIOR a le plaisir de vous informer que la candidature de votre enfant a retenu toute notre attention pour la deuxième saison."
-      retenu_2_fr:  |
-          a été sélectionné pour participer au casting de la 2ème édition de MasterChef MAROC JUNIOR, l’événement télévisuel de la rentrée.
+      retenu_2_fr: |
+        a été sélectionné pour participer au casting de la 2ème édition de MasterChef MAROC JUNIOR, l’événement télévisuel de la rentrée.
 
-          Cette invitation permettra à votre enfant d’accéder à la dernière phase de sélection: le casting !
-          Ne l’oubliez surtout pas lorsque votre enfant se présentera à notre bureau d’accueil.
+        Cette invitation permettra à votre enfant d’accéder à la dernière phase de sélection: le casting !
+        Ne l’oubliez surtout pas lorsque votre enfant se présentera à notre bureau d’accueil.
 
       date_fr: "Vous êtes invités à vous présenter avec votre enfant le : "
       lieu_fr: "à l’adresse suivante:"
@@ -246,32 +246,32 @@ fr:
       li_2_fr: "Cette Invitation"
       li_3_fr: "2 photos d’identité"
       li_4_fr: "Un plat froid confectionné par tes soins*"
-      instructions_fr:  |
-          Inutile de te rappeler d’accorder la plus grande attention à ce plat car c’est grâce à lui que tu seras peut-être sélectionné pour faire partie de l’aventure inoubliable MasterChef Junior!
+      instructions_fr: |
+        Inutile de te rappeler d’accorder la plus grande attention à ce plat car c’est grâce à lui que tu seras peut-être sélectionné pour faire partie de l’aventure inoubliable MasterChef Junior!
 
-          Il faut que ce soit un plat froid, car tu n’auras pas de moyen de réchauffer/cuire quoique ce soit.
+        Il faut que ce soit un plat froid, car tu n’auras pas de moyen de réchauffer/cuire quoique ce soit.
 
-          Le dressage se fera dans nos salles entièrement. Il faudra donc apporter toutes tes préparations dans des boîtes.
+        Le dressage se fera dans nos salles entièrement. Il faudra donc apporter toutes tes préparations dans des boîtes.
 
-          A l’issu de cette journée de sélection, les meilleurs cuisiniers JUNIORS seront invités à nous rejoindre pour le tournage de l’émission.
+        A l’issu de cette journée de sélection, les meilleurs cuisiniers JUNIORS seront invités à nous rejoindre pour le tournage de l’émission.
 
-          *Fait très attention à respecter la chaine du froid, sac congélation / glacière (obligatoire) de tes plats (salés ou sucrés), car ils seront goûtés par le jury.
-
-
-          Si vous avez la moindre question, n’hésitez pas à nous contacter :
-          Téléphone : +212 (0)6 61 95 34 19 / +212 (0)6 57 80 58 86
-          Email : contact.masterchefjunior@gmail.com
-
-          Ces sélections seront filmées. Ainsi, pour ta tenue vestimentaire, nous te conseillons de ne pas porter de vêtements :
-          - Avec des marque et logo apparents 
-          - Blancs ou avec des couleurs flashy
+        *Fait très attention à respecter la chaine du froid, sac congélation / glacière (obligatoire) de tes plats (salés ou sucrés), car ils seront goûtés par le jury.
 
 
-          Pour conclure, notre équipe te donne un dernier conseil :
+        Si vous avez la moindre question, n’hésitez pas à nous contacter :
+        Téléphone : +212 (0)6 61 95 34 19 / +212 (0)6 57 80 58 86
+        Email : contact.masterchefjunior@gmail.com
 
-          PRENDS PLAISIR À PRÉPARER TON PLAT POUR PARTICIPER À CETTE DEUXIEME ÉDITION DE MASTERCHEF JUNIOR.
+        Ces sélections seront filmées. Ainsi, pour ta tenue vestimentaire, nous te conseillons de ne pas porter de vêtements :
+        - Avec des marque et logo apparents 
+        - Blancs ou avec des couleurs flashy
 
-          SOIS INVENTIF, CRÉATIF ET MONTRE LE MEILLEUR DE TOI-MÊME DANS CE MONDE MERVEILLEUX DE LA CUISINE !
+
+        Pour conclure, notre équipe te donne un dernier conseil :
+
+        PRENDS PLAISIR À PRÉPARER TON PLAT POUR PARTICIPER À CETTE DEUXIEME ÉDITION DE MASTERCHEF JUNIOR.
+
+        SOIS INVENTIF, CRÉATIF ET MONTRE LE MEILLEUR DE TOI-MÊME DANS CE MONDE MERVEILLEUX DE LA CUISINE !
 
       remerciement_1_fr: "L’ensemble de l’équipe de Masterchef Junior vous remercie pour votre participation et espère vivement partager avec vous et avec"
       remerciement_2_fr: "une aventure inoubliable."
@@ -281,11 +281,11 @@ fr:
       welcome_ar: "مرحبا"
       felicitation_ar: "هنيئا"
       retenu_1_ar: "یتشرف فریق ماسترشیف جونیور بإخباركم بأن اشتراك طفلكم قد حضى بإهتمامنا"
-      retenu_2_ar:  |
-          لقد تم اختیار طفلكم للمشاركة في كاستینغ الدورة الثانیة لماسترشیف جونیور، الحدث التلفزي لهذه السنة
+      retenu_2_ar: |
+        لقد تم اختیار طفلكم للمشاركة في كاستینغ الدورة الثانیة لماسترشیف جونیور، الحدث التلفزي لهذه السنة
 
-          هذه الدعوة ستمكن طفلكم من ولوج آخر مرحلة من التصفیات : الكاستینغ
-          لدى نطلب منكم ضرورة إحضار الدعوة عند وصول طفلكم .بمكتب الاستقبال
+        هذه الدعوة ستمكن طفلكم من ولوج آخر مرحلة من التصفیات : الكاستینغ
+        لدى نطلب منكم ضرورة إحضار الدعوة عند وصول طفلكم .بمكتب الاستقبال
       date_ar: "أنتم مدعوون"
       lieu_ar: "بفندق"
       felicitation_enfant_ar: "هنیئا"
@@ -295,99 +295,101 @@ fr:
       li_2_ar: "الدعوة"
       li_3_ar: "صورتان شمسیتان"
       li_4_ar: "طبق بارد من إعدادك"
-      instructions_ar:  |
-          یجب إعطاء أھمیة کبیرة للطبق الذي سوف یقّدم من طرف المشترك
+      instructions_ar: |
+        یجب إعطاء أھمیة کبیرة للطبق الذي سوف یقّدم من طرف المشترك
 
-          المرجو مراعات درجة حرارة تحافظ علی جودة الطبق الذي سوف للجنة التحکیم
+        المرجو مراعات درجة حرارة تحافظ علی جودة الطبق الذي سوف للجنة التحکیم
 
-          یجب أن یكون طبقك باردا، لن یكون لدیك الوسیلة لتسخینه أو لطهیه
+        یجب أن یكون طبقك باردا، لن یكون لدیك الوسیلة لتسخینه أو لطهیه
 
-          نعلمكم أننا نتوفر على قاعة خاصة بالتقدیم في عین المكان، یجب علیكم .إعداد جمیع التحضیرات الخاصة بطبقكم في علب
+        نعلمكم أننا نتوفر على قاعة خاصة بالتقدیم في عین المكان، یجب علیكم .إعداد جمیع التحضیرات الخاصة بطبقكم في علب
 
-          لدیك أسئلة، لا تتردد في الاتصال علی
+        لدیك أسئلة، لا تتردد في الاتصال علی
 
-          Téléphone : +212 (0)6 61 95 34 19 / +212 (0)6 57 80 58 86
-          Email : contact.masterchefjunior@gmail.com
+        Téléphone : +212 (0)6 61 95 34 19 / +212 (0)6 57 80 58 86
+        Email : contact.masterchefjunior@gmail.com
 
       remerciement_1_ar: "فريق ماستر شيف جونيور يشكركم على مشاركتكم ويتمنى أن يتقاسم معكم ومع "
       remerciement_2_ar: "مغامرة اسثتنائية"
       identifiant_ar: "Identifiant #"
-    cordialement_fr: 'Cordialement,'
+    cordialement_fr: "Cordialement,"
     signature_fr: "L'équipe MasterChef Junior"
-    cordialement_ar: 'مع خالص التقدير'
-    signature_ar: 'فريق ماسترشيف جونيور'
+    cordialement_ar: "مع خالص التقدير"
+    signature_ar: "فريق ماسترشيف جونيور"
 
   simple_form:
     labels:
       user:
-        username: 'User name'
-        password: 'Password'
+        username: "User name"
+        password: "Password"
         edit:
-          username: 'Change user name'
-          password: 'Change password'
+          username: "Change user name"
+          password: "Change password"
 
   activerecord:
     errors:
       messages:
-        record_invalid: 'La validation a échoué : %{errors}'
+        record_invalid: "La validation a échoué : %{errors}"
         restrict_dependent_destroy:
-          has_one: Vous ne pouvez pas supprimer l'enregistrement car un(e) %{record}
+          has_one:
+            Vous ne pouvez pas supprimer l'enregistrement car un(e) %{record}
             dépendant(e) existe
-          has_many: Vous ne pouvez pas supprimer l'enregistrement parce que les %{record}
+          has_many:
+            Vous ne pouvez pas supprimer l'enregistrement parce que les %{record}
             dépendants existent
   date:
     abbr_day_names:
-    - dim
-    - lun
-    - mar
-    - mer
-    - jeu
-    - ven
-    - sam
+      - dim
+      - lun
+      - mar
+      - mer
+      - jeu
+      - ven
+      - sam
     abbr_month_names:
-    -
-    - jan.
-    - fév.
-    - mar.
-    - avr.
-    - mai
-    - juin
-    - juil.
-    - août
-    - sept.
-    - oct.
-    - nov.
-    - déc.
+      -
+      - jan.
+      - fév.
+      - mar.
+      - avr.
+      - mai
+      - juin
+      - juil.
+      - août
+      - sept.
+      - oct.
+      - nov.
+      - déc.
     day_names:
-    - dimanche
-    - lundi
-    - mardi
-    - mercredi
-    - jeudi
-    - vendredi
-    - samedi
+      - dimanche
+      - lundi
+      - mardi
+      - mercredi
+      - jeudi
+      - vendredi
+      - samedi
     formats:
       default: "%d/%m/%Y"
       long: "%e %B %Y"
       short: "%e %b"
     month_names:
-    -
-    - janvier
-    - février
-    - mars
-    - avril
-    - mai
-    - juin
-    - juillet
-    - août
-    - septembre
-    - octobre
-    - novembre
-    - décembre
+      -
+      - janvier
+      - février
+      - mars
+      - avril
+      - mai
+      - juin
+      - juillet
+      - août
+      - septembre
+      - octobre
+      - novembre
+      - décembre
     order:
-    - :day
-    - :month
-    - :year
+      - :day
+      - :month
+      - :year
   datetime:
     distance_in_words:
       about_x_hours:
@@ -452,7 +454,7 @@ fr:
       invalid: n'est pas valide
       less_than: doit être inférieur à %{count}
       less_than_or_equal_to: doit être inférieur ou égal à %{count}
-      model_invalid: 'Validation échouée : %{errors}'
+      model_invalid: "Validation échouée : %{errors}"
       not_a_number: n'est pas un nombre
       not_an_integer: doit être un nombre entier
       odd: doit être impair
@@ -470,10 +472,10 @@ fr:
         one: ne fait pas la bonne longueur (doit comporter un seul caractère)
         other: ne fait pas la bonne longueur (doit comporter %{count} caractères)
     template:
-      body: 'Veuillez vérifier les champs suivants : '
+      body: "Veuillez vérifier les champs suivants : "
       header:
-        one: 'Impossible d''enregistrer ce(tte) %{model} : 1 erreur'
-        other: 'Impossible d''enregistrer ce(tte) %{model} : %{count} erreurs'
+        one: "Impossible d'enregistrer ce(tte) %{model} : 1 erreur"
+        other: "Impossible d'enregistrer ce(tte) %{model} : %{count} erreurs"
   helpers:
     select:
       prompt: Veuillez sélectionner
@@ -506,9 +508,9 @@ fr:
           quadrillion: million de milliards
           thousand: millier
           trillion: billion
-          unit: ''
+          unit: ""
       format:
-        delimiter: ''
+        delimiter: ""
         precision: 3
         significant: true
         strip_insignificant_zeros: true
@@ -526,11 +528,11 @@ fr:
           tb: To
     percentage:
       format:
-        delimiter: ''
+        delimiter: ""
         format: "%n%"
     precision:
       format:
-        delimiter: ''
+        delimiter: ""
   support:
     array:
       last_word_connector: " et "

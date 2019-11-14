@@ -12,7 +12,7 @@
     end
 
     if errors.first.nil?
-        render json: {success: true, inscriptions: InscriptionsSerializer.new(Inscription.all).serialized_json}
+        render json: {success: true, inscriptions: InscriptionsSerializer.new(policy_scope(Inscription)).serialized_json}
     else
         render json: {success: false, errors: errors}
     end

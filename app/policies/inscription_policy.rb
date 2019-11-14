@@ -2,9 +2,9 @@ class InscriptionPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       if user.admin
-        scope.all
+        scope.where(evenement: Evenement.where(actif: true).last)
       else
-        scope.where(user: user)
+        scope.where(user: user, evenement: Evenement.where(actif: true).last)
       end
     end
   end
