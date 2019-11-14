@@ -29,9 +29,12 @@ fr:
     insc_edit: 'Modifier Mon Inscription'
     insc_show: 'Inscription'
   home:
-    titre: "ILS SONT DE RETOUR POUR LA PLUS GRANDE, ET LA PLUS SPECTACULAIRE COMPÉTITION DE CUISINE JAMAIS VUE À LA TÉLÉVISION !"
-    sous_titre_1: "Tu as entre 8 et 12 ans et tu penses être prêt à relever le défi ?"
-    sous_titre_2: "Inscris-toi et viens vivre une expérience inoubliable avec nous !  👇"
+    titre: "Sanaat Bladi, première émission de téléréalité au monde dédiée aux apprentis artisans revient dans sa 8ème édition !"
+    sous_titre_1: "Vous vous êtes toujours intéressé(e) aux métiers du bois, de la broderie , de la céramique, du cuir, des métaux, ou de la tapisserie ?"
+    sous_titre_2: "Alors laissez votre créativité s’exprimer et inscrivez-vous à la 8ème édition de Sanaat Bladi pour encore plus d’inventivité, d’innovation et d’excellence !"
+    # titre: "ILS SONT DE RETOUR POUR LA PLUS GRANDE, ET LA PLUS SPECTACULAIRE COMPÉTITION DE CUISINE JAMAIS VUE À LA TÉLÉVISION !"
+    # sous_titre_1: "Tu as entre 8 et 12 ans et tu penses être prêt à relever le défi ?"
+    # sous_titre_2: "Inscris-toi et viens vivre une expérience inoubliable avec nous !  👇"
     inscription: "Inscription"
     comment: "Comment ça marche ? 🤔"
     episodes: "La saison dernière sur MasterChef Junior 🤩"
@@ -110,6 +113,7 @@ fr:
       cuisine: "Quelle est ta relation avec la cuisine ?"
       competence: "Dis nous plus à propos de tes talents de cuisinier"
       perso: "Nous avons envie d'en savoir davantage sur toi !"
+      categorie : "Categorie d'artisanat" #SB
   question:
     personnel:
       nom: 'Nom :'
@@ -121,6 +125,7 @@ fr:
       medicament: 'Prends-tu des médicaments ? Si oui, lesquelles ?'
       autre: 'Y a-t-il autre chose que nous devrions avoir à l''esprit ?'
       sexe: 'Sexe :'
+      tel: 'Numéro de téléphone :'  # SB
     tuteur:
       nom: 'Nom :'
       prenom: 'Prénom :'
@@ -134,9 +139,15 @@ fr:
       adresse: 'Adresse :'
       ville: 'Ville :'
       classe: 'En quelle classe es-tu ?'
+      formation : 'Quelle est votre formation ?' #SB
+      niveau : "Quel est votre niveau d'étude ?" #SB
+    categorie:
+      categorie: "Dans quelle catégorie comptez-vous vous inscrire ?" #SB
     motivation:
       participation: 'Pourquoi veux-tu participer à MasterChef Junior ?'
       competitif: 'A quel point es-tu compétitif ?'
+      artisanat: "Pourquoi avez-vous choisi l’artisanat ?" #SB
+      sb: "Que représente pour vous Sanaat Bladi ?" #SB
     cuisine:
       temps: 'Depuis combien de temps cuisines-tu ?'
       souvenir: 'Quel est ton premier souvenir de cuisine ?'

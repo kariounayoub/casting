@@ -1,12 +1,16 @@
 <div class="navbar fixed-top navbar-expand-sm navbar-light navbar-lewagon">
   <div class='navbar-flex'>
   <%= link_to root_path(I18n.locale), class: "navbar-brand" do %>
-    <%= image_tag "logo-MCJR.png" %>
+    <!-- <%= image_tag "logo-MCJR.png" %>  -->
+    <%= image_tag "logo-SB.png", style: 'height:60px;width:auto;'  %>
   <% end %>
   <div class="footer-links">
-    <a href="https://www.instagram.com/masterchefmarocofficiel/"><i class="fab fa-instagram"></i></a>
+<!--     <a href="https://www.instagram.com/masterchefmarocofficiel/"><i class="fab fa-instagram"></i></a>
     <a href="https://www.facebook.com/masterchefmarocofficiel/"><i class="fab fa-facebook"></i></a>
-    <a href="https://www.youtube.com/channel/UC5wXEtm29dNaN_HBOXWfKjg"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.youtube.com/channel/UC5wXEtm29dNaN_HBOXWfKjg"><i class="fab fa-youtube"></i></a> -->
+    <a href="https://www.instagram.com/sanaat.bladi/"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/sanaatbladi.ma/"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.youtube.com/user/SANAATBLADI"><i class="fab fa-youtube"></i></a>
   </div>
   </div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,7 +19,7 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
+<!--           <li class="nav-item">
             <%= link_to t("navbar.episodes"), root_path(I18n.locale, anchor: "episodes"), class: "nav-link" %>
           </li>
           <li class="nav-item">
@@ -23,7 +27,7 @@
           </li>
           <li class="nav-item">
             <%= link_to t("navbar.candidats"), root_path(I18n.locale, anchor: "candidats"), class: "nav-link" %>
-          </li>
+          </li> -->
       <% if user_signed_in? %>
         <% if current_user.admin == true %>
           <li class="nav-item">
@@ -49,12 +53,6 @@
           <li class="nav-item active">
             <%= link_to t('navbar.inscription'), inscriptions_path(I18n.locale), class: "nav-link" %>
           </li>
-          <!--           <li class="nav-item">
-            <%= link_to t('navbar.a_propos'), a_propos_path(I18n.locale), class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to t('navbar.contact'), contact_path(I18n.locale), class: "nav-link" %>
-          </li> -->
         <% end %>
         <li class="nav-item dropdown">
           <% if current_user.photo.blank? %>

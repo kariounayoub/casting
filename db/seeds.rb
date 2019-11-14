@@ -14,8 +14,10 @@ User.create(email: 'user@gmail.com', password: 'azerty', admin: false)
 
 puts 'creating questions'
 
-mcjr2 = Evenement.create(nom: 'MCJR2', date: '15/06/2019', adresse: 'Hotel Grand Mogador, Casablanca', actif: true)
+# mcjr2 = Evenement.create(nom: 'MCJR2', date: '15/06/2019', adresse: 'Hotel Grand Mogador, Casablanca', actif: true)
+sb8 = Evenement.create(nom: 'sb8', date: '10/12/2019', adresse: 'A determiner', actif: true)
 
+#MCJR2
 Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'nom', data_type: 'string', required: true)
 Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'prenom', data_type: 'string', required: true)
 Question.create(evenement: mcjr2, categorie: 'personnel', contenu: 'adresse', data_type: 'text', required: true)
@@ -64,5 +66,23 @@ Question.create(evenement: mcjr2, categorie: 'perso', contenu: 'grand', data_typ
 Question.create(evenement: mcjr2, categorie: 'perso', contenu: 'qualites', data_type: 'text', required: false)
 Question.create(evenement: mcjr2, categorie: 'perso', contenu: 'defauts', data_type: 'text', required: false)
 Question.create(evenement: mcjr2, categorie: 'perso', contenu: 'tele', data_type: 'text', required: false)
+
+#SB8
+Question.create(evenement: sb8, categorie: 'personnel', contenu: 'nom', data_type: 'string', required: true)
+Question.create(evenement: sb8, categorie: 'personnel', contenu: 'prenom', data_type: 'string', required: true)
+Question.create(evenement: sb8, categorie: 'personnel', contenu: 'adresse', data_type: 'text', required: true)
+Question.create(evenement: sb8, categorie: 'personnel', contenu: 'ville', data_type: 'string', required: true)
+Question.create(evenement: sb8, categorie: 'personnel', contenu: 'date_naissance', data_type: 'date', required: true)
+Question.create(evenement: sb8, categorie: 'personnel', contenu: 'tel', data_type: 'tel', required: true)
+
+Question.create(evenement: sb8, categorie: 'ecole', contenu: 'formation', data_type: 'string', required: true)
+Question.create(evenement: sb8, categorie: 'ecole', contenu: 'niveau', data_type: 'string', required: false)
+
+Question.create(evenement: sb8, categorie: 'categorie', contenu: 'categorie', data_type: 'string', required: true)
+
+Question.create(evenement: sb8, categorie: 'motivation', contenu: 'artisanat', data_type: 'text', required: false)
+Question.create(evenement: sb8, categorie: 'motivation', contenu: 'sb', data_type: 'text', required: false)
+
+# photo CIN et photo objet
 
 puts 'seed completed'
